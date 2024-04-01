@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from 'react'
-import { ethers } from ethers;
-import { contractAddress, contractABI } from './constants';
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import { ethers } from 'ethers';
+// import { contractAddress, contractABI } from './constants';
+import './App.css'; 
+import Footer from './components/Footer';
+import Home from './components/Home';
+import Nav from './components/Nav';
+import Hotels from './components/Hotels';
+import Bookings from './components/Bookings';
+import Profile from './components/Profile';
 
 const App = () => {
   const [contractIns, setContractIns] = useState(null);
   const [account, setAccount] = useState(null);
 
-  useEffect(() => {
     const connectContract = async () => {
       try {
         const { ethereum } = window;
@@ -21,21 +28,30 @@ const App = () => {
         setAccount(accounts[0]);
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
-        const contract = new ethers.Contract(contractAddess, contrcatABI, signer);
+        const contract = new ethers.Contract(contractAddress, contractABI, signer);
         setContractIns(contract);
       }
       catch (err) {
         console.log(err);
       }
     }
-    connectContract();
-  }, [])
 
   return (
     <>
+      <BrowserRouter>
+        <Nav connectContract={connectContract} />
+        <Routes>
+          <Route path="/" element={<Home contractIns={contractIns} account={account} connectContract={connectContract}/>} />
+          <Route path="/hotels" element={<Hotels contractIns={contractIns} account={account} />} />
+          <Route path='/bookings' element={<Bookings contractIns={contractIns} account={account} />} />
+          <Route path='/profile' element={<Profile contractIns={contractIns} account={account} />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
 
     </>
   )
 }
 
 export default App
+
