@@ -1,10 +1,20 @@
 const hre = require("hardhat");
 
 async function main() {
-  const HotelBooking = await hre.ethers.getContractFactory("HotelBooking");
-  const hotelBooking = await HotelBooking.deploy();
-  await hotelBooking.waitForDeployment();
-  console.log("deployed to: ", `${hotelBooking.target}`);
+  // Define the rooms array with bytes32 values
+
+
+  // Deploy the Hotel contract with rooms as parameter
+  const Hotel = await ethers.getContractFactory("Hotel");
+  const hotel = await Hotel.deploy(
+    ["MAriott", "Oberoi"],
+    ["H1", "H2"],
+    ["R1", "R2"],
+    [800, 900],
+    [20, 15]);
+  await hotel.waitForDeployment();
+
+  console.log("Hotel deployed to: ", hotel.target);
 }
 
 main().catch((error) => {
