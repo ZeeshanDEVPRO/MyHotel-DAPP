@@ -5,6 +5,7 @@
     "hardhat": "^2.22.2"
   },
   "dependencies": {
+    "@nomicfoundation/edr": "^0.3.3",
     "dotenv": "^16.4.5",
     "ethers": "^6.11.1"
   }
