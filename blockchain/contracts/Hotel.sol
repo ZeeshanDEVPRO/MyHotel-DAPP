@@ -42,7 +42,7 @@ contract Hotel {
         owner = payable(msg.sender);
         for (uint256 i = 0; i < _name.length; i++) {
             hotels[_hotelID[i]][_roomID[i]] = Room({
-                price: _price[i]*100000000000000,
+                price: _price[i]*100000000000000,  //in wei
                 discount: _discount[i],
                 roomID: _roomID[i],
                 hotelID: _hotelID[i],

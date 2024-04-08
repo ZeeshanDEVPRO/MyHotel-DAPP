@@ -1,10 +1,7 @@
 const hre = require("hardhat");
 
 async function main() {
-  // Define the rooms array with bytes32 values
 
-
-  // Deploy the Hotel contract with rooms as parameter
   const Hotel = await ethers.getContractFactory("Hotel");
   const hotel = await Hotel.deploy(
     ["Omkar Pride", "Omkar Pride", "Omkar Pride", "SAWAI Resort", "SAWAI Resort", "SAWAI Resort", "Hotel Radiance", "Hotel Radiance", "Hotel Radiance", "Hotel Oberoi", "Hotel Oberoi", "Hotel Oberoi", "Great Tripti", "Great Tripti", "Great Tripti",

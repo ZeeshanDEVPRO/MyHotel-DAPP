@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { GiCheckedShield } from "react-icons/gi";
 
-const Home = ({ connectContract }) => {
+const Home = ({ connectContract,account }) => {
   return (
     <div className='bg-[#ffffff] mt-[10vh] md:mt-[14vh] mb-[5vh] font-inter font-sans flex flex-col gap-[4vh] sm:gap-[5vh] md:gap-[10vh]'>
       <div className='relative h-[50vh]'>
@@ -27,7 +27,7 @@ const Home = ({ connectContract }) => {
         <div className='p-[10vh] flex flex-col items-center justify-center gap-[4vh]'>
           <div className='text-[#333] text-2xl font-bold '>There is our hotel around. Always.</div>
           <div className='text-[rgba(0, 0, 0, 0.7)]'>More Desinations.More Ease.More Affordable.</div>
-          <div><span className='font-bold text-2xl'>35+</span> Countries / <span  className='font-bold text-2xl'>1000+</span> hotels and homes</div>
+          <div><span className='font-bold text-2xl'>35+</span> Countries / <span className='font-bold text-2xl'>1000+</span> hotels and homes</div>
           <ul className='flex list-disc gap-9'>
             <li>Delhi</li>
             <li>Bangalore</li>
@@ -38,7 +38,12 @@ const Home = ({ connectContract }) => {
             <li>Kolkata</li>
             <li>Hyderabad</li>
           </ul>
-          <button className=' text-xl sm:text-2xl text-white font-semibold cursor-pointer p-[10px] rounded-md bg-[#1ab64f] hover:bg-green-700' onClick={() => { connectContract() }} style={{ boxShadow: '0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06)' }}>Connect Metamask</button>
+          {
+            !account ?
+              <button className=' text-xl sm:text-2xl text-white font-semibold cursor-pointer p-[10px] rounded-md bg-[#1ab64f] hover:bg-green-700' onClick={() => { connectContract() }} style={{ boxShadow: '0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06)' }}>Connect Metamask</button>
+              :
+              <button className=' text-xl sm:text-2xl text-white font-semibold cursor-pointer p-[10px] rounded-md bg-[#1ab64f] hover:bg-green-700' style={{ boxShadow: '0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06)' }}>Connected</button>
+          }
         </div>
       </div>
     </div>

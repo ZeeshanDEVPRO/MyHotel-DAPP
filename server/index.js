@@ -79,6 +79,22 @@ app.get("/search/:key", async (req, res) => {
     }
 });
 
+//search by hotelId
+app.get("/searchByHotelId/:key", async (req, res) => {
+    try {
+        let result = await Hotel.find({
+            "$or": [
+                { hotelId: { $regex: req.params.key, $options: 'i' } }
+            ]
+        });
+        res.send(result);
+    } catch (error) {
+        console.error("Error searching hotels:", error);
+        res.status(500).send({ error: error.message || "Something went wrong" });
+    }
+});
+
+
 app.get("/", (req, res) => {
     res.send("Server is running");
 });

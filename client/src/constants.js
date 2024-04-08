@@ -1,5 +1,5 @@
-contractAddress = "0x30a2695Fc71C84Da507f22B302736f3045771Cc3";
-contractABI = [
+const contractAddress = "0x30a2695Fc71C84Da507f22B302736f3045771Cc3";
+const contractABI = [
     {
       "inputs": [
         {
@@ -274,6 +274,6 @@ contractABI = [
       "stateMutability": "nonpayable",
       "type": "function"
     }
-  ];
+  ]
 
-export { contractAddress, contractABI }
+export {contractAddress, contractABI }

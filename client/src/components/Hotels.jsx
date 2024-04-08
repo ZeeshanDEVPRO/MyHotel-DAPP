@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { TbAirConditioning } from "react-icons/tb";
 import { IoWifiSharp } from "react-icons/io5";
 import { FaCar } from "react-icons/fa";
@@ -9,6 +10,8 @@ const Hotels = () => {
   const [hotels, setHotels] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedOptions, setSelectedOptions] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchProducts();
@@ -21,7 +24,6 @@ const Hotels = () => {
       setSelectedOptions([...selectedOptions, option]);
     }
   };
-
 
   const fetchProducts = async () => {
     try {
@@ -75,7 +77,14 @@ const Hotels = () => {
 
   const book = (id) => {
 
-  }
+    if (localStorage.getItem('hotelID')) {
+      localStorage.removeItem('hotelID');
+    }
+
+    localStorage.setItem('hotelID', id);
+    navigate('/book');
+  };
+
 
   return (
     <div className="mt-[14vh] font-noto-sans-<uniquifier> font-sans flex ">
@@ -84,7 +93,7 @@ const Hotels = () => {
 
         <div className='text-3xl font-semibold text-[#333]'>Filters</div>
         <div className='font-medium my-[1vh]'>Popular locations for you</div>
-        
+
         {/* search bar */}
         <div className='py-[2vh]'>
           <input
@@ -179,7 +188,7 @@ const Hotels = () => {
                   <div className='text-2xl font-bold'>₹ {hotel.price}</div>
                   <div className='text-yellow-500 font-bold'>{hotel.discount} % off</div>
                 </div>
-                <button className="bg-[#1ab64f] hover:bg-green-700 text-lg font-bold text-white p-[0.7vh] px-[1.2vw] m-[0.8vh] rounded-sm cursor-pointer shadow-md" onClick={() => book()}>Book Now</button>
+                <button className="bg-[#1ab64f] hover:bg-green-700 text-lg font-bold text-white p-[0.7vh] px-[1.2vw] m-[0.8vh] rounded-sm cursor-pointer shadow-md" onClick={() => book(hotel.hotelId)}>Book Now</button>
               </div>
             </div>
           ))
@@ -187,9 +196,8 @@ const Hotels = () => {
             (
               <div className='text-3xl font-bold flex flex-col gap-4 items-center justify-center h-[100vh]'>
                 <div>No matching results For Now</div>
-                <div className='flex items-center gap-2'><MdSignalWifiStatusbarConnectedNoInternet4 /><div>Internet/Metamask Error</div></div>
                 <div>OR</div>
-                <div>No results to show</div>
+                <div className='flex items-center gap-2'><MdSignalWifiStatusbarConnectedNoInternet4 /><div>Internet/Metamask Error</div></div>
               </div>
             )
         }
