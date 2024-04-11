@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { MdSignalWifiStatusbarConnectedNoInternet4 } from "react-icons/md";
 import { CiHeart } from "react-icons/ci";
 import { FaStar } from "react-icons/fa";
@@ -15,7 +16,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Book = ({ account, contractIns, connectContract }) => {
-    const [searchTerm, setSearchTerm] = useState('');
     const [hotel, setHotel] = useState([]);
     const [roomID1, setRoomID1] = useState('');
     const [entry1, setEntry1] = useState('0');
@@ -25,6 +25,8 @@ const Book = ({ account, contractIns, connectContract }) => {
     const [exit2, setExit2] = useState('0');
     const [availabilityLoader, setAvailabilityLoader] = useState(false);
     const [bookingLoader, setBookingLoader] = useState(false);
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (!account) {
@@ -43,7 +45,6 @@ const Book = ({ account, contractIns, connectContract }) => {
     }, [account]);
 
     const searchHandle = async (key) => {
-        setSearchTerm(key);
         if (key) {
             try {
                 const url = new URL(`http://localhost:5000/searchByHotelId/${key}`);
@@ -156,6 +157,7 @@ const Book = ({ account, contractIns, connectContract }) => {
                     transition: Bounce,
                 });
                 setBookingLoader(false);
+                navigate('/bookings');
             }
             else {
                 console.log(false);
@@ -175,6 +177,17 @@ const Book = ({ account, contractIns, connectContract }) => {
         }
         catch (e) {
             console.log(e);
+            toast.error(`We encountered some error!`, {
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                transition: Bounce,
+            });
             setBookingLoader(false);
         }
     }

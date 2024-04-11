@@ -166,8 +166,13 @@ const Hotels = () => {
         {
           hotels.length > 0 ? hotels.map((hotel, index) => (
             <div key={index} className='p-[8vh] flex border-b border-gray-300'>
-              <div className='w-[35vw] h-[35vh] overflow-hidden flex justify-center items-center'>
-                <img className="object-cover" src={hotel.photo} alt={hotel.name} />
+              <div className='relative'>
+                <div className='w-[35vw] h-[35vh] overflow-hidden flex justify-center items-center'>
+                  <img className="object-cover" src={hotel.photo} alt={hotel.name} />
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-sm font-semibold p-2">
+                  <div>Hotel ID - {hotel.hotelId}</div>
+                </div>
               </div>
               <div className='flex flex-col justify-center gap-1.5 px-[3vw]'>
                 <div className='text-2xl font-bold font-inter sans-serif'>{hotel.name}</div>

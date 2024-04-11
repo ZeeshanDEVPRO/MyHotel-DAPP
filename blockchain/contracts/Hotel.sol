@@ -1,4 +1,4 @@
-//SPDX-License-Identifier:MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
 contract Hotel {
@@ -22,8 +22,15 @@ contract Hotel {
         uint256 exitTime;
     }
 
+    struct Profile {
+        string name;
+        string email;
+        uint256 mobile; // changed to uint256 for mobile number
+    }
+
     mapping(uint256 => mapping(uint256 => Room)) public hotels;
     mapping(address => BookedRoom[]) public myBookings;
+    mapping(address => Profile) public myProfile;
 
     constructor(
         string[] memory _name,
@@ -42,12 +49,12 @@ contract Hotel {
         owner = payable(msg.sender);
         for (uint256 i = 0; i < _name.length; i++) {
             hotels[_hotelID[i]][_roomID[i]] = Room({
-                price: _price[i]*100000000000000,  //in wei
+                price: _price[i] * 100000000000000,  // in wei
                 discount: _discount[i],
                 roomID: _roomID[i],
                 hotelID: _hotelID[i],
-                entryTime: new uint256[](0),
-                exitTime: new uint256[](0)
+                entryTime: new uint256[](0) ,
+                exitTime: new uint256[](0) 
             });
         }
     }
@@ -64,8 +71,7 @@ contract Hotel {
             "Room is not available for the given slot"
         );
 
-        uint256 pricePerHour = ((room.price * (100 - room.discount)) / 100) /
-            24;
+        uint256 pricePerHour = ((room.price * (100 - room.discount)) / 100) / 24;
         uint256 hoursBooked = (_exitTime - _entryTime) / 3600;
         uint256 toPay = pricePerHour * hoursBooked;
         require(msg.value >= toPay, "Insufficient balance in your account");
@@ -134,7 +140,7 @@ contract Hotel {
         uint256 _roomID,
         uint256 _entryTime,
         uint256 _exitTime
-     ) public  view returns (bool) {
+     ) public view returns (bool) {
         Room storage room = hotels[_hotelID][_roomID];
         for (uint256 i = 0; i < room.entryTime.length; i++) {
             if (
@@ -151,7 +157,15 @@ contract Hotel {
         owner.transfer(address(this).balance);
     }
 
-    function getBookingDetails() external view returns (BookedRoom[] memory) {
-        return myBookings[msg.sender];
+    function saveProfile(string memory _name, string memory _email, uint256 _mobile) public {
+        myProfile[msg.sender] = Profile({
+            name: _name,
+            email: _email,
+            mobile: _mobile
+        });
+    }
+
+    function getProfile() public view returns (Profile memory) {
+        return myProfile[msg.sender];
     }
 }

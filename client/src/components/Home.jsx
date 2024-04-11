@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { GiCheckedShield } from "react-icons/gi";
+import homeImage from '../assets/HomeImage.jpg';
+import staycation from '../assets/staycation.avif';
+import qrDiscount from '../assets/qrDiscount.avif';
+import map from '../assets/map.avif';
 
 const Home = ({ connectContract,account }) => {
   return (
     <div className='bg-[#ffffff] mt-[10vh] md:mt-[14vh] mb-[5vh] font-inter font-sans flex flex-col gap-[4vh] sm:gap-[5vh] md:gap-[10vh]'>
-      <div className='relative h-[50vh]'>
+      <div className='relative h-[70vh]'>
         <img
           className='absolute inset-0 h-full w-full object-cover'
-          src='https://media.cntraveler.com/photos/64879b50add73e0d14b17f9e/16:9/w_1600%2Cc_limit/Most-Adventurous-things-to-do-in-your-lifetime-(update)_timur-garifov-sisZWCDkmwA-unsplash.jpg'
+          src={homeImage}
           alt='travel image'
         />
         <div className='absolute inset-0 flex flex-col gap-4 items-center justify-center text-white'>
@@ -17,13 +21,13 @@ const Home = ({ connectContract,account }) => {
         </div>
       </div>
       <div>
-        <img src='https://assets.oyoroomscdn.com/cmsMedia/6e9d9804-9c6f-4b18-a5d5-5e9a8f9815e5.jpg' alt='discount 70%' />
+        <img src={qrDiscount} alt='discount 70%' />
       </div>
       <div>
-        <img src='https://assets.oyoroomscdn.com/cmsMedia/b4462e5e-fd6b-44e4-99d7-fc83767ed892.png' alt='vacation' />
+        <img src={staycation} alt='vacation' />
       </div>
       <div className='bg-[#ffffff] flex flex-col md:flex-row justify-center items-center gap-[1vw] sm:gap-[3vw]'>
-        <img className='w-[80%] md:w-[50%] h-[60%] md:h-[40%]' src='https://assets.oyoroomscdn.com/cmsMedia/b44cad94-daf3-4989-b4d6-8b22487c589a.png' alt='world' />
+        <img className='w-[80%] md:w-[50%] h-[60%] md:h-[40%]' src={map} alt='world' />
         <div className='p-[10vh] flex flex-col items-center justify-center gap-[4vh]'>
           <div className='text-[#333] text-2xl font-bold '>There is our hotel around. Always.</div>
           <div className='text-[rgba(0, 0, 0, 0.7)]'>More Desinations.More Ease.More Affordable.</div>
