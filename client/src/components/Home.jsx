@@ -5,9 +5,9 @@ import staycation from '../assets/staycation.avif';
 import qrDiscount from '../assets/qrDiscount.avif';
 import map from '../assets/map.avif';
 
-const Home = ({ connectContract,account }) => {
+const Home = ({ connectContract, account }) => {
   return (
-    <div className='bg-[#ffffff] mt-[10vh] md:mt-[14vh] mb-[5vh] font-inter font-sans flex flex-col gap-[4vh] sm:gap-[5vh] md:gap-[10vh]'>
+    <div className='bg-[#ffffff] mt-[10vh] md:mt-[13vh] mb-[5vh] font-inter font-sans flex flex-col gap-[4vh] sm:gap-[5vh] md:gap-[10vh]'>
       <div className='relative h-[70vh]'>
         <img
           className='absolute inset-0 h-full w-full object-cover'
@@ -15,11 +15,15 @@ const Home = ({ connectContract,account }) => {
           alt='travel image'
         />
         <div className='absolute inset-0 flex flex-col gap-4 items-center justify-center text-white'>
-          <div className='text-center text-2xl sm:text-4xl font-extrabold'>Over 100+ destinations and 1000+ hotels and homes</div>
-          <div className='text-center text-2xl sm:text-4xl font-extrabold text-[#6ec23e]'>Quality stays, Always.</div>
-          <div className='text-center text-xl sm:text-4xl font-extrabold flex gap-1 items-center'>Sanitized stays our <span className='text-[#ff7661]'>commitment</span> <GiCheckedShield /></div>
+          <div className='text-center text-2xl sm:text-4xl font-extrabold leading-tight' style={{ textShadow: '3px 3px 4px rgba(0, 0, 0, 0.4)' }}>Over 100+ destinations and 1000+ hotels and homes</div>
+          <div className='text-center text-2xl sm:text-4xl font-extrabold text-[#6ec23e] leading-tight' style={{ textShadow: '3px 3px 5px rgba(0, 0, 0, 0.4)' }}>Quality stays, Always.</div>
+          <div className='text-center text-xl sm:text-4xl font-extrabold leading-tight flex gap-1 items-center' style={{ textShadow: '3px 3px 5px rgba(0, 0, 0, 0.4)' }}>
+            Sanitized stays our <span className='text-[#ff7661]'>commitment</span> <GiCheckedShield />
+          </div>
         </div>
       </div>
+
+
       <div>
         <img src={qrDiscount} alt='discount 70%' />
       </div>

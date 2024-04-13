@@ -25,7 +25,8 @@ contract Hotel {
     struct Profile {
         string name;
         string email;
-        uint256 mobile; // changed to uint256 for mobile number
+        uint256 mobile; 
+        string profileImageHash; // Store profile image hash
     }
 
     mapping(uint256 => mapping(uint256 => Room)) public hotels;
@@ -36,7 +37,7 @@ contract Hotel {
         string[] memory _name,
         uint256[] memory _hotelID,
         uint256[] memory _roomID,
-        uint256[] memory _price,
+        uint256[] memory _price,   //in eth
         uint256[] memory _discount
      ) {
         require(
@@ -49,12 +50,12 @@ contract Hotel {
         owner = payable(msg.sender);
         for (uint256 i = 0; i < _name.length; i++) {
             hotels[_hotelID[i]][_roomID[i]] = Room({
-                price: _price[i] * 100000000000000,  // in wei
+                price: _price[i]*1000000000000000000,  // in wei
                 discount: _discount[i],
                 roomID: _roomID[i],
                 hotelID: _hotelID[i],
-                entryTime: new uint256[](0) ,
-                exitTime: new uint256[](0) 
+                entryTime: new uint256[](0)  ,
+                exitTime: new uint256[](0)  
             });
         }
     }
@@ -92,7 +93,9 @@ contract Hotel {
                 exitTime: _exitTime
             })
         );
-    }
+     }
+
+    //extend stay
 
     function cancelBooking(
         uint256 _hotelID,
@@ -161,11 +164,24 @@ contract Hotel {
         myProfile[msg.sender] = Profile({
             name: _name,
             email: _email,
-            mobile: _mobile
+            mobile: _mobile,
+            profileImageHash: ""
         });
+    }
+
+    function saveProfileImage(string memory _profileImageHash) external {
+        myProfile[msg.sender].profileImageHash = _profileImageHash;
     }
 
     function getProfile() public view returns (Profile memory) {
         return myProfile[msg.sender];
+    }
+
+    function getProfileImage() public view returns (string memory) {
+        return myProfile[msg.sender].profileImageHash;
+    }
+
+     function getPriceArray(uint256 _hotelID, uint256 _roomID) public view returns (uint256) {
+        return hotels[_hotelID][_roomID].price;
     }
 }

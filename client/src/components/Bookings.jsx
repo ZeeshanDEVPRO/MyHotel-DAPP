@@ -1,7 +1,15 @@
-import React, { useEffect,useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { TiWarningOutline } from "react-icons/ti";
+import { ToastContainer, toast, Bounce } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Bookings = ({ account, contractIns, connectContract }) => {
   const [availabilityLoader, setAvailabilityLoader] = useState(false);
+  const [hotel, setHotel] = useState([]);
+  const [hotelID, setHotelID] = useState('');
+  const [roomID, setRoomID] = useState('');
+  const [entry, setEntry] = useState('');
+  const [exit, setExit] = useState('');
 
   useEffect(() => {
     if (!account) {
@@ -13,128 +21,279 @@ const Bookings = ({ account, contractIns, connectContract }) => {
     console.log("availability data:", _hotelID, _roomID, _entry, _exit);
     setAvailabilityLoader(true);
     if (!_hotelID || !_roomID || !_entry || !_exit || _entry > _exit || _entry < Math.round(Date.now() / 1000)) {
-        toast.error(`Enter all fields and proper time!`, {
-            position: "bottom-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-            transition: Bounce,
-        });
-        setAvailabilityLoader(false);
-        return;
+      toast.error(`Enter all fields and proper time!`, {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce,
+      });
+      setAvailabilityLoader(false);
+      return;
     }
 
     try {
-        const roomAvailable = await contractIns.checkAvailability(_hotelID, _roomID, _entry, _exit);
-        if (roomAvailable == true) {
-            console.log(true);
-            toast.success(`Room ${_roomID}  Available!`, {
-                position: "bottom-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-                transition: Bounce,
-            });
-            setAvailabilityLoader(false);
-        }
-        else {
-            console.log(false);
-            toast.error(`Room ${_roomID} Unavailable in the specified time!`, {
-                position: "bottom-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored",
-                transition: Bounce,
-            });
-            setAvailabilityLoader(false);
-        }
+      const roomAvailable = await contractIns.checkAvailability(_hotelID, _roomID, _entry, _exit);
+      if (roomAvailable == true) {
+        console.log(true);
+        toast.success(`Room ${_roomID}  Available!`, {
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          transition: Bounce,
+        });
+        setAvailabilityLoader(false);
+      }
+      else {
+        console.log(false);
+        toast.error(`Room ${_roomID} Unavailable in the specified time!`, {
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          transition: Bounce,
+        });
+        setAvailabilityLoader(false);
+      }
     }
     catch (e) {
-        console.log(e);
-        setAvailabilityLoader(false);
+      console.log(e);
+      setAvailabilityLoader(false);
     }
-}
+  }
+
+  const roomCancel = async (_hotelID, _roomID, _entry, _exit) => {
+    try {
+      const cancellation = await contractIns.cancelBooking(_hotelID, _roomID, _entry, _exit);
+      if(cancellation){
+        toast.success(`Room ${_roomID}  Cancelled!`, {
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          transition: Bounce,
+        });
+      }
+    }
+    catch (e) {
+      console.warn(e);
+      toast.error(`Room ${_roomID}  cancellation failed!`, {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce,
+      });
+    }
+  }
 
   return (
-    <div className='mt-[14vh] '>
+    <div className='mt-[13vh] pb-[10vh] bg-[#d8dcdf] flex flex-col gap-5'>
 
-      <div>Connected Metamask Address: {account}</div>
+      <div className="mt-4 bg-[#C5E60FE1] text-center rounded-md p-4 shadow-md flex flex-col gap-3">
+        {/* <p className="text-lg text-[#292727] font-bold">Connected Metamask Address: {account}</p> */}
+        <div className='flex justify-center gap-4 items-center px-5'>
+          <div>
+            <TiWarningOutline fontSize='40px' />
+          </div>
+          <div className="ml-3">
+            Cancellation of a booking is permissible with a full refund provided that the cancellation occurs at least forty-eight hours prior to the scheduled check-in time. Should the cancellation take place within 48 hours of the check-in time, a refund will be issued, deducting 10% of the total paid amount. Refunds will be processed promptly upon cancellation.
+          </div>
+        </div>
+      </div>
 
       {/* div1 */}
-      <div>
-        <div>All Bookings</div>
+      <div className='mx-[8vw] my-[5vh] bg-white rounded-lg p-8 shadow-md'>
+        <h2 className='text-2xl font-semibold mb-4'>Your Bookings</h2>
+        <div className='flex flex-col m-4'>
+          <div className='bg-gray-200 p-4 rounded-md shadow-md'>
+            <div className='flex gap-7 justify-evenly'>
+              <div className="w-1/6 text-center text-gray-700 font-semibold">Hotel Booked</div>
+              <div className="w-1/6 text-center text-gray-700 font-semibold">Hotel ID</div>
+              <div className="w-1/6 text-center text-gray-700 font-semibold">Room ID</div>
+              <div className="w-1/6 text-center text-gray-700 font-semibold">Check In Time</div>
+              <div className="w-1/6 text-center text-gray-700 font-semibold">Check Out Time</div>
+              <div className="w-1/6 text-center text-gray-700 font-semibold">Cancel Booking</div>
+            </div>
+          </div>
+          {/* {hotel && hotel.map((item) => ( */}
+          <div className='flex flex-col'>
+            <div className='bg-white dark:bg-gray-800 p-4 rounded-md shadow-md'>
+              <div className='flex gap-7 justify-evenly font-medium'>
+                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">Hotel Triptii</div>
+                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
+                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
+                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
+                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
+                <div className="w-1/6 text-center">
+                  <button onClick={() => roomCancel(item.hotelID, item.roomID, item.entryTime, item.exitTime)} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg">
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='flex flex-col'>
+            <div className='bg-white dark:bg-gray-800 p-4 rounded-md shadow-md'>
+              <div className='flex gap-7 justify-evenly font-medium'>
+                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">Hotel Triptii International</div>
+                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
+                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
+                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
+                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
+                <div className="w-1/6 text-center">
+                  <button onClick={() => roomCancel(item.hotelID, item.roomID, item.entryTime, item.exitTime)} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg">
+                    Cancel 
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='flex flex-col'>
+            <div className='bg-white dark:bg-gray-800 p-4 rounded-md shadow-md'>
+              <div className='flex gap-7 justify-evenly font-medium'>
+                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">Hotel Triptii International</div>
+                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
+                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
+                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
+                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
+                <div className="w-1/6 text-center">
+                  <button onClick={() => roomCancel(item.hotelID, item.roomID, item.entryTime, item.exitTime)} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg">
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* ))} */}
+        </div>
       </div>
 
       {/* div2 */}
-      <div className='shadow px-[3vw] bg-[#e5eff1] border p-[3vh] rounded-[5px] mx-[8vw] my-[3vh] flex flex-col gap-5'>
-        <div className='text-[#4b4848] font-semibold text-2xl'>Check Availability</div>
-        <div className='flex gap-3'>
-          <div className='flex gap-4 text-gray-600 items-center'>
-            <input className='cursor-pointer' onClick={() => setRoomID1('1')} type="radio" id="r1_1" name="room1" />
-            <label htmlFor="r1">ROOM 1</label>
+      <div className='shadow-lg px-8 py-6 bg-white border border-gray-300 rounded-md mx-auto max-w-xl'>
+        <div className='text-[#4b4848] font-semibold text-2xl mb-6'>Check Availability</div>
+
+        <select
+          className='w-full border border-gray-400 p-2 my-4 rounded-md appearance-none'
+          value={hotelID}
+          onChange={(e) => setHotelID(e.target.value)}
+        >
+          <option value="">Select Hotel Name</option>
+          <option value="11" className="hover:bg-gray-100">Omkar Pride</option>
+          <option value="12" className="hover:bg-gray-100">SAWAI Resort</option>
+          <option value="13" className="hover:bg-gray-100">Hotel Radiance</option>
+          <option value="21" className="hover:bg-gray-100">Hotel Oberoi</option>
+          <option value="22" className="hover:bg-gray-100">Great Tripti</option>
+          <option value="23" className="hover:bg-gray-100">Mariott Bonvoy</option>
+          <option value="31" className="hover:bg-gray-100">Hotel Supremo</option>
+          <option value="32" className="hover:bg-gray-100">Hotel Hyatt</option>
+          <option value="33" className="hover:bg-gray-100">Resort LinChain</option>
+          <option value="41" className="hover:bg-gray-100">Hotel Mosaicc</option>
+          <option value="42" className="hover:bg-gray-100">Jaswithha</option>
+          <option value="43" className="hover:bg-gray-100">Gaikwad Hotel</option>
+          <option value="51" className="hover:bg-gray-100">Grand Residency</option>
+          <option value="52" className="hover:bg-gray-100">Jayam Residency</option>
+          <option value="53" className="hover:bg-gray-100">Shayayam Residency</option>
+          <option value="61" className="hover:bg-gray-100">SKY INNs</option>
+          <option value="62" className="hover:bg-gray-100">Pavithhra</option>
+          <option value="63" className="hover:bg-gray-100">Hotel SKYSPACE</option>
+          <option value="71" className="hover:bg-gray-100">Sudharani Palace</option>
+          <option value="72" className="hover:bg-gray-100">White Palace Hotel</option>
+          <option value="73" className="hover:bg-gray-100">Park Platinum</option>
+        </select>
+
+        <div className='flex justify-evenly gap-4 mb-6'>
+          <div className='flex items-center gap-3 text-gray-800 dark:text-gray-200 font-medium'>
+            <input
+              className='cursor-pointer'
+              onClick={() => setRoomID('1')}
+              type="radio"
+              id="r1_1"
+              name="room1"
+            />
+            <label htmlFor="r1_1">ROOM 1</label>
           </div>
-          <div className='flex gap-4 text-gray-600 items-center'>
-            <input className='cursor-pointer' onClick={() => setRoomID1('2')} type="radio" id="r1_2" name="room1" />
-            <label htmlFor="r2">ROOM 2</label>
+          <div className='flex items-center gap-3 text-gray-800 dark:text-gray-200 font-medium'>
+            <input
+              className='cursor-pointer'
+              onClick={() => setRoomID('2')}
+              type="radio"
+              id="r1_2"
+              name="room1"
+            />
+            <label htmlFor="r1_2">ROOM 2</label>
           </div>
-          <div className='flex gap-4 text-gray-600 items-center'>
-            <input className='cursor-pointer' onClick={() => setRoomID1('3')} type="radio" id="r1_3" name="room1" />
-            <label htmlFor="r3">ROOM 3</label>
+          <div className='flex items-center gap-3 text-gray-800 dark:text-gray-200 font-medium'>
+            <input
+              className='cursor-pointer'
+              onClick={() => setRoomID('3')}
+              type="radio"
+              id="r1_3"
+              name="room1"
+            />
+            <label htmlFor="r1_3">ROOM 3</label>
           </div>
         </div>
-
-        <div className='flex justify-center gap-5 text-lg'>
-          <div className="flex flex-col justify-center">
+        <div className='flex items-center justify-evenly gap-4 mb-6'>
+          <div className="flex flex-col">
             <label htmlFor="check-in-time" className="text-gray-600 mb-2 text-base">Select Check In Time:</label>
             <input
-              className="appearance-none border rounded shadow-sm py-1 px-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="appearance-none border rounded shadow-sm py-2 px-3 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               type="datetime-local"
               id="check-in-time"
               defaultValue={new Date().toISOString().slice(0, 16)}
               onChange={(e) => {
                 const date = new Date(e.target.value);
                 const epochSeconds = Math.round(date.getTime() / 1000);
-                setEntry1(epochSeconds);
+                setEntry(epochSeconds);
               }}
             />
           </div>
-
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col">
             <label htmlFor="check-out-time" className="text-gray-600 mb-2 text-base">Select Check Out Time:</label>
             <input
-              className="appearance-none border rounded shadow-sm py-1 px-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="appearance-none border rounded shadow-sm py-2 px-3 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               type="datetime-local"
               id="check-out-time"
               defaultValue={new Date().toISOString().slice(0, 16)}
               onChange={(e) => {
                 const date = new Date(e.target.value);
                 const epochSeconds = Math.round(date.getTime() / 1000);
-                setExit1(epochSeconds);
+                setExit(epochSeconds);
               }}
             />
           </div>
         </div>
         <div className='flex justify-center'>
           {!availabilityLoader ?
-            <button className='text-white bg-yellow-600 hover:bg-yellow-700 font-medium text-lg py-2 px-4 rounded flex items-center' onClick={() => roomAvailability(hotell.hotelId, roomID1, entry1, exit1)}>Check Availability</button>
+            <button className='text-white bg-yellow-600 hover:bg-yellow-700 font-medium text-lg py-3 px-6 rounded-md flex items-center' onClick={() => roomAvailability(hotelID, roomID, entry, exit)}>Check Availability</button>
             :
-            <button className='text-white bg-yellow-600  font-medium text-lg py-2 px-4 rounded flex items-center' disabled>Checking...</button>
+            <button className='text-white bg-yellow-600 font-medium text-lg py-3 px-6 rounded-md flex items-center' disabled>Checking...</button>
           }
         </div>
       </div>
-
+      <ToastContainer />
     </div>
   );
 };

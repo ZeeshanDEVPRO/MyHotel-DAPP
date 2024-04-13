@@ -94,6 +94,37 @@ app.get("/searchByHotelId/:key", async (req, res) => {
     }
 });
 
+//price search api
+app.get("/searchByPrice/:minPrice/:maxPrice", async (req, res) => {
+    try {
+        const minPrice = parseInt(req.params.minPrice);
+        const maxPrice = parseInt(req.params.maxPrice);
+        const hotels = await Hotel.find({
+            price: {
+                $gte: minPrice,
+                $lte: maxPrice
+            }
+        });
+        res.status(200).json(hotels);
+    } catch (error) {
+        console.error("Error searching the price:", error);
+        res.status(500).send({ error: error.message || "Something went wrong" });
+    }
+});
+
+//search by facility
+app.post("/searchByFacility", async (req, res) => {
+    try {
+        const selectedFacilities = req.body.selectedFacilities; 
+        const result = await Hotel.find({ facility: { $in: selectedFacilities } });
+        
+        res.send(result);
+    } catch (error) {
+        console.error("Error searching hotels by facility:", error);
+        res.status(500).send({ error: error.message || "Something went wrong" });
+    }
+});
+
 
 app.get("/", (req, res) => {
     res.send("Server is running");

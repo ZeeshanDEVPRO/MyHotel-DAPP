@@ -5,11 +5,13 @@ import { IoWifiSharp } from "react-icons/io5";
 import { FaCar } from "react-icons/fa";
 import { MdSignalWifiStatusbarConnectedNoInternet4 } from "react-icons/md";
 import { FaMoneyBillTransfer } from "react-icons/fa6";
+import Slider from "@mui/material/Slider";
 
 const Hotels = () => {
   const [hotels, setHotels] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedOptions, setSelectedOptions] = useState([]);
+  const [range, setRange] = useState([800, 3000]);
 
   const navigate = useNavigate();
 
@@ -17,13 +19,35 @@ const Hotels = () => {
     fetchProducts();
   }, [])
 
-  const handleOptionChange = (option) => {
-    if (selectedOptions.includes(option)) {
-      setSelectedOptions(selectedOptions.filter((item) => item !== option));
-    } else {
-      setSelectedOptions([...selectedOptions, option]);
+  const handleOptionChange = async (option) => {
+    setSelectedOptions(prevOptions => {
+      if (prevOptions.includes(option)) {
+        return prevOptions.filter(item => item !== option);
+      } else {
+        return [...prevOptions, option];
+      }
+    });
+
+    try {
+      const response = await fetch(`http://localhost:5000/searchByFacility`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ selectedFacilities: selectedOptions }),
+      });
+      const data = await response.json();
+      if (data.length == 0) {
+        fetchProducts();
+        return;
+      }
+      setHotels(data);
+      console.log('Response from backend:', data);
+    } catch (error) {
+      console.error('Error sending data to backend:', error);
     }
   };
+
 
   const fetchProducts = async () => {
     try {
@@ -85,6 +109,29 @@ const Hotels = () => {
     navigate('/book');
   };
 
+  const handlePriceChanges = async (event, newValue) => {
+    setRange(newValue);
+    setSearchTerm("");
+    if (newValue.length === 2) {
+      const minPrice = newValue[0];
+      const maxPrice = newValue[1];
+      try {
+        const url = new URL(`http://localhost:5000/searchByPrice/${minPrice}/${maxPrice}`);
+        const response = await fetch(url, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        const searchData = await response.json();
+        setHotels(searchData);
+      } catch (error) {
+        console.error("Error searching products:", error);
+      }
+    }
+  }
+
+
 
   return (
     <div className="mt-[14vh] font-noto-sans-<uniquifier> font-sans flex ">
@@ -116,9 +163,19 @@ const Hotels = () => {
         <hr />
 
         {/* range price bar */}
-        <div className="py-[2vh]">
-          <div className='font-bold text-xl text-#222'>Price</div>
+        <div className='m-[3vh] font-medium text-[#333]'>
+          <h3 className='py-[2vh] font-semibold text-2xl text-#222'>Price</h3>
+          <Slider
+            className='w-[25vw]'
+            value={range}
+            onChange={handlePriceChanges}
+            valueLabelDisplay="auto"
+            min={800}
+            max={3000}
+          />
+          The selected range is {range[0]} - {range[1]}
         </div>
+
         <hr />
 
         {/* hotel facilities */}
