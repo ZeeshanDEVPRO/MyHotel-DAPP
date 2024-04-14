@@ -10,11 +10,11 @@ const Nav = ({ account, connectContract }) => {
 
   return (
     <div className='bg-white flex justify-between font-noto-sans-<uniquifier> font-sans p-[1.5vh] fixed top-0 left-0 w-full z-50' style={{ boxShadow: '0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06)' }}>
-      <div className='flex items-center gap-2 min-[450px]:gap-4 md:gap-10'>
+      <div className='flex items-center gap-4 min-[450px]:gap-4 md:gap-10'>
         <div className='flex items-center h-[6vh] md:h-[10vh] text-xl min-[450px]:text-2xl md:text-3xl font-medium p-[1.5vh] min-[450px]:p-[3vh] cursor-pointer' onClick={() => navigate('/')}>My<span className='text-[rgb(14 165 233 / var(--tw-bg-opacity))]'>Hotel</span><SiHotelsdotcom color='#f13719' /></div>
-        <div className='text-[#323531] flex flex-col items-center text-md min-[450px]:text-xl md:text-2xl font-normal cursor-pointer' onClick={() => navigate('/hotels')}><RiHotelFill fontSize='35px' /><div className='text-sm font-semibold'>hotels</div></div>
-        <div className='text-[#323531] flex flex-col items-center text-md min-[450px]:text-xl md:text-2xl font-normal cursor-pointer' onClick={() => navigate('/bookings')}><FaPenToSquare fontSize='35px' /><div className='text-sm font-semibold'>booking</div></div>
-        <div className='text-[#323531] flex flex-col items-center text-md min-[450px]:text-xl md:text-2xl font-normal cursor-pointer' onClick={() => navigate('/profile')}><CgProfile fontSize='35px' /><div className='text-sm font-semibold'>profile</div></div>
+        <div className='text-[#323531] flex flex-col items-center text-md min-[450px]:text-xl md:text-2xl font-normal cursor-pointer' onClick={() => navigate('/hotels')}><RiHotelFill fontSize='25px' /><div className="text-sm font-semibold hidden sm:block">hotels</div></div>
+        <div className='text-[#323531] flex flex-col items-center text-md min-[450px]:text-xl md:text-2xl font-normal cursor-pointer' onClick={() => navigate('/bookings')}><FaPenToSquare fontSize='25px' /><div className='text-sm font-semibold hidden sm:block'>booking</div></div>
+        <div className='text-[#323531] flex flex-col items-center text-md min-[450px]:text-xl md:text-2xl font-normal cursor-pointer' onClick={() => navigate('/profile')}><CgProfile fontSize='25px' /><div className='text-sm font-semibold hidden sm:block'>profile</div></div>
       </div>
 
       <div className='flex items-center gap-4'>

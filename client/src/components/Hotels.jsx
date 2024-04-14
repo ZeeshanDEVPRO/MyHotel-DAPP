@@ -20,13 +20,16 @@ const Hotels = () => {
   }, [])
 
   const handleOptionChange = async (option) => {
-    setSelectedOptions(prevOptions => {
+    
+   setSelectedOptions(prevOptions => {
       if (prevOptions.includes(option)) {
         return prevOptions.filter(item => item !== option);
       } else {
         return [...prevOptions, option];
       }
     });
+      console.log(selectedOptions);
+    
 
     try {
       const response = await fetch(`http://localhost:5000/searchByFacility`, {
@@ -212,7 +215,7 @@ const Hotels = () => {
       <div className="h-[100vh] border-l border-gray-300"></div>
 
       {/* div2 */}
-      <div className="scrollbar overflow-y-auto w-[70vw] h-[86vh] py-[5vh]">
+      <div className=" overflow-y-auto w-[70vw] h-[86vh] py-[5vh]">
         <div className='custom-button cursor-pointer mx-[8vh] p-[1.5vh] w-[23vw] flex items-center justify-center gap-2'>
           <div><FaMoneyBillTransfer color='#00b28a' fontSize='34px' /></div>
           <div className='text-sm text-customGray'>Your <span className='text-red-500 font-bold'>₹2000</span> MyHotel Money is pre-applied on all properties to show the best room price.</div>

@@ -5,6 +5,7 @@ import { GiVacuumCleaner } from "react-icons/gi";
 import { GiHotMeal } from "react-icons/gi";
 import { FaCar } from "react-icons/fa6";
 import { FaEdit } from 'react-icons/fa';
+import { FaPlusCircle } from "react-icons/fa";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import profile from '../assets/profile.jpg';
@@ -18,6 +19,7 @@ const Profile = ({ account, contractIns, connectContract }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [detailLoader, setDetailLoader] = useState(false);
   const [profileIcon, setProfileIcon] = useState(null); // Changed from profileImage
+  const [isPhotoEditing, setIsPhotoEditing] = useState(false);
 
   useEffect(() => {
     if (contractIns) {
@@ -35,20 +37,21 @@ const Profile = ({ account, contractIns, connectContract }) => {
   // Function to save profile icon
   const saveProfileIcon = async () => {
     try {
-      setDetailLoader(true);
-      await contractIns.saveProfileIcon(profileIcon);
-      toast.success(`Profile Icon Updated!`, {
-        position: 'bottom-center',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'colored',
-        transition: Bounce,
-      });
-      setDetailLoader(false);
+      const saving = await contractIns.saveProfileImage(profileIcon);
+      if (saving) {
+        toast.success(`Profile Icon Updated!`, {
+          position: 'bottom-center',
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: 'colored',
+          transition: Bounce,
+        });
+        console.log(saving);
+      }
     } catch (e) {
       console.warn(e);
       toast.error(`Error while updating profile icon!`, {
@@ -161,6 +164,10 @@ const Profile = ({ account, contractIns, connectContract }) => {
     }
   }, [account, connectContract]);
 
+  function selectphoto() {
+    document.getElementById("input-img").click();
+  }
+
   return (
     <div className='mt-[16vh] mb-[5vh] container mx-auto'>
 
@@ -175,20 +182,36 @@ const Profile = ({ account, contractIns, connectContract }) => {
 
         </div>
         <div className='absolute top-[35vh] left-0 m-8'>
+
           {/* profileIcon */}
-          {isEditing && (
+          <div className='relative'>
+            {isPhotoEditing && (
+              <input
+                type='file'
+                accept='image/*'
+                onChange={handleProfileIconChange}
+                className='bg-transparent text-white cursor-pointer hidden'
+
+              />
+            )}
             <input
               type='file'
               accept='image/*'
               onChange={handleProfileIconChange}
-              className='bg-transparent text-white cursor-pointer'
+              className='bg-transparent text-white cursor-pointer hidden'
+              id="input-img"
             />
-          )}
-          <img
-            src={profileIcon || personIcon}
-            alt="profile"
-            className="rounded-full h-36 w-36 border-4 border-[#323531]"
-          />
+
+            <span id="editIcon" className="absolute bottom-[4px] right-[20px] text-3xl cursor-pointer" onClick={selectphoto}>
+              <FaPlusCircle style={{ color: '#1378fc', border: '2px solid white', borderRadius: '50%', backgroundColor: 'white' }} />
+            </span>
+
+            <img
+              src={profileIcon || personIcon}
+              alt="profile"
+              className="rounded-full h-36 w-36 border-4 border-[#323531]"
+            />
+          </div>
         </div>
       </div>
 
