@@ -117,7 +117,7 @@ const Bookings = ({ account, contractIns, connectContract }) => {
           <div>
             <TiWarningOutline fontSize='40px' />
           </div>
-          <div className="ml-3">
+          <div className="ml-3 text-[15px]">
             Cancellation of a booking is permissible with a full refund provided that the cancellation occurs at least forty-eight hours prior to the scheduled check-in time. Should the cancellation take place within 48 hours of the check-in time, a refund will be issued, deducting 10% of the total paid amount. Refunds will be processed promptly upon cancellation.
           </div>
         </div>
