@@ -32,7 +32,7 @@ const Hotels = () => {
     
 
     try {
-      const response = await fetch(`http://localhost:5000/searchByFacility`, {
+      const response = await fetch(`https://my-hotel-dapp-backend.vercel.app/searchByFacility`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -51,10 +51,9 @@ const Hotels = () => {
     }
   };
 
-
   const fetchProducts = async () => {
     try {
-      const url = new URL(`http://localhost:5000/allproducts`);
+      const url = new URL(`https://my-hotel-dapp-backend.vercel.app/allproducts`);
 
       const response = await fetch(url, {
         method: "get",
@@ -73,7 +72,7 @@ const Hotels = () => {
     setSearchTerm(key);
     if (key) {
       try {
-        const url = new URL(`http://localhost:5000/search/${key}`);
+        const url = new URL(`https://my-hotel-dapp-backend.vercel.app/search/${key}`);
 
         const response = await fetch(url, {
           method: "GET",
@@ -119,7 +118,7 @@ const Hotels = () => {
       const minPrice = newValue[0];
       const maxPrice = newValue[1];
       try {
-        const url = new URL(`http://localhost:5000/searchByPrice/${minPrice}/${maxPrice}`);
+        const url = new URL(`https://my-hotel-dapp-backend.vercel.app/${minPrice}/${maxPrice}`);
         const response = await fetch(url, {
           method: "GET",
           headers: {
