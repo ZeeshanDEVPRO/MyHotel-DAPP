@@ -15,6 +15,9 @@ const Bookings = ({ account, contractIns, connectContract }) => {
     if (!account) {
       connectContract();
     }
+    else {
+      allBookings();
+    }
   }, [account, connectContract]);
 
   const roomAvailability = async (_hotelID, _roomID, _entry, _exit) => {
@@ -78,7 +81,7 @@ const Bookings = ({ account, contractIns, connectContract }) => {
   const roomCancel = async (_hotelID, _roomID, _entry, _exit) => {
     try {
       const cancellation = await contractIns.cancelBooking(_hotelID, _roomID, _entry, _exit);
-      if(cancellation){
+      if (cancellation) {
         toast.success(`Room ${_roomID}  Cancelled!`, {
           position: "bottom-center",
           autoClose: 5000,
@@ -108,9 +111,23 @@ const Bookings = ({ account, contractIns, connectContract }) => {
     }
   }
 
+  const allBookings = async () => {
+    try {
+      const bookings = await contractIns.getBookings();
+      if (bookings) {
+        setHotel(bookings);
+        console.log(bookings);
+      }
+    }
+    catch (e) {
+      console.log(e);
+    }
+  }
+
   return (
     <div className='mt-[13vh] pb-[10vh] bg-[#d8dcdf] flex flex-col gap-5'>
 
+      {/* warning */}
       <div className="mt-4 bg-[#C5E60FE1] text-center rounded-md p-4 shadow-md flex flex-col gap-3">
         {/* <p className="text-lg text-[#292727] font-bold">Connected Metamask Address: {account}</p> */}
         <div className='flex justify-center gap-4 items-center px-5'>
@@ -124,7 +141,7 @@ const Bookings = ({ account, contractIns, connectContract }) => {
       </div>
 
       {/* div1 */}
-      <div className='mx-[8vw] my-[5vh] bg-white rounded-lg p-8 shadow-md'>
+      <div className='mx-[4vw] my-[5vh] bg-white rounded-lg p-8 shadow-md'>
         <h2 className='text-2xl font-semibold mb-4'>Your Bookings</h2>
         <div className='flex flex-col m-4'>
           <div className='bg-gray-200 p-4 rounded-md shadow-md'>
@@ -137,56 +154,48 @@ const Bookings = ({ account, contractIns, connectContract }) => {
               <div className="w-1/6 text-center text-gray-700 font-semibold">Cancel Booking</div>
             </div>
           </div>
-          {/* {hotel && hotel.map((item) => ( */}
-          <div className='flex flex-col'>
-            <div className='bg-white dark:bg-gray-800 p-4 rounded-md shadow-md'>
-              <div className='flex gap-7 justify-evenly font-medium'>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">Hotel Triptii</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center">
-                  <button onClick={() => roomCancel(item.hotelID, item.roomID, item.entryTime, item.exitTime)} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg">
-                    Cancel
-                  </button>
+
+          {hotel && hotel.map((item, index) => {
+
+            // Convert entryTime from BigNumber to milliseconds
+            const entryTimeMs = parseInt(item.entryTime.toString()) * 1000;
+            console.warn("Entry Time (Milliseconds):", entryTimeMs);
+
+            // Create a new Date object for entryTime
+            const entryTimeDate = new Date(entryTimeMs);
+            console.warn("Parsed Entry Time:", entryTimeDate);
+
+            // Format entryTime as a human-readable string
+            const formattedEntryTime = `${entryTimeDate.getMonth() + 1}/${entryTimeDate.getDate()}/${entryTimeDate.getFullYear()}, ${entryTimeDate.getHours()}:${entryTimeDate.getMinutes()}:${entryTimeDate.getSeconds()} AM`;
+            console.warn("Formatted Entry Time:", formattedEntryTime);
+
+            const exitTimeMs = parseInt(item.exitTime.toString()) * 1000;
+            const exitTimeDate = new Date(exitTimeMs);
+            const formattedExitTime = exitTimeDate.toLocaleString();
+
+            return (
+              <div className='flex flex-col' key={index}>
+                <div className='bg-white dark:bg-gray-800 p-4 rounded-md shadow-md'>
+                  <div className='flex gap-7 justify-evenly items-center font-medium'>
+                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.name}</div>
+                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.hotelID.toString()}</div>
+                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.roomID.toString()}</div>
+                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedEntryTime}</div>
+                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedExitTime}</div>
+                    <div className="w-1/6 text-center">
+                      <button onClick={() => roomCancel(item.hotelID, item.roomID, item.entryTime, item.exitTime)} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg">
+                        Cancel
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className='flex flex-col'>
-            <div className='bg-white dark:bg-gray-800 p-4 rounded-md shadow-md'>
-              <div className='flex gap-7 justify-evenly font-medium'>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">Hotel Triptii International</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center">
-                  <button onClick={() => roomCancel(item.hotelID, item.roomID, item.entryTime, item.exitTime)} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg">
-                    Cancel 
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='flex flex-col'>
-            <div className='bg-white dark:bg-gray-800 p-4 rounded-md shadow-md'>
-              <div className='flex gap-7 justify-evenly font-medium'>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">Hotel Triptii International</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center">
-                  <button onClick={() => roomCancel(item.hotelID, item.roomID, item.entryTime, item.exitTime)} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg">
-                    Cancel
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* ))} */}
+            );
+          })}
+
+
+
+
         </div>
       </div>
 

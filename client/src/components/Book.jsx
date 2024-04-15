@@ -142,38 +142,29 @@ const Book = ({ account, contractIns, connectContract }) => {
         }
 
         try {
-            const roomBooking = await contractIns.bookRoom(_hotelID, _roomID, _entry, _exit);
-            if (roomBooking) {
-                console.log(true);
-                toast.success(`Room ${_roomID} Booked!`, {
-                    position: "bottom-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "colored",
-                    transition: Bounce,
-                });
-                setBookingLoader(false);
-                navigate('/bookings');
-            }
-            else {
-                console.log(false);
-                toast.error(`Room ${_roomID} Unavailable in the specified time!`, {
-                    position: "bottom-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "colored",
-                    transition: Bounce,
-                });
-                setBookingLoader(false);
-            }
+            const entryTimeUnix = Math.round(new Date(_entry).getTime() / 1000);
+            const exitTimeUnix = Math.round(new Date(_exit).getTime() / 1000);
+
+            // Fetch price per hour from the contract
+            const priceAsValue = await contractIns.getFinalPrice(_hotelID, _roomID,_entry,_exit);
+
+            // Send transaction with necessary value
+            const roomBookingTx = await contractIns.bookRoom(_hotelID, _roomID, entryTimeUnix, exitTimeUnix, { value: priceAsValue/100000000000000 });
+            console.log("Transaction Hash:", roomBookingTx.hash);
+
+            toast.success(`Room ${_roomID} Booked!`, {
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                transition: Bounce,
+            });
+            setBookingLoader(false);
+            navigate('/bookings');
         }
         catch (e) {
             console.log(e);
@@ -191,6 +182,7 @@ const Book = ({ account, contractIns, connectContract }) => {
             setBookingLoader(false);
         }
     }
+
 
     return (
         <div className='mt-[14vh] font-noto-sans-<uniquifier> font-sans'>
@@ -223,7 +215,7 @@ const Book = ({ account, contractIns, connectContract }) => {
                             </div>
                         </div>
                         <div className='py-[4vh]'>
-                            <button className='my-[3vh] bg-[#f5ece5] cursor-not-allowed bg-gray-300 text-[#f49242] font-semibold py-2 px-4 rounded inline-flex items-center'>
+                            <button className='my-[3vh] bg-[#f5ece5] cursor-not-allowed text-[#f49242] font-semibold py-2 px-4 rounded inline-flex items-center'>
                                 <CiHeart className='mr-2' />
                                 Managed by MyHotel
                             </button>

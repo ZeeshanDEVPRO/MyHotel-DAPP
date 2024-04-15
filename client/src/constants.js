@@ -1,4 +1,4 @@
-const contractAddress = "0x3cB1DE20Bd07327503014e5144ca99318379C7F7";
+const contractAddress = "0x581a44eed246574E1c5690a10a4Bf437AE9E2CBC";
 const contractABI = [
   {
     "inputs": [
@@ -122,6 +122,56 @@ const contractABI = [
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "getBookings",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "address payable",
+            "name": "user",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "status",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "roomID",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "hotelID",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "entryTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "exitTime",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct Hotel.BookedRoom[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [
       {
         "internalType": "uint256",
@@ -132,9 +182,19 @@ const contractABI = [
         "internalType": "uint256",
         "name": "_roomID",
         "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_entryTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_exitTime",
+        "type": "uint256"
       }
     ],
-    "name": "getPriceArray",
+    "name": "getFinalPrice",
     "outputs": [
       {
         "internalType": "uint256",
@@ -209,6 +269,11 @@ const contractABI = [
     "name": "hotels",
     "outputs": [
       {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
+      {
         "internalType": "uint256",
         "name": "price",
         "type": "uint256"
@@ -247,6 +312,11 @@ const contractABI = [
     ],
     "name": "myBookings",
     "outputs": [
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      },
       {
         "internalType": "address payable",
         "name": "user",

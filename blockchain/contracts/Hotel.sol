@@ -5,6 +5,7 @@ contract Hotel {
     address payable public owner;
 
     struct Room {
+        string name;
         uint256 price; // in wei
         uint256 discount; // in percentage
         uint256 roomID;
@@ -14,6 +15,7 @@ contract Hotel {
     }
 
     struct BookedRoom {
+        string name;
         address payable user;
         string status;
         uint256 roomID;
@@ -50,6 +52,7 @@ contract Hotel {
         owner = payable(msg.sender);
         for (uint256 i = 0; i < _name.length; i++) {
             hotels[_hotelID[i]][_roomID[i]] = Room({
+                name: _name[i],
                 price: _price[i]*1000000000000000000,  // in wei
                 discount: _discount[i],
                 roomID: _roomID[i],
@@ -85,6 +88,7 @@ contract Hotel {
 
         myBookings[msg.sender].push(
             BookedRoom({
+                name: room.name,
                 user: user,
                 status: "Booked",
                 roomID: _roomID,
@@ -93,10 +97,8 @@ contract Hotel {
                 exitTime: _exitTime
             })
         );
-     }
-
-    //extend stay
-
+    }
+   
     function cancelBooking(
         uint256 _hotelID,
         uint256 _roomID,
@@ -160,6 +162,10 @@ contract Hotel {
         owner.transfer(address(this).balance);
     }
 
+    function getBookings() public view returns (BookedRoom[] memory) {
+        return myBookings[msg.sender];
+    }
+
     function saveProfile(string memory _name, string memory _email, uint256 _mobile) public {
         myProfile[msg.sender] = Profile({
             name: _name,
@@ -181,7 +187,13 @@ contract Hotel {
         return myProfile[msg.sender].profileImageHash;
     }
 
-     function getPriceArray(uint256 _hotelID, uint256 _roomID) public view returns (uint256) {
-        return hotels[_hotelID][_roomID].price;
+     // value to be sent with transaction
+    function getFinalPrice(uint256 _hotelID, uint256 _roomID,uint256 _entryTime, uint256 _exitTime) public view returns (uint256) {
+        Room storage room = hotels[_hotelID][_roomID];
+
+        uint256 pricePerHour = ((room.price * (100 - room.discount)) / 100) / 24;
+        uint256 hoursBooked = (_exitTime - _entryTime) / 3600;
+        uint256 toPay = pricePerHour * hoursBooked;
+        return toPay;
     }
 }
