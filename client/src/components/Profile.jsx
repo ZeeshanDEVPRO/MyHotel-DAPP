@@ -20,10 +20,12 @@ const Profile = ({ account, contractIns, connectContract }) => {
   const [detailLoader, setDetailLoader] = useState(false);
   const [profileIcon, setProfileIcon] = useState(null); // Changed from profileImage
   const [isPhotoEditing, setIsPhotoEditing] = useState(false);
+  const [hotel, setHotel] = useState([]);
 
   useEffect(() => {
     if (contractIns) {
       getProfileDetails();
+      allBookings();
     }
   }, [contractIns]);
 
@@ -166,6 +168,19 @@ const Profile = ({ account, contractIns, connectContract }) => {
 
   function selectphoto() {
     document.getElementById("input-img").click();
+  }
+
+  const allBookings = async () => {
+    try {
+      const bookings = await contractIns.getBookings();
+      if (bookings) {
+        setHotel(bookings);
+        console.log(bookings);
+      }
+    }
+    catch (e) {
+      console.log(e);
+    }
   }
 
   return (
@@ -356,9 +371,9 @@ const Profile = ({ account, contractIns, connectContract }) => {
       </div>
 
       {/* bookings */}
-      <div className='mx-[3vw] my-[5vh] bg-gray-100 rounded-lg p-8 shadow-md'>
+      <div className='mx-[4vw] my-[5vh] bg-gray-100 rounded-lg p-8 shadow-md'>
         <h2 className='text-2xl font-semibold mb-4'>Your Bookings</h2>
-        <div className='flex flex-col'>
+        <div className='flex flex-col m-4'>
           <div className='bg-black p-4 rounded-md shadow-md'>
             <div className='flex gap-7 justify-evenly'>
               <div className="w-1/6 text-center text-white font-semibold">Hotel Booked</div>
@@ -369,42 +384,36 @@ const Profile = ({ account, contractIns, connectContract }) => {
               <div className="w-1/6 text-center text-white font-semibold">Status</div>
             </div>
           </div>
-          <div className='flex flex-col'>
-            <div className='bg-white dark:bg-gray-800 p-4 rounded-md shadow-md'>
-              <div className='flex gap-7 justify-evenly font-medium'>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">Hotel Triptii International</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center">Cancelled</div>
+
+          {hotel && hotel.map((item, index) => {
+
+            // Convert entryTime from BigNumber to milliseconds
+            const entryTimeMs = parseInt(item.entryTime.toString()) * 1000 * 1000;
+            const entryTimeDate = new Date(entryTimeMs);
+            const formattedEntryTime = entryTimeDate.toLocaleString();
+
+            const exitTimeMs = parseInt(item.exitTime.toString()) * 1000 * 1000;
+            const exitTimeDate = new Date(exitTimeMs);
+            const formattedExitTime = exitTimeDate.toLocaleString();
+
+            return (
+              <div className='flex flex-col' key={index}>
+                <div className='bg-white dark:bg-gray-800 p-4 rounded-md shadow-md'>
+                  <div className='flex gap-7 justify-evenly items-center font-medium'>
+                    <div className="w-1/6 text-center text-[#03050c] dark:text-gray-200">{item.name}</div>
+                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.hotelID.toString()}</div>
+                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.roomID.toString()}</div>
+                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedEntryTime}</div>
+                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedExitTime}</div>
+                    <div className="w-1/6 text-center">
+                      {item.status.toString() === 'Booked' ?
+                        (<div className='text-green-600 font-bold'>Booked</div>) : (<div className='text-red-600 font-bold'><Cancelled></Cancelled></div>)}
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className='flex flex-col'>
-            <div className='bg-white dark:bg-gray-800 p-4 rounded-md shadow-md'>
-              <div className='flex gap-7 justify-evenly font-medium'>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">Hotel Triptii International</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center">Booked</div>
-              </div>
-            </div>
-          </div>
-          <div className='flex flex-col'>
-            <div className='bg-white dark:bg-gray-800 p-4 rounded-md shadow-md'>
-              <div className='flex gap-7 justify-evenly font-medium'>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">Hotel Triptii International</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">1</div>
-                <div className="w-1/6 text-center">Cancelled</div>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
       <ToastContainer />

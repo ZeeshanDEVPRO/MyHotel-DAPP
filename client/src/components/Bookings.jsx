@@ -158,18 +158,11 @@ const Bookings = ({ account, contractIns, connectContract }) => {
           {hotel && hotel.map((item, index) => {
 
             // Convert entryTime from BigNumber to milliseconds
-            const entryTimeMs = parseInt(item.entryTime.toString()) * 1000;
-            console.warn("Entry Time (Milliseconds):", entryTimeMs);
-
-            // Create a new Date object for entryTime
+            const entryTimeMs = parseInt(item.entryTime.toString()) * 1000 * 1000;
             const entryTimeDate = new Date(entryTimeMs);
-            console.warn("Parsed Entry Time:", entryTimeDate);
+            const formattedEntryTime = entryTimeDate.toLocaleString();
 
-            // Format entryTime as a human-readable string
-            const formattedEntryTime = `${entryTimeDate.getMonth() + 1}/${entryTimeDate.getDate()}/${entryTimeDate.getFullYear()}, ${entryTimeDate.getHours()}:${entryTimeDate.getMinutes()}:${entryTimeDate.getSeconds()} AM`;
-            console.warn("Formatted Entry Time:", formattedEntryTime);
-
-            const exitTimeMs = parseInt(item.exitTime.toString()) * 1000;
+            const exitTimeMs = parseInt(item.exitTime.toString()) * 1000 * 1000;
             const exitTimeDate = new Date(exitTimeMs);
             const formattedExitTime = exitTimeDate.toLocaleString();
 
@@ -177,7 +170,7 @@ const Bookings = ({ account, contractIns, connectContract }) => {
               <div className='flex flex-col' key={index}>
                 <div className='bg-white dark:bg-gray-800 p-4 rounded-md shadow-md'>
                   <div className='flex gap-7 justify-evenly items-center font-medium'>
-                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.name}</div>
+                    <div className="w-1/6 text-center text-black font-semibold">{item.name}</div>
                     <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.hotelID.toString()}</div>
                     <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.roomID.toString()}</div>
                     <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedEntryTime}</div>
@@ -192,10 +185,6 @@ const Bookings = ({ account, contractIns, connectContract }) => {
               </div>
             );
           })}
-
-
-
-
         </div>
       </div>
 
