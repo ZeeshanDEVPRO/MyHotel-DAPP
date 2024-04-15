@@ -407,7 +407,7 @@ const Profile = ({ account, contractIns, connectContract }) => {
                     <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedExitTime}</div>
                     <div className="w-1/6 text-center">
                       {item.status.toString() === 'Booked' ?
-                        (<div className='text-green-600 font-bold'>Booked</div>) : (<div className='text-red-600 font-bold'><Cancelled></Cancelled></div>)}
+                        (<div className='text-green-600 font-bold'>BOOKED</div>) : (<div className='text-red-600 font-bold'>CANCELLLED</div>)}
                     </div>
                   </div>
                 </div>
