@@ -146,10 +146,10 @@ const Book = ({ account, contractIns, connectContract }) => {
             const exitTimeUnix = Math.round(new Date(_exit).getTime() / 1000);
 
             // Fetch price per hour from the contract
-            const priceAsValue = await contractIns.getFinalPrice(_hotelID, _roomID,_entry,_exit);
+            const priceAsValue = await contractIns.getFinalPrice(_hotelID, _roomID, _entry, _exit);
 
             // Send transaction with necessary value
-            const roomBookingTx = await contractIns.bookRoom(_hotelID, _roomID, entryTimeUnix, exitTimeUnix, { value: priceAsValue/100000000000000 });
+            const roomBookingTx = await contractIns.bookRoom(_hotelID, _roomID, entryTimeUnix, exitTimeUnix, { value: priceAsValue / 100000000000000 });
             console.log("Transaction Hash:", roomBookingTx.hash);
 
             toast.success(`Room ${_roomID} Booked!`, {

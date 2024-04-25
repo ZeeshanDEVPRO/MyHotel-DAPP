@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { TiWarningOutline } from "react-icons/ti";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { BigNumber } from 'bignumber.js';
+
 
 const Bookings = ({ account, contractIns, connectContract }) => {
   const [availabilityLoader, setAvailabilityLoader] = useState(false);
@@ -80,7 +82,10 @@ const Bookings = ({ account, contractIns, connectContract }) => {
 
   const roomCancel = async (_hotelID, _roomID, _entry, _exit) => {
     try {
-      const cancellation = await contractIns.cancelBooking(_hotelID, _roomID, _entry, _exit);
+      // Fetch price per hour from the contract
+      const priceAsValue = await contractIns.getFinalPrice(_hotelID, _roomID, _entry, _exit);
+
+      const cancellation = await contractIns.cancelBooking(_hotelID, _roomID, _entry, _exit, { value: priceAsValue / 100000000000000 });
       if (cancellation) {
         toast.success(`Room ${_roomID}  Cancelled!`, {
           position: "bottom-center",
@@ -158,13 +163,15 @@ const Bookings = ({ account, contractIns, connectContract }) => {
           {hotel && hotel.map((item, index) => {
 
             // Convert entryTime from BigNumber to milliseconds
-            const entryTimeMs = parseInt(item.entryTime.toString()) * 1000 * 1000;
+            const entryTimeMs = new BigNumber(item.entryTime.toString()).toNumber() * 1000;
             const entryTimeDate = new Date(entryTimeMs);
             const formattedEntryTime = entryTimeDate.toLocaleString();
+            console.log(entryTimeMs,item.entryTime.toString(), formattedEntryTime);
 
-            const exitTimeMs = parseInt(item.exitTime.toString()) * 1000 * 1000;
+            const exitTimeMs = new BigNumber(item.exitTime.toString()).toNumber() * 1000;
             const exitTimeDate = new Date(exitTimeMs);
             const formattedExitTime = exitTimeDate.toLocaleString();
+
 
             return (
               <div className='flex flex-col' key={index}>
@@ -176,7 +183,7 @@ const Bookings = ({ account, contractIns, connectContract }) => {
                     <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedEntryTime}</div>
                     <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedExitTime}</div>
                     <div className="w-1/6 text-center">
-                      <button onClick={() => roomCancel(item.hotelID, item.roomID, item.entryTime, item.exitTime)} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg">
+                      <button onClick={() => roomCancel(item.hotelID, item.roomID, entryTimeMs, exitTimeMs)} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg">
                         Cancel
                       </button>
                     </div>
