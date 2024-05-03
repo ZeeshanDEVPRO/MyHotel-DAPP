@@ -22,6 +22,7 @@ const App = () => {
       const { ethereum } = window;
       if (!ethereum) {
         console.error("Please install or enable MetaMask");
+        window.location('no-metamask');
         return;
       }
 
@@ -49,26 +50,12 @@ const App = () => {
           <Route path='/bookings' element={<Bookings contractIns={contractIns} account={account} connectContract={connectContract} />} />
           <Route path='/profile' element={<Profile contractIns={contractIns} account={account} connectContract={connectContract} />} />
           <Route path='/book' element={<Book contractIns={contractIns} account={account} connectContract={connectContract} />} />
-          <Route path='/no-metamask' element={<NoMetamaskComponent connectContract={connectContract} />} />
+          <Route path='/no-metamask' element={<NoMetamask />} />
         </Routes>
         <Footer />
       </div>
     </BrowserRouter>
   );
 }
-const NoMetamaskComponent = ({ connectContract }) => {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    connectContract().then(() => {
-      navigate('/');
-    }).catch(() => {
-      navigate('/no-metamask'); // Redirect to '/no-metamask' if MetaMask is not available
-    });
-  }, [connectContract, navigate]);
-
-  return <NoMetamask />;
-}
-
 
 export default App;
