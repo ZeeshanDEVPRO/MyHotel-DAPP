@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import { Routes, Route, BrowserRouter,useNavigate } from 'react-router-dom'
 import { ethers } from 'ethers';
 import { contractAddress, contractABI } from './constants';
 import './App.css';
@@ -10,16 +10,20 @@ import Hotels from './components/Hotels';
 import Bookings from './components/Bookings';
 import Profile from './components/Profile';
 import Book from './components/Book'
+import NoMetamask from './components/NoMetamask';
 
 const App = () => {
   const [contractIns, setContractIns] = useState(null);
   const [account, setAccount] = useState(null);
+
+  const Navigate = useNavigate();
 
   const connectContract = async () => {
     try {
       const { ethereum } = window;
       if (!ethereum) {
         console.error("Please install or enable MetaMask");
+        Navigate('/no-metamask')
         return;
       }
       const accounts = await ethereum.request({ method: "eth_requestAccounts" });
@@ -46,6 +50,7 @@ const App = () => {
           <Route path='/bookings' element={<Bookings contractIns={contractIns} account={account} connectContract={connectContract} />} />
           <Route path='/profile' element={<Profile contractIns={contractIns} account={account} connectContract={connectContract} />} />
           <Route path='/book' element={<Book contractIns={contractIns} account={account} connectContract={connectContract} />} />
+          <Route path='/no-metamask' element={<NoMetamask />} />
         </Routes>
         <Footer />
       </BrowserRouter>
