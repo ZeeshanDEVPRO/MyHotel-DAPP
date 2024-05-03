@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { Routes, Route, BrowserRouter,useNavigate } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { Routes, Route, BrowserRouter } from 'react-router-dom'; 
 import { ethers } from 'ethers';
 import { contractAddress, contractABI } from './constants';
 import './App.css';
@@ -9,8 +9,9 @@ import Nav from './components/Nav';
 import Hotels from './components/Hotels';
 import Bookings from './components/Bookings';
 import Profile from './components/Profile';
-import Book from './components/Book'
+import Book from './components/Book';
 import NoMetamask from './components/NoMetamask';
+import { useNavigate } from 'react-router-dom';
 
 const App = () => {
   const [contractIns, setContractIns] = useState(null);
@@ -23,7 +24,7 @@ const App = () => {
       const { ethereum } = window;
       if (!ethereum) {
         console.error("Please install or enable MetaMask");
-        Navigate('/no-metamask')
+        Navigate('/no-metamask');
         return;
       }
       const accounts = await ethereum.request({ method: "eth_requestAccounts" });
@@ -54,10 +55,8 @@ const App = () => {
         </Routes>
         <Footer />
       </BrowserRouter>
-
     </>
-  )
+  );
 }
 
-export default App
-
+export default App;
