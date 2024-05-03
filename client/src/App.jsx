@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, BrowserRouter, Link } from 'react-router-dom';
+import { Routes, Route, BrowserRouter, Link, Navigate } from 'react-router-dom';
 import { ethers } from 'ethers';
 import { contractAddress, contractABI } from './constants';
 import './App.css';
@@ -11,21 +11,20 @@ import Bookings from './components/Bookings';
 import Profile from './components/Profile';
 import Book from './components/Book';
 import NoMetamask from './components/NoMetamask';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const App = () => {
   const [contractIns, setContractIns] = useState(null);
   const [account, setAccount] = useState(null);
-  const history = useHistory();
 
   const connectContract = async () => {
     try {
       const { ethereum } = window;
       if (!ethereum) {
         console.error("Please install or enable MetaMask");
-        history.push('/no-metamask');
         return;
       }
+
       const accounts = await ethereum.request({ method: "eth_requestAccounts" });
       window.ethereum.on("accountsChanged", () => {
         window.location.reload();
@@ -50,12 +49,26 @@ const App = () => {
           <Route path='/bookings' element={<Bookings contractIns={contractIns} account={account} connectContract={connectContract} />} />
           <Route path='/profile' element={<Profile contractIns={contractIns} account={account} connectContract={connectContract} />} />
           <Route path='/book' element={<Book contractIns={contractIns} account={account} connectContract={connectContract} />} />
-          <Route path='/no-metamask' element={<NoMetamask />} />
+          <Route path='/no-metamask' element={<NoMetamaskComponent connectContract={connectContract} />} />
         </Routes>
         <Footer />
       </div>
     </BrowserRouter>
   );
+}
+
+const NoMetamaskComponent = ({ connectContract }) => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    connectContract().then(() => {
+      navigate('/');
+    }).catch(() => {
+      navigate('/no-metamask');
+    });
+  }, [connectContract, navigate]);
+
+  return <NoMetamask />;
 }
 
 export default App;
