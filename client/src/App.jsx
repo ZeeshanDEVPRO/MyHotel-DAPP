@@ -56,7 +56,6 @@ const App = () => {
     </BrowserRouter>
   );
 }
-
 const NoMetamaskComponent = ({ connectContract }) => {
   const navigate = useNavigate();
 
@@ -64,11 +63,12 @@ const NoMetamaskComponent = ({ connectContract }) => {
     connectContract().then(() => {
       navigate('/');
     }).catch(() => {
-      navigate('/no-metamask');
+      navigate('/no-metamask'); // Redirect to '/no-metamask' if MetaMask is not available
     });
   }, [connectContract, navigate]);
 
   return <NoMetamask />;
 }
+
 
 export default App;
