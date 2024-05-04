@@ -22,7 +22,7 @@ const App = () => {
       const { ethereum } = window;
       if (!ethereum) {
         console.error("Please install or enable MetaMask");
-        window.location('no-metamask');
+        window.location = '/no-metamask';
         return;
       }
 
