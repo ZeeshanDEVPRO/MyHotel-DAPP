@@ -2,4 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.hotel-section::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers like Chrome and Safari */
+}

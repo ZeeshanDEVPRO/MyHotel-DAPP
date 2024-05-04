@@ -70,7 +70,7 @@ const Hotels = ({ connectContract }) => {
     setSearchTerm(key);
     if (key) {
       try {
-        const url = new URL(`https://my-hotel-dapp-backend.vercel.app/search/${key}`);
+        const url = new URL(`http://localhost:5000/search/${key}`);
 
         const response = await fetch(url, {
           method: "GET",
@@ -116,7 +116,7 @@ const Hotels = ({ connectContract }) => {
       const minPrice = newValue[0];
       const maxPrice = newValue[1];
       try {
-        const url = new URL(`https://my-hotel-dapp-backend.vercel.app/${minPrice}/${maxPrice}`);
+        const url = new URL(`http://localhost:5000/searchByPrice/${minPrice}/${maxPrice}`);
         const response = await fetch(url, {
           method: "GET",
           headers: {
@@ -210,7 +210,7 @@ const Hotels = ({ connectContract }) => {
       <div className="h-[100vh] border-l border-gray-300"></div>
 
       {/* div2 */}
-      <div className=" overflow-y-auto w-[70vw] h-[86vh] py-[5vh]">
+      <div className="hotel-section overflow-y-auto w-[70vw] h-[86vh] py-[5vh]">
         <div className='custom-button cursor-pointer mx-[8vh] p-[1.5vh] w-[23vw] flex items-center justify-center gap-2'>
           <div><FaMoneyBillTransfer color='#00b28a' fontSize='34px' /></div>
           <div className='text-sm text-customGray'>Your <span className='text-red-500 font-bold'>₹2000</span> MyHotel Money is pre-applied on all properties to show the best room price.</div>

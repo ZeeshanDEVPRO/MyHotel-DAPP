@@ -61,23 +61,38 @@ app.get("/allproducts", async (req, res) => {
 });
 
 app.get("/search/:key", async (req, res) => {
+    const key = req.params.key;
+    const keys = parseFloat(key); // parse key as float
+
     try {
-        let result = await Hotel.find({
-            "$or": [
-                { name: { $regex: req.params.key, $options: 'i' } }, // Case-insensitive regex
-                { ratings: { $regex: req.params.key } },
-                { address: { $regex: req.params.key, $options: 'i' } },
-                { price: { $regex: req.params.key } },
-                { city: { $regex: req.params.key, $options: 'i' } },
-                { facility: { $regex: req.params.key, $options: 'i' } }
-            ]
-        });
+        // Check if the key is a valid number
+        const isNumber = !isNaN(keys) && isFinite(keys);
+
+        let result;
+        if (isNumber) {
+            // If the key is a valid number, search by price as a number
+            result = await Hotel.find({ price: keys });
+        } else {
+            // If the key is not a number, search by other fields
+            result = await Hotel.find({
+                "$or": [
+                    { name: { $regex: key, $options: 'i' } },
+                    { ratings: { $regex: key } },
+                    { address: { $regex: key, $options: 'i' } },
+                    { city: { $regex: key, $options: 'i' } },
+                    { facility: { $regex: key, $options: 'i' } }
+                ]
+            });
+        }
+
         res.send(result);
     } catch (error) {
         console.error("Error searching hotels:", error);
         res.status(500).send({ error: error.message || "Something went wrong" });
     }
 });
+
+
 
 //search by hotelId
 app.get("/searchByHotelId/:key", async (req, res) => {
@@ -115,9 +130,9 @@ app.get("/searchByPrice/:minPrice/:maxPrice", async (req, res) => {
 //search by facility
 app.post("/searchByFacility", async (req, res) => {
     try {
-        const selectedFacilities = req.body.selectedFacilities; 
+        const selectedFacilities = req.body.selectedFacilities;
         const result = await Hotel.find({ facility: { $in: selectedFacilities } });
-        
+
         res.send(result);
     } catch (error) {
         console.error("Error searching hotels by facility:", error);
