@@ -85,7 +85,8 @@ const Bookings = ({ account, contractIns, connectContract }) => {
       // Fetch price per hour from the contract
       const priceAsValue = await contractIns.getFinalPrice(_hotelID, _roomID, _entry, _exit);
 
-      const cancellation = await contractIns.cancelBooking(_hotelID, _roomID, _entry, _exit, { value: priceAsValue / 100000000000000 });
+      const cancellation = await contractIns.cancelBooking(_hotelID, _roomID, _entry, _exit);
+      console.warn(cancellation);
       if (cancellation) {
         toast.success(`Room ${_roomID}  Cancelled!`, {
           position: "bottom-center",
@@ -161,37 +162,38 @@ const Bookings = ({ account, contractIns, connectContract }) => {
           </div>
 
           {hotel && hotel.map((item, index) => {
+           
+            if (item.status === 'Booked') {
+              // Convert entryTime from BigNumber to milliseconds
+              const entryTimeMs = new BigNumber(item.entryTime.toString()).toNumber() * 1000;
+              const entryTimeDate = new Date(entryTimeMs);
+              const formattedEntryTime = entryTimeDate.toLocaleString();
 
-            // Convert entryTime from BigNumber to milliseconds
-            const entryTimeMs = new BigNumber(item.entryTime.toString()).toNumber() * 1000;
-            const entryTimeDate = new Date(entryTimeMs);
-            const formattedEntryTime = entryTimeDate.toLocaleString();
-            console.log(entryTimeMs,item.entryTime.toString(), formattedEntryTime);
+              const exitTimeMs = new BigNumber(item.exitTime.toString()).toNumber() * 1000;
+              const exitTimeDate = new Date(exitTimeMs);
+              const formattedExitTime = exitTimeDate.toLocaleString();
 
-            const exitTimeMs = new BigNumber(item.exitTime.toString()).toNumber() * 1000;
-            const exitTimeDate = new Date(exitTimeMs);
-            const formattedExitTime = exitTimeDate.toLocaleString();
-
-
-            return (
-              <div className='flex flex-col' key={index}>
-                <div className='bg-white dark:bg-gray-800 p-4 rounded-md shadow-md'>
-                  <div className='flex gap-7 justify-evenly items-center font-medium'>
-                    <div className="w-1/6 text-center text-black font-semibold">{item.name}</div>
-                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.hotelID.toString()}</div>
-                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.roomID.toString()}</div>
-                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedEntryTime}</div>
-                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedExitTime}</div>
-                    <div className="w-1/6 text-center">
-                      <button onClick={() => roomCancel(item.hotelID, item.roomID, entryTimeMs, exitTimeMs)} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg">
-                        Cancel
-                      </button>
+              return (
+                <div className='flex flex-col' key={index}>
+                  <div className='bg-white dark:bg-gray-800 p-4 rounded-md shadow-md'>
+                    <div className='flex gap-7 justify-evenly items-center font-medium'>
+                      <div className="w-1/6 text-center text-black font-semibold">{item.name}</div>
+                      <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.hotelID.toString()}</div>
+                      <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.roomID.toString()}</div>
+                      <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedEntryTime}</div>
+                      <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedExitTime}</div>
+                      <div className="w-1/6 text-center">
+                        <button onClick={() => roomCancel(item.hotelID, item.roomID, item.entryTime, item.exitTime)} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg">
+                          Cancel
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            );
+              );
+            }
           })}
+
         </div>
       </div>
 

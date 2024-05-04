@@ -10,6 +10,7 @@ import { ToastContainer, toast, Bounce } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import profile from '../assets/profile.jpg';
 import personIcon from '../assets/profileIcon.avif';
+import { BigNumber } from 'bignumber.js';
 
 const Profile = ({ account, contractIns, connectContract }) => {
   const [selectedOptions, setSelectedOptions] = useState([]);
@@ -388,11 +389,11 @@ const Profile = ({ account, contractIns, connectContract }) => {
           {hotel && hotel.map((item, index) => {
 
             // Convert entryTime from BigNumber to milliseconds
-            const entryTimeMs = parseInt(item.entryTime.toString()) * 1000 * 1000;
+            const entryTimeMs = new BigNumber(item.entryTime.toString()).toNumber() * 1000;
             const entryTimeDate = new Date(entryTimeMs);
             const formattedEntryTime = entryTimeDate.toLocaleString();
 
-            const exitTimeMs = parseInt(item.exitTime.toString()) * 1000 * 1000;
+            const exitTimeMs = new BigNumber(item.exitTime.toString()).toNumber() * 1000;
             const exitTimeDate = new Date(exitTimeMs);
             const formattedExitTime = exitTimeDate.toLocaleString();
 
@@ -406,7 +407,7 @@ const Profile = ({ account, contractIns, connectContract }) => {
                     <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedEntryTime}</div>
                     <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedExitTime}</div>
                     <div className="w-1/6 text-center">
-                      {item.status.toString() === 'Booked' ?
+                      {item.status === 'Booked' ?
                         (<div className='text-green-600 font-bold'>BOOKED</div>) : (<div className='text-red-600 font-bold'>CANCELLLED</div>)}
                     </div>
                   </div>

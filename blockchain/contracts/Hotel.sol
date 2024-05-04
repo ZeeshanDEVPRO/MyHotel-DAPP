@@ -53,11 +53,11 @@ contract Hotel {
         for (uint256 i = 0; i < _name.length; i++) {
             hotels[_hotelID[i]][_roomID[i]] = Room({
                 name: _name[i],
-                price: _price[i]*1000000000000000000,  // in wei
+                price: _price[i]*100000000000000,  // in wei
                 discount: _discount[i],
                 roomID: _roomID[i],
                 hotelID: _hotelID[i],
-                entryTime: new uint256[](0)  ,
+                entryTime: new uint256[](0),
                 exitTime: new uint256[](0)  
             });
         }

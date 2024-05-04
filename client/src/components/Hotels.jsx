@@ -7,7 +7,7 @@ import { MdSignalWifiStatusbarConnectedNoInternet4 } from "react-icons/md";
 import { FaMoneyBillTransfer } from "react-icons/fa6";
 import Slider from "@mui/material/Slider";
 
-const Hotels = () => {
+const Hotels = ({ connectContract }) => {
   const [hotels, setHotels] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedOptions, setSelectedOptions] = useState([]);
@@ -20,16 +20,15 @@ const Hotels = () => {
   }, [])
 
   const handleOptionChange = async (option) => {
-    
-   setSelectedOptions(prevOptions => {
+
+    setSelectedOptions(prevOptions => {
       if (prevOptions.includes(option)) {
         return prevOptions.filter(item => item !== option);
       } else {
         return [...prevOptions, option];
       }
     });
-      console.log(selectedOptions);
-    
+    console.log(selectedOptions);
 
     try {
       const response = await fetch(`https://my-hotel-dapp-backend.vercel.app/searchByFacility`, {
@@ -61,7 +60,6 @@ const Hotels = () => {
 
       const data = await response.json();
       setHotels(data);
-      // console.log(data);
     } catch (error) {
       console.error("Error fetching products:", error);
     }
@@ -106,7 +104,7 @@ const Hotels = () => {
     if (localStorage.getItem('hotelID')) {
       localStorage.removeItem('hotelID');
     }
-
+    connectContract();
     localStorage.setItem('hotelID', id);
     navigate('/book');
   };
@@ -133,10 +131,8 @@ const Hotels = () => {
     }
   }
 
-
-
   return (
-    <div className="mt-[14vh] font-noto-sans-<uniquifier> font-sans flex ">
+    <div className="mt-[13vh] font-noto-sans-<uniquifier> font-sans flex ">
       {/* div1 */}
       <div className="scrollbar overflow-y-auto w-[30vw] h-[86vh] position-fixed top-0 p-[5vh]">
 
