@@ -88,7 +88,7 @@ const Bookings = ({ account, contractIns, connectContract }) => {
       const cancellation = await contractIns.cancelBooking(_hotelID, _roomID, _entry, _exit);
       console.warn(cancellation);
       if (cancellation) {
-        toast.success(`Room ${_roomID}  Cancelled!`, {
+        toast.success(`Room ${_roomID}  Cancelled! Refund initiated`, {
           position: "bottom-center",
           autoClose: 5000,
           hideProgressBar: false,
