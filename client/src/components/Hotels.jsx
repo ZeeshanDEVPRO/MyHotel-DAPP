@@ -70,7 +70,7 @@ const Hotels = ({ connectContract }) => {
     setSearchTerm(key);
     if (key) {
       try {
-        const url = new URL(`http://localhost:5000/search/${key}`);
+        const url = new URL(`https://my-hotel-dapp-backend.vercel.app/search/${key}`);
 
         const response = await fetch(url, {
           method: "GET",
@@ -116,7 +116,7 @@ const Hotels = ({ connectContract }) => {
       const minPrice = newValue[0];
       const maxPrice = newValue[1];
       try {
-        const url = new URL(`http://localhost:5000/searchByPrice/${minPrice}/${maxPrice}`);
+        const url = new URL(`https://my-hotel-dapp-backend.vercel.app/searchByPrice/${minPrice}/${maxPrice}`);
         const response = await fetch(url, {
           method: "GET",
           headers: {
