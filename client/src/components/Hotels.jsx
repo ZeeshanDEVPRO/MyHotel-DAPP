@@ -267,7 +267,7 @@ const Hotels = ({ connectContract }) => {
             }
           </div>)
           :
-          (<div className='flex items-center justify-center text-4xl font-bold'>loading...</div>)
+          (<div className='min-h-[80vh] flex items-center justify-center text-4xl font-bold'>loading...</div>)
         }
 
       </div>
