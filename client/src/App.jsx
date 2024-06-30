@@ -10,6 +10,7 @@ import Hotels from './components/Hotels';
 import Bookings from './components/Bookings';
 import Profile from './components/Profile';
 import Book from './components/Book';
+import Predictions from './components/Predictions';
 import NoMetamask from './components/NoMetamask';
 import { useNavigate } from 'react-router-dom';
 
@@ -50,6 +51,7 @@ const App = () => {
           <Route path='/bookings' element={<Bookings contractIns={contractIns} account={account} connectContract={connectContract} />} />
           <Route path='/profile' element={<Profile contractIns={contractIns} account={account} connectContract={connectContract} />} />
           <Route path='/book' element={<Book contractIns={contractIns} account={account} connectContract={connectContract} />} />
+          <Route path='/predictions' element={<Predictions contractIns={contractIns} account={account} connectContract={connectContract} />} />
           <Route path='/no-metamask' element={<NoMetamask />} />
         </Routes>
         <Footer />

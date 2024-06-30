@@ -1,0 +1,651 @@
+Hotel Name,Rating,Location,Price,Tax,City,Star,Mini Fridge,Wi-Fi,House Keeping,Seating Area,Parking,AC,Meals,Swimming Pool
+The Orchid Hotel Mumbai Vile Parle,4,Near Mumbai Airport ,"6,499",780,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Trident Bandra Kurla,4.6,Bandra Kurla Complex ,"8,750",,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+ITC Grand Central - A Luxury Collection Hotel,4.5,South Mumbai ,"14,000",,Mumbai,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+IRA By Orchid Mumbai ( VITS Mumbai),3.9,Near Mumbai Airport ,"5,099",612,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Trident Nariman Point,4.6,Marine Drive ,"11,250",,Mumbai,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+The Lalit Mumbai,4.1,Near Mumbai Airport ,"11,160","3,000",Mumbai,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+"Ginger Mumbai, Andheri East",3.7,Andheri East ,"3,679",,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Taj Santacruz, Mumbai",4.6,Near Mumbai Airport ,"9,000",,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Hotel Surya Prakash,3.9,Chembur,"3,939",968,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hilton Mumbai International Airport,4.2,Near Mumbai Airport ,"9,100",,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Holiday Inn Mumbai International Airport,4.3,Near Mumbai Airport ,"6,999",,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+goSTOPS Mumbai - Rooms & Dorms,3.9,South Mumbai,816,211,Mumbai,3,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+The Regale by Tunga,4.1,Andheri East ,"4,427",932,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Taj Lands End, Mumbai",4.5,Bandra West ,"11,000",,Mumbai,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+"Ramada Plaza By Wyndham Palm Grove, Juhu, Mumbai",4.1,Juhu ,"7,095","2,136",Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Sahara Star,4.2,Near Mumbai Airport ,"10,400","1,872",Mumbai,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Qubestay Airport Capsule Hostel | Rooms & Dorms,3.8,Andheri East ,"1,160",341,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Courtyard by Marriott Mumbai International Airport,4.3,Near Mumbai Airport ,"7,500",,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Westin Mumbai Garden City,4.4,Goregaon ,"9,000",,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+JW Marriott Mumbai Juhu,4.4,Juhu ,"12,500",,Mumbai,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+ITC Maratha - A Luxury Collection Hotel,4.4,Near Mumbai Airport ,"10,030",,Mumbai,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+City Stay,4.6,Andheri East ,"1,229",370,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+JW Marriott Mumbai Sahar,4.5,Near Mumbai Airport ,"9,500",,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Radisson Mumbai Andheri MIDC,4.3,Andheri East ,"7,000",,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Sofitel Mumbai BKC- Luxury Brand by Accor,4.3,Bandra Kurla Complex ,"8,550","1,539",Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Leela Mumbai,4.5,Near Mumbai Airport ,"10,500",,Mumbai,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Novotel Mumbai International Airport,4.4,Near Mumbai Airport ,"8,299",,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Radisson Blu Mumbai International Airport,4.4,Near Mumbai Airport ,"7,499",,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Sun-N-Sand,4.2,Juhu ,"8,835","2,660",Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The St. Regis Mumbai,4.5,South Mumbai ,"12,500",,Mumbai,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Niranta Airport Transit Hotel & Lounge Terminal 2 Arrivals/Landside,4,In Mumbai Airport ,"9,303","2,501",Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Zostel Mumbai
+Like a 3",4,Andheri East ,"1,342",285,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"President, Mumbai - IHCL SeleQtions",4.4,South Mumbai ,"10,400",,Mumbai,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Novotel Mumbai Juhu Beach,3.6,Juhu ,"8,500",,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Ibis Mumbai Airport - An Accor Brand,3.6,Near Mumbai Airport ,"6,499",,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Ginger Mumbai, Andheri (MIDC)",3.4,Jogeshwari East ,"2,624",,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Lakeside Chalet Marriott Executive Apartments,4.1,Powai ,"9,000",,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Lemon Tree Hotel, Kalina, Mumbai",3.3,Bandra Kurla Complex ,"4,975","1,806",Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Ramee Guestline Hotel Juhu,3.6,Juhu ,"5,275","1,430",Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Ramee Techome,4,Khar West ,"6,231","1,273",Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Shabana,3.5,Colaba ,"1,304",355,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Bawa International,4,Near Mumbai Airport ,"5,000",,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Ginger Mumbai, Goregaon",3.8,Goregaon ,"3,224",,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Grand Hyatt Mumbai,4.3,Near Mumbai Airport ,"20,000",,Mumbai,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
+Hotel Marine Plaza,4.2,Churchgate ,"9,449","1,701",Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Lemon Tree Premier, Mumbai International Airport, Mumbai",4.2,Near Mumbai Airport ,"3,566","1,294",Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Airport International,3.7,Near Mumbai Airport ,"3,255",770,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Dragonfly Hotel - The Art Hotel,3.5,Near Mumbai Airport ,"3,035",935,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Four Seasons Hotel Mumbai,4.4,South Mumbai,"49,000",,Mumbai,5,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
+Gateway Inn | Rooms in an Apartment,3.2,Near Mumbai Airport ,"1,839",495,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"The Oberoi, Mumbai",4.7,Marine Drive ,"16,750",,Mumbai,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
+Hotel Jyoti Dwelling,4.2,Near Mumbai Airport ,"2,232",456,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Indie Stays,3.9,Bandra Kurla Complex ,"6,975","1,425",Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Meluha - The Fern,4.4,Powai ,"7,109","1,911",Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Afra dormitory,4.8,Andheri East ,848,228,Mumbai,3,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Hotel Airlink,3.8,Near Mumbai Airport ,"3,204",798,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Fern Goregaon,4.2,Goregaon ,"7,988","2,405",Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Mirage Hotel,4.1,Near Mumbai Airport ,"6,126","1,251",Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"RELOhomes | 1 BHK Apartment
+Like a 4",4.6,Powai ,"5,721","1,420",Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Click Hotel Caliph,3.3,Powai ,"4,500",,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+HOTEL LEAFIO MARIGOLD,3.7,Near Mumbai Airport ,"3,162",748,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Keys Select by Lemon Tree Hotels, Nestor, Mumbai",3.5,Andheri East ,"3,623","1,288",Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Sea Princess,4.1,Juhu ,"7,952","2,138",Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+HOTEL WEGO,4.1,Near Mumbai Airport ,"3,495","1,128",Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Rodas - An Ecotel Hotel,4.4,Powai ,"7,998","2,150",Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Westin Mumbai Powai Lake,4.3,Powai ,"9,000",,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Mayura Aureole Co-Living,4.2,Goregaon ,"1,496",418,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Sea Green Hotel,3.8,Churchgate ,"4,692","1,265",Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+ibis Mumbai Vikhroli - An Accor Brand,3.9,Vikhroli West ,"6,299",,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Aboo's Concord Galaxy,3.3,Near Mumbai Airport ,"3,228",831,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Paradise by Tunga,4,Andheri East ,"5,864","1,424",Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Address Dormitory,4,Andheri East ,404,113,Mumbai,3,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Arnna Hotel - Goregaon,3.8,Goregaon ,"2,919",830,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Ramee Guestline Hotel - Dadar,4.1,South Mumbai,"6,814","1,612",Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Hotel Metro Palace,3.6,Bandra West ,"4,064",495,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Manama,3.5,South Mumbai ,"3,158",747,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Aashiyana Dormitory,3.1,South Mumbai ,630,176,Mumbai,3,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+T24 Residency,4,Near Mumbai Airport ,"4,099",,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"The Taj Mahal Palace, Mumbai",4.7,Colaba ,"27,000",,Mumbai,3,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
+The Roa Hotel,3.7,Ghatkopar West ,"2,976",608,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Leafio,3.5,Near Mumbai Airport ,"2,199",264,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Byke Delotel,3.8,Borivali West,"3,183",903,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Empresa Hotel,3.8,Andheri West ,"8,099","1,458",Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+HOTEL KOHINOOR PARK,3.8,South Mumbai ,"3,596","1,118",Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Altruist Business Hotel (Andheri),3.6,Jogeshwari East ,"2,763",711,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Parle International,3.7,Near Mumbai Airport ,"4,836","1,052",Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Ocean Dormitory,3.6,Asalpha ,925,249,Mumbai,3,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Hotel Beacon T2,3.2,Near Mumbai Airport ,"3,600",851,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Columbus,3.6,Near Mumbai Airport ,"2,608",567,Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Sea Green South Hotel,3.9,Churchgate ,"5,583","1,389",Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Hotel Suba International,4.3,Near Mumbai Airport ,"6,700",,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Classic Dormitory,3.8,Andheri East ,572,145,Mumbai,3,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+The Resort Mumbai,4.2,Madh,"11,811","3,556",Mumbai,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+The Mirador,3.7,Near Mumbai Airport ,"6,750",810,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Sahil Hotel,4.2,South Mumbai ,"4,650","1,100",Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Avion Hotel,3.3,Near Mumbai Airport ,"4,205","1,033",Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Blossom Dormitory ( For Male and Female),3.6,Sakinaka ,678,189,Mumbai,3,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Comfort Inn Heritage,3.9,South Mumbai,"4,743","1,122",Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Planet Residency,3.8,Near Mumbai Airport ,"3,726","1,028",Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Kohinoor Elite,4.1,Near Mumbai Airport ,"7,250",,Mumbai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Residency Hotel Andheri,4,Andheri East ,"4,883","1,155",Mumbai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Park Kolkata,3.9,New Market Area ,"4,207",886,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Zone By The Park, Kolkata",3.8,New Town,"3,915",926,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+JW Marriott Hotel Kolkata,4.4,Tangra,"7,800",,Kolkata,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+ibis Kolkata Rajarhat - An Accor Brand,3.9,New Town,"2,220",,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Lalit Great Eastern Kolkata,4.2,Bow Barracks ,"6,365",764,Kolkata,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+ITC Royal Bengal - A Luxury Collection Hotel,4.5,Tangra,"8,925",,Kolkata,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Lemon Tree Premier, New Town, Kolkata",4.2,New Town,"2,156",782,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Novotel Kolkata Hotel and Residences,4.1,New Town,"5,060",,Kolkata,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+All Fresco Hotel,3.7,Baguiati ,"1,637",483,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Regenta Orko's Kolkata,3.9,Kasba ,"3,321",449,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Holiday Inn Express, Kolkata Airport",4.1,Dum Dum ,"4,099",,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Himalayan Inn Guest House - Near TCS Gitobitan,3.3,Salt Lake City,724,257,Kolkata,3,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Holiday Inn Kolkata Airport,4.1,Chinar Park ,"4,600",,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Taj City Centre New Town, Kolkata",4.4,Rajarhat ,"5,650",,Kolkata,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Vivanta Kolkata, EM Bypass",4.4,East Kolkata Township,"5,500",,Kolkata,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Hyatt Regency Kolkata,4.2,Salt Lake City ,"5,780",694,Kolkata,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Bandhan Residency
+Like a 3",3.7,Kaikhali ,"1,102",350,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Oberoi Grand,4.7,New Market Area ,"8,000",,Kolkata,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Fairfield by Marriott, Kolkata",4.1,New Town,"2,499",,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Ethnotel,4,Dum Dum ,"2,949",621,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Backpackers Park Hostel @ParkStreet,3.8,New Market Area ,893,209,Kolkata,3,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+THE WESTIN KOLKATA RAJARHAT,4.4,New Town ,"5,699",,Kolkata,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Taj Bengal, Kolkata",4.6,Alipore,"8,000",,Kolkata,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Hotel Senses,3.9,Salt Lake City ,"3,716","1,016",Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+ITC Sonar - A Luxury Collection Hotel,4.4,Tangra,"7,225",,Kolkata,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Kenilworth Hotel,4.3,Park Street Area,"6,054",727,Kolkata,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Peerless Inn,3.9,Near Howrah Train Station ,"4,186",855,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+De Sovrani,3.9,Salt Lake City,"2,916",690,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Pride Plaza Hotel, Kolkata",3.9,New Town,"2,800",336,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"City Central Hostel, Kolkata",4.6,Kolkata ,736,198,Kolkata,3,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Siamton Inn - A Cygnett Collection,4,Park Street ,"2,790",677,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Aauris,4.1,Park Street ,"4,650",950,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Howard Johnson by Wyndham, Kolkata Airport",3.9,Chinar Park ,"2,500",,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Park Prime Kolkata,3.8,Ballygunge,"3,652","1,006",Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Joey's Nest,4.7,Salt Lake City ,"2,245",583,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Hindusthan International,3.6,Bhowanipore,"4,134",978,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Niharika,4.1,Elgin,"2,790",570,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Vedic Village Spa Resort,4,Vedic Village,"3,688",944,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Park Palace Hotel,3.6,Ballygunge,"1,350",431,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Offbeat CCU Bunkers,4.3,Topsia,944,205,Kolkata,3,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Monotel Luxury Business Hotel,3.9,Salt Lake City,"3,523",855,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+AIRPORT CITY HOTEL,3.9,Birati ,"2,994",767,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Lindsay,3.5,New Market Area ,"2,907",710,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+RituIvy,4,East Kolkata Township,"2,132",588,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel O2 Oxygen,3.8,Near Kolkata Airport ,"2,856",583,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+VISITEL - A BOUTIQUE HOTEL,3.8,Kankurgachi,"1,991",590,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+IndiSmart Hotel,3.9,Salt Lake City,"1,999",515,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+LYNQ AERO,4,Salt Lake City,"3,242",767,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Park Guest House, Kolkata",3.7,Park Street ,"1,045",315,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Regenta Inn Larica,3.6,Chinar Park ,"2,713",419,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Golden Tulip Kolkata,4.1,Salt Lake City,"3,772",770,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Senator,4.3,Elgin,"2,511",513,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Gallery 67,4.2,Ghose Bagan ,"2,536",737,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+CHOWDHURY'S ESTATES,3.5,Elgin,"1,935",480,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Pipal Tree Hotel,4,Chinar Park ,"3,579",846,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Stayotel,4,Dum Dum ,"2,365",672,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Raajkutir, Kolkata - IHCL SeleQtions",4.6,Kankurgachi ,"5,350",,Kolkata,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Sonnet,4.1,Salt Lake City,"4,937","1,233",Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Krishna Kunja | Rooms & Caretaker
+Like a 3",4.6,South Dum Dum ,"1,440",418,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Aristocrat Hotel,3.7,New Town,"1,966",409,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Fern Residency Kolkata,3.8,Chinar Park ,"2,462",582,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Sapphire Suites,3.8,New Market Area ,"3,089",631,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Victoria Hotel,4,Chinar Park ,"2,388",720,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Pearl Hotel,3.3,Beliaghata ,"1,517",484,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Astor,4.2,Park Street Area,"4,502",920,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Barsana Boutique Hotel (Pure vegetarian),4.2,Tangra,"3,767",770,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+THE MAUREEN KOLKATA,4,Baguiati ,"3,188",671,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Aster Penthouse,4.2,Ballygunge ,"1,766",532,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Firangipani Suites,4,New Town,"1,980",484,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Celesta,4.1,Baguiati ,"3,085",842,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+HOTEL EASTERN PLAZA,3.3,Kaikhali ,"1,192",331,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Aura,3.6,New Market Area,"2,106",599,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Viceroy Kolkata (Boutique Hotel),3.8,Chinar Park ,"2,562",523,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Beyzaa Hotel & Suites (Brewery Hotel),4.2,Salt Lake City,"4,589",551,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The CORPORATE,3.4,Park Street ,"3,086",867,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Trimoorti,3.6,Bhowanipore,"1,488",476,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Bubble Beds,3.9,Kalighat ,597,161,Kolkata,3,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+The Opus Kolkata - A Boutique Hotel,3.9,Bhowanipore,"2,372",485,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Crest Inn,3.7,Park Circus,"1,260",382,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Golden Parkk,3.6,Park Street Area ,"3,767",770,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel The Crest,3.8,Park Circus,"1,328",384,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Park Victoria Hotel,3.4,New Market Area ,"1,507",308,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Samilton,4,Bhowanipore,"3,499",420,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Treebo Trend Orion Sapphire Beck Bagan,3.8,Park Street ,"2,540",530,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Eennra Oiitijhyya,4.4,Keyatala,"1,994",567,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"The Aster Heritage Homestay | Rooms & Caretaker
+Like a 3",4.3,New Market Area ,"2,452",660,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Basera Guest House,4.1,Gariahat,"1,000",289,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+LYNQ-CICO - Hotel,3.8,Alipore,"2,372",576,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Lake Hotel,3.7,Dhakuria,"1,986",528,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"The Aster Heritage Gold
+Like a 3",4.4,New Market Area ,"4,723","1,320",Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Treebo Tryst Tahoora International Park Street,3.7,Park Street ,"3,257",680,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Southern Plaza,3.8,Kalighat,"3,201",674,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+DIAMOND PLAZA,3.8,Bow Bazaar ,"1,850",438,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Lytton Hotel,3.6,New Market Area ,"3,004",711,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Dorota House | Room & Caretaker
+Like a 3",4,Salt Lake City,"1,365",412,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel O2 VIP,3.9,Near Kolkata Airport ,"2,212",481,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Gateway Continental,3.8,Dum Dum ,"2,800",737,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Air View,4,Dum Dum ,"1,078",255,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Casa Fortuna,3.9,Park Street Area,"3,934",950,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Middleton Inn,3.5,Park Street ,"2,590",545,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Sawood International,3.6,Tangra,"2,122",560,Kolkata,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Radisson Hyderabad Hitec City,3.7,Gachibowli,"4,500",,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Park Hyderabad,3.7,Somajiguda,"5,699","1,284",Hyderabad,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+ITC Kohenur - A Luxury Collection Hotel,4.3,Hitech City,"16,150",,Hyderabad,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
+Fairfield by Marriott Hyderabad Gachibowli,3.9,Gachibowli,"4,004",818,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Radisson Blu Plaza Hotel,4.1,Banjara Hills,"7,250",,Hyderabad,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Lemon Tree Hotel Gachibowli,4,Gachibowli,"4,183","1,518",Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Red Fox Hotel Hyderabad,3.9,Hitech City,"2,654","1,050",Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Lemon Tree Hotel, Banjara Hills, Hyderabad",4.1,Banjara Hills,"2,571",933,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Taj Krishna, Hyderabad",4.5,Banjara Hills,"8,000",,Hyderabad,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Novotel Hyderabad Airport,3.9,Near Hyderabad Airport ,"12,999",,Hyderabad,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Rester Select Kukatpally,4,Kukatpally,"2,463",674,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Golkonda Hotel,4.1,Masab Tank,"5,499",660,Hyderabad,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Trident Hyderabad,4.7,Hitech City,"14,250",,Hyderabad,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Ellaa Hotel Gachibowli,3.8,Gachibowli,"3,321",678,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Lemon Tree Premier HITEC City Hyderabad,4,Hitech City,"3,151","1,246",Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Siri Inn Hospitality | Rooms in an Apartment
+Like a 3",3.6,Hitech City,"1,287",373,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+ibis Hyderabad HITEC City - An Accor Brand,3.8,Hitech City,"4,499",,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hyatt Place Hyderabad Banjara Hills,4.1,Banjara Hills,"7,249",,Hyderabad,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Vivanta Hyderabad, Begumpet",4.4,Begumpet,"6,500",,Hyderabad,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Zen Comfort,4,Gachibowli,"1,438",387,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hyderabad Marriott Hotel and Convention Centre,4.3,Kavadiguda,"6,500",,Hyderabad,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+HOTEL SIGNATURE AIRPORT ZONE SHAMSHABAD,4.1,Shamshabad ,"2,217",571,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Daspalla Hotel,4.1,Jubilee Hills,"5,413","1,386",Hyderabad,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Hotel OAK by Signature,4.2,Shamshabad ,"1,317",346,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Aditya Park Hyderabad - A Sarovar Hotel,4,Ameerpet,"6,111","1,248",Hyderabad,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Park Hyatt Hotel and Residences, Hyderabad",4.2,Sri Nagar Colony,"10,000",,Hyderabad,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Marigold By Green Park,4.3,Ameerpet,"5,714","1,485",Hyderabad,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Hotel Hyderabad Grand,3.8,Shamshabad ,"3,028",756,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Green Park,4.2,Ameerpet,"5,122","1,267",Hyderabad,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Central Court,3.6,Lakdikapul,"2,041",566,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Holiday Inn Express Hyderabad HITEC City,3.5,Hitech City,"4,499",,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Slackpackr Hostel,4.1,Begumpet,849,237,Hyderabad,3,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Holiday Inn Express Hyderabad Banjara Hills,3.5,Punjagutta,"4,140",540,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+CITADEL Hotel By Vinnca,4.1,Gaghan Pahad,"2,932",802,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Aditya Hometel Hyderabad - A Sarovar Hotel,3.5,Ameerpet,"1,860",380,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Deccan Serai Grande,4.4,Gachibowli,"7,014","2,297",Hyderabad,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Katriya Hotel and Towers,2.8,Somajiguda,"3,761",451,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Saptagiri Hyderabad,3.8,Shivaji Nagar ,"2,724",614,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hampshire Plaza Hotel,3.8,Lakdikapul,"3,379",891,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Taj Deccan, Hyderabad",4.4,Banjara Hills,"6,990",,Hyderabad,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Avasa Hotel,4.2,Madhapur,"6,696","1,368",Hyderabad,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Hotel Akoya - HITECH City Hyderabad,4.1,Hitech City,"2,471",681,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+MARIGOLD AT NEST,3.8,Gachibowli,"1,346",307,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+HOTEL RAINTR33,3.8,Hitech City,"2,011",550,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Urban Nest Luxury Rooms,3.9,Kokapet,"1,046",357,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Novotel Hyderabad Convention Centre,4.2,Hitech City,"10,500",,Hyderabad,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Hotel B Plus L,4,Hitech City,"3,360",795,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+La Hometel Hotel - HITECH City Hyderabad,3.9,Hitech City,"1,435",387,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Le Meridien Hyderabad,4.3,Gachibowli,"10,500",,Hyderabad,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+"Restel Studio Flats
+Like a 3",4.2,Borabanda,"1,801",504,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Conclave,3.2,Gachibowli,"1,613",497,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Landmark Banjara Hills,4,Banjara Hills,"1,696",437,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+THE CENT,3.3,Lakdikapul,"1,662",389,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Courtyard by Marriott Hyderabad,4.5,Kavadiguda,"6,000",,Hyderabad,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"The Wilderness Retreat | Rooms & Restaurant
+Like a 4",3.9,Gandipet,"7,346","2,197",Hyderabad,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Altruist Business Hotel (Hitech),3.7,Shilpa Hills,"4,278","1,028",Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Istay Hotels Hitec,3.7,Kondapur,"2,913",613,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hyatt Hyderabad Gachibowli,4.1,Gachibowli,"8,750",,Hyderabad,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Art Boutique Hotel,3.8,Gachibowli,"2,197",677,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Imperial Classic,3.9,Himayat Nagar,"1,068",315,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Mercure Hyderabad KCP - An AccorHotels brand,4.2,Punjagutta,"5,000",,Hyderabad,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Veeraj Suites,4,Rai Durg,"2,170",599,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Bloom Hotel - Gachibowli,4.1,Gachibowli,"4,500",,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Oakwood Residence Kapil Hyderabad,4.5,Gachibowli,"7,500",,Hyderabad,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Aalankrita Resort & Convention,4.1,Secunderabad ,"4,484",916,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Minerva Grand- Kondapur,3.9,Kothaguda,"4,371",893,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+M SQUARE HOTEL,3.9,Hitech City,"4,395",898,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Sri Sri Suites,3.4,Madhapur,"1,208",330,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Manohar,2.7,Begumpet,"3,158",645,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Lime Boutique Suites,4.1,Gachibowli,"2,976",608,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Taj Tristar,3.9,Secunderabad ,"2,271",494,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Minerva Grand - Banjara,4,Banjara Hills,"4,464",912,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Sheraton Hyderabad,4.3,Gachibowli,"1,25,000",,Hyderabad,5,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
+ITC Kakatiya - A Luxury Collection Hotel,4.2,Begumpet,"9,690",,Hyderabad,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Bikanervala Boutique Hotel,4.1,Banjara Hills,"3,488",713,Hyderabad,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Country Inn and Suites by Radisson, Sahibabad",4.2,In Ghaziabad ,"6,249",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Radisson Blu Kaushambi Delhi NCR,4,In Ghaziabad ,"5,039",605,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Ashok,3.8,Chanakyapuri ,"6,288",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Pride Plaza Hotel Aerocity New Delhi,4,Aerocity ,"6,499",780,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Golden Tulip Vasundhara Hotel & Suites, Delhi NCR",3.9,In Ghaziabad ,"3,386",871,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Welcomhotel by ITC Hotels, Dwarka, New Delhi",4,Sector 10 Dwarka,"6,223",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Holiday Inn New Delhi International Airport,4.2,Aerocity ,"6,999",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Novotel New Delhi International Airport- An Accor hotels brand,4.1,Aerocity ,"7,250",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Suryaa New Delhi,4.1,New Friends Colony,"5,348","1,092",Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Hosteller Delhi | Private Rooms & Dorms,4.3,New Friends Colony,"2,228",503,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The LaLiT New Delhi,4.1,Connaught Place,"9,040","2,430",Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Radisson Blu Plaza Delhi Airport,4.3,Mahipalpur ,"4,500",765,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Roseate House New Delhi,4.4,Aerocity ,"9,649","1,737",Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Lemon Tree Hotel East Delhi Mall Kaushambi,3.9,In Ghaziabad ,"2,073",752,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+YWCA OF DELHI BLUE TRIANGLE FAMILY HOSTEL,3.9,Connaught Place ,"2,620",770,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Trans International,4.2,Mahipalpur ,"2,274",465,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Leela Ambience Convention Hotel Delhi,4.4,East Delhi,"7,499",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Jaypee Vasant Continental Hotel,4,Vasant Vihar ,"5,999",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+YWCA INTERNATIONAL GUEST HOUSE,3.8,Connaught Place ,"2,408",648,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Holiday Inn New Delhi Mayur Vihar,4.1,East Delhi,"6,249",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Lemon Tree Premier Delhi Airport,3.9,Aerocity ,"4,464","1,478",Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Radisson Blu Marina Hotel Connaught Place,3.8,Connaught Place,"8,000",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Metropolitan Hotel and Spa,4.1,Connaught Place,"7,500",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Grand New Delhi,3.8,Vasant Kunj ,"12,899","2,322",Delhi,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Crowne Plaza Mayur Vihar,4.3,East Delhi,"8,649",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Hotel Smart Plaza,4.3,Mahipalpur ,"1,525",423,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Aero Star,4.3,Mahipalpur ,"2,472",505,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Golden Bliss Near IGI Airport Mahipalpur,3,Mahipalpur ,"2,794",811,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel International Inn,4.1,Mahipalpur ,"2,199",537,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Park New Delhi,3.5,Connaught Place ,"7,905","2,125",Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+ibis New Delhi Aerocity - An Accor Brand,3.7,Aerocity ,"5,100",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+goSTOPS Delhi - Rooms & Dorms,4.2,Chandni Chowk ,"1,481",384,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel The Royal Plaza,3.4,Connaught Place ,"7,379",885,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Taj Mahal, New Delhi",4.5,Man Singh Road Area ,"12,000",,Delhi,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Hotel Shanti Palace (Mahipalpur),3.7,Mahipalpur ,"2,604",532,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Aloft New Delhi Aerocity,4.2,Aerocity ,"6,950",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Radisson Blu Hotel New Delhi Dwarka,3.7,Sector 13 Dwarka,"5,953",714,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Hotel Star,4.3,Mahipalpur ,"2,472",505,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Pullman New Delhi International Airport- An Accor Luxury Brand,4.3,Aerocity ,"10,500",,Delhi,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Hotel Aman Continental @ Paharganj,4.3,Paharganj ,"2,045",620,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Taj Palace, New Delhi",4.5,Chanakyapuri ,"11,500",,Delhi,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Red Fox Hotel Delhi Airport,3.9,Aerocity ,"2,903","1,054",Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Vivanta New Delhi, Dwarka",4.3,Sector 21 Dwarka,"7,100",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Gold Regency @ Paharganj,4.3,Paharganj ,"2,044",620,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Red Brick | Home by Earthaa Escapes
+Like a 3",4.2,Malviya Nagar,"2,548",696,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+JW Marriott Hotel New Delhi Aerocity,4.5,Aerocity ,"12,800",,Delhi,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Crowne Plaza Rohini,4.3,Rohini,"6,498",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Park Plaza, Shahdara",3.7,East Delhi,"3,825",,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Andaz Delhi - A concept by Hyatt,4.3,Aerocity ,"11,000",,Delhi,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Homestay AC Dormitory at Kashmiri Gate,3.9,North Delhi,735,229,Delhi,3,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Zone Connect Saket Delhi,3.9,Saket,"5,900","1,205",Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Crowne Plaza Okhla,4.3,Okhla Industrial Area,"6,300",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Taurus Sarovar Portico,3.1,Mahipalpur ,"2,976",608,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Leela Palace New Delhi,4.5,Chanakyapuri ,"17,000",,Delhi,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
+Shangri-La Eros New Delhi,4.4,Connaught Place ,"12,500",,Delhi,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Sheraton New Delhi,4.5,Saket,"9,500",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Hyatt Centric Janakpuri, New Delhi",3.6,Janakpuri,"5,599",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+ITC Maurya - A Luxury Collection Hotel,4.3,Chanakyapuri ,"11,000",,Delhi,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Le Meridien Delhi,4.2,Connaught Place ,"12,150",,Delhi,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+"Eros Hotel New Delhi ,Nehru Place",4,Near Nehru Place,"4,999",,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Jaypee Siddharth Hotel,3.7,Pusa road ,"6,299",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Hotel Vertu,4,Mahipalpur ,"2,525",631,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Le ROI, Delhi@ New Delhi Railway Station",4,Paharganj,"2,474",633,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Ashiana Hotel @ New Delhi Railway Station,3.7,Paharganj ,883,307,Delhi,3,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+The Roseate,4.3,Mahipalpur ,"12,024","2,164",Delhi,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+"The Connaught, New Delhi - IHCL SeleQtions",4.5,Connaught Place ,"7,499",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Hyatt Regency New Delhi,4.2,R.K. Puram ,"8,100","1,863",Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Hotel Samrat,3.2,Chanakyapuri ,"4,278",874,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"New Delhi YMCA Tourist Hostel | Rooms & Wi-Fi
+Like a 3",3.5,Connaught Place ,"3,148",847,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Golden Keys Inn,3.7,North Delhi,"2,009",679,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Ginger East Delhi,3.5,East Delhi,"1,839",,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Hans,3.6,Connaught Place ,"4,860",993,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Shubham Vilas
+Like a 3",4.2,Rajouri Garden,"1,876",665,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Ramada By Wyndham New Delhi Pitampura,3.5,North Delhi,"4,437",906,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Svelte Hotel & Personal Suites,3.6,Saket,"8,333",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Grand Uddhav,4.2,Paharganj ,"3,081",817,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Chanakya Inn,3.4,Mahipalpur ,"1,836",513,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Viva Palace @ Delhi Airport,3.9,Mahipalpur ,"2,271",567,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Hari Piorko,3.8,Paharganj ,"1,104",412,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Southern,3.4,Karol bagh,"1,951",469,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Delhi 37,4.3,Mahipalpur ,"2,472",505,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Red Fox Hotel East Delhi,3.6,East Delhi,"1,908",692,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+HOME@B11,2.3,East Of Kailash,"2,758",901,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Umrao,3.9,Samalka ,"5,000",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+IIDL Suites,4.1,East Delhi,"4,900",,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Four Points by Sheraton Delhi,4,Samalka ,"4,559",,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Deventure Sarovar Portico, Kapashera, New Delhi",3.9,Delhi ,"5,022","1,026",Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"The Dream House BnB | Rooms & Caretaker
+Like a 3",4.1,Safdarjung Enclave ,"2,542",684,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Park Inn by Radisson, IP Extension- New Delhi",3.8,East Delhi,"4,150",,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Claridges New Delhi,4.1,Motilal Nehru Marg Area ,"10,350","1,863",Delhi,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+De Pavilion Hotel,3.6,Mahipalpur ,"3,164",646,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Venizia Sarovar Portico,3.6,North Delhi,"3,766",769,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Centaur Hotel,2.5,Delhi Airport ,"3,202",654,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Orion Plaza - Nehru Place,3.8,Near Nehru Place,"2,706",589,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Dee Marks Hotel & Resort Delhi Airport,3.4,Mahipalpur ,"2,534",633,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+HOTEL LE SEASONS,3.6,Mahipalpur ,"2,653",700,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Caspia Hotel New Delhi Shalimar Bagh,3.4,North Delhi,"2,799",572,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Park Inn by Radisson, Lajpat Nagar",4.1,Andrews Ganj,"6,999",,Delhi,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Jukaso Inn Down Town,3.6,Connaught Place ,"3,134",682,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel LA New Delhi,3.6,Mangolpuri,"3,438",702,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Kelvish Hotel Near Delhi Airport,3.9,Mahipalpur ,"1,869",481,Delhi,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Taj Club House, Chennai",4.3,Royapettah,"6,390",767,Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Park Chennai,3.7,Near US Consulate,"7,198","2,167",Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Taj Fisherman's Cove Resort & Spa, Chennai",4.3,Covelong ,"12,555","2,260",Chennai,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Hotel Savera,4,Mylapore,"4,612","1,091",Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Ibis Chennai OMR - An Accor Brand,4.1,Sholinganallur,"3,345",,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Taj Coromandel, Chennai",4.5,Near US Consulate,"11,200",,Chennai,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Courtyard by Marriott Chennai,4.2,Mount road,"7,500",,Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Radisson Blu Hotel Chennai City Centre,4.3,Egmore,"9,443",,Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+FIRST INN HOTELS,3.8,Perungudi,"2,907",594,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Ibis Chennai City Centre - An Accor Brand,3.9,Mount road ,"5,299",,Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Rohaan Inns - UPAR Ashok Nagar,4.1,Ashok Nagar ,"1,771",495,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Vivanta Chennai, IT Expressway",4.4,Sholinganallur,"7,360",,Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Taj Connemara, Chennai",4.5,Chennai,"7,600","1,368",Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Four Points by Sheraton Chennai OMR,4.1,Sholinganallur,"5,859","1,197",Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Ramada Plaza by Wyndham,4.5,Saidapet ,"7,533","2,554",Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Citadines OMRChennai,4.4,Sholinganallur,"11,340",,Chennai,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+The Leela Palace Chennai,4.5,Raja Annamalai Puram,"10,800",,Chennai,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+"The Raintree, Annasalai",4.4,Mount road,"7,299",,Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Hablis,4.2,Mount road ,"5,271","1,124",Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Novotel Chennai Chamiers Road,4.3,Nandanam,"7,391",,Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Residency,4.2,T Nagar,"5,336","1,455",Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Residency Towers,4.3,T Nagar,"6,696","1,826",Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Novotel Chennai OMR - An Accor Brand,4.3,Sholinganallur,"6,134",,Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Hotel Southern Comfort ( Chennai Airport ),3.6,Chennai Airport ,"2,870",757,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Lemon Tree Hotel Chennai,3.6,Saidapet ,"2,487",903,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Pride Hotel Chennai,3.6,Kilpauk,"3,399",408,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Ginger Chennai, Vadapalani",3.5,Vadapalani,"2,699",,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+UPAR Nungambakkam,4.1,Nungambakkam,"2,716",633,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Ginger Chennai,3.5,Tharamani,"3,299",,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Holiday Inn Express Chennai OMR Thoraipakkam,3.5,Thoraipakkam,"3,680",480,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Raj Park Chennai,3.6,Teynampet,"3,953",935,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"UPAR Uthandi, ECR
+Like a 3",3.6,East Coast Road (ECR),"1,317",397,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Abu Palace,3.4,Purasawalkam ,"2,947",789,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Ramada Chennai Egmore,3.9,Egmore,"4,557","1,078",Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hyatt Regency Chennai,4.1,Teynampet,"7,499",,Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Lemon Tree Hotel, Shimona, Chennai",4,Manapakkam ,"2,819","1,115",Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Trident Chennai,4.5,Chennai Airport ,"127,050",,Chennai,5,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
+Holiday Inn Chennai OMR IT Expressway,4.2,Thiruvanmiyur,"7,499",,Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Ibis Chennai SIPCOT - An Accor Brand,4,Egatoor ,"3,299",,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Accord Metropolitan,4.1,T Nagar,"6,500","1,957",Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Park Hyatt Chennai,4.5,Guindy ,"9,000",,Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+OYO Home Fantasea Uthandi Near Juhu Beach,1.9,Uthandi,769,40,Chennai,3,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Gokulam Park Sabari - Siruseri SIPCOT,4.2,Navallur,"5,719","1,244",Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+BOULEVARD BY DESIGN HOTEL,4.1,Velachery ,"4,860","1,026",Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Fairfield by Marriott Chennai OMR,4.2,Sholinganallur,"4,850",,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+ITC Grand Chola - A Luxury Collection Hotel,4.4,Guindy ,"12,500",,Chennai,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+The Ambassador Pallava,4,Egmore,"8,079","2,432",Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Le Royal Meridien,3.9,Mount road ,"9,000",,Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Taj Wellington Mews, Chennai",4.7,Tharamani,"10,560",,Chennai,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Novotel Chennai Sipcot - An Accor Brand,4.3,Egatoor ,"8,138",,Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Mount Manor,3.4,Chennai Airport ,"2,350",634,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Green Park Chennai,4.2,Vadapalani,"6,696","1,368",Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Mango Hill central Chennai,3.2,T Nagar,"3,314",677,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Venture Park,3.5,Thoraipakkam,"1,315",339,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Grand Chennai by GRT Hotels,4.5,T Nagar,"8,550","1,710",Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Season 4 Residences, Nungambakkam",3.7,Near US Consulate,"2,591",620,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Ginger Chennai OMR,4.5,Navallur,"2,479",,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Pandian,3.5,Egmore,"1,595",342,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hilton Chennai,4.3,Guindy ,"11,000",,Chennai,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+FORTEL,3.5,Egmore,"3,118",703,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Royal Park,3.1,Near Marina Beach,"1,351",407,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Fairfield by Marriott Chennai Mahindra World City,4.2,Mahindra World City ,"5,533","1,130",Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Crossway Parklane Airport Hotel,3.2,Meenambakkam ,"2,544",574,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Ashok Residency,3.7,Porur,"4,290",933,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Greens Gate (Near Central station),3.6,Poongavanapuram,"1,887",498,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+HOTEL RANJITH,4,Near US Consulate,"5,208","1,064",Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Welcomhotel by ITC Hotels, GST Road, Chennai",4.2,Singaperumal Koil ,"7,200",,Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Regenta Central RS Chennai SIPCOT OMR,4.4,Egatoor ,"3,824",459,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+CRESCENT PARK (near US Consulate Chennai),4.1,Nungambakkam,"2,307",471,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Harrisons,4,Nungambakkam,"3,906",798,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+MGM Beach Resorts (15Kms before Mahabalipuram),3.9,Muttukadu ,"25,110","7,812",Chennai,3,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
+PARK PLAZA CHENNAI OMR,4,Thoraipakkam,"4,200",,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Feathers A Radha Hotel Chennai,4.3,Manapakkam ,"8,999",,Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+V7 HOTEL,3.2,Porur,"3,667",896,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Keys Select by Lemon Tree Hotels, Katti-Ma, Chennai",3.7,Adyar,"2,240",796,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hostel Gandhi,4.2,Saidapet ,"1,307",107,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Grand Cascade,3.6,Poongavanapuram ,"2,052",502,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Days Hotel Chennai OMR,4.3,Kelambakkam ,"2,767",565,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+PP Residency,4,Chennai ,"2,768",713,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Highnest | Rooms & Caretaker,3.5,Kattankolatur R.F. ,"2,815",633,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Grand Elegant,3.9,Poongavanapuram,"2,046",418,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Accord Chrome,4.5,Chromepet ,"6,975","1,425",Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+AVENUE HOTEL -CHENNAI AIRPORT,3.6,Pallavaram ,"2,671",546,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+La Woods hotel (1Km from us consulate chennai),4,Mount road,"3,360",403,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+E Hotel,4.1,Royapettah,"6,749",810,Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Hotel Bakya Slot - Maraimalai Nagar,3.6,Maraimalai Nagar ,"2,046",484,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Pharos Hotels,4.3,Nungambakkam,"4,650","1,100",Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Al Noor Palace,4,Triplicane ,"2,093",428,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+JS Five two By twinstar hotel,4,Raja Annamalai Puram,"3,794",976,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+HOTEL HALEZ,4.3,Sholinganallur,"3,800",456,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Essentia Premier Hotel,4.1,Thoraipakkam,"3,989",479,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+ILARA Hotel & Spa,4,Navallur,"2,650",576,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Centrepoint OMR,3.8,Sholinganallur,"3,322",723,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"KLASE HOTELS, GUINDY",3.3,Mount road ,"2,914",768,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Just Guest House,4,Pazhavanthangal ,"3,149",811,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+GRAND OLIVER,3.6,Poongavanapuram,"1,243",302,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Pebbles Serviced Apartments
+Like a 3",4.2,T Nagar,"2,349",547,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Mercure Chennai Sriperumbudur - An Accor Brand,4.2,Oragadam ,"5,900",,Chennai,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+ZAITH RESIDENCY,3.4,Thousand Lights,"2,355",635,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Mount Kailash Suites,4,Mount road ,"2,516",615,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Mount City near US Consulate,3.6,Triplicane ,"1,748",460,Chennai,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Park Bangalore,3.9,Ulsoor,"7,567","2,254",Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Keys Select by Lemon Tree Hotels, Whitefield, Bengaluru",4,Brookefield,"1,509",531,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+ITC Windsor - A Luxury Collection Hotel,4.4,Vasanth Nagar ,"9,900",,Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Lemon Tree Premier Ulsoor Lake Bangalore,4,Sivanchetti Gardens ,"2,347",918,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Keys Select by Lemon Tree Hotels, Hosur Road, Bengaluru",4,Hosur road,"2,522","1,014",Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Chancery Pavilion,3.8,Ashok Nagar ,"6,580","1,540",Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Radisson Blu Atria Bengaluru,4.3,Palace road,"10,200",,Bangalore,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Lemon Tree Hotel Electronics City Bangalore,4.1,Electronic City,"2,598","1,016",Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Welcomhotel by ITC Hotels, Richmond Road, Bengaluru",4.3,Richmond road,"7,700",,Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Grand Mercure Bangalore - An Accor Brand,4.3,Koramangala,"9,700",,Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Holiday Inn Express Bengaluru Yeshwantpur,3.7,Tumkur road,"3,680",480,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+goSTOPS Bengaluru - Rooms & Dorms,4.2,Gandhi Nagar,"1,098",269,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Holiday Inn Bengaluru Racecourse,4,Gandhi Nagar,"7,249",,Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Fortune Select JP Cosmos - Member ITC Hotel Group,4,Vasanth Nagar ,"5,999",,Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Hyatt Centric MG Road Bangalore,4.2,Ulsoor,"6,250",,Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Ibis Bengaluru City Centre - An Accor Brand,3.9,Sampangi Rama Nagar ,"4,299",,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"The Fern Residency - Yeshwanthpur, Bengaluru",4,Tumkur road,"4,112",831,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Ashraya International Hotel,3.7,Infantry Road ,"2,792",564,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Davanam Sarovar Portico Suites,4.3,Koramangala,"5,076","1,026",Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Taj M G Road, Bengaluru",4.6,Sivanchetti Gardens ,"9,000",,Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Draper Startup House Koramangala | Dorms & Rooms,4.4,Koramangala,"1,113",294,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Lalit Ashok Bangalore,3.8,Seshadripuram,"6,698","1,354",Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Vivanta Bengaluru, Residency Road",4.3,Residency Road ,"7,000",,Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+ibis Bengaluru Hebbal - An Accor Brand,4.1,Hebbal,"4,499",,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Vividus,4.2,Gandhi Nagar,"6,547","2,156",Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Citrus Hotel Cunningham,4.1,Cunningham Road ,"3,934","1,075",Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Citrus Classic Bengaluru,3.9,Outer Ring Road,"3,575",977,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Taj Yeshwantpur, Bengaluru",4.6,Tumkur road,"7,500",,Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Lemon Tree Hotel Whitefield,4.1,Brookefield,"2,347",843,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Golden Lotus Bangalore Boutique Suites | Rooms & Garden
+Like a 3",3.8,Richmond road ,"2,660",754,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Ramada Encore,4.4,Domlur Layout,"5,640","1,140",Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Ibis Bengaluru Hosur Road - An Accor Brand,3.9,Hosur road,"4,499",,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"The Oberoi, Bengaluru",4.7,Ulsoor,"11,500",,Bangalore,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Holiday Inn Express Bengaluru Whitefield ITPL,3.5,Whitefield,"3,399",,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Hosteller Bangalore Brigade Road,4.3,Ashok Nagar ,"1,330",315,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Ginger Bangalore (IRR),3.6,Domlur Layout,"1,689",,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Gokulam Grand Hotel & Spa,4.1,Mathikere,"6,409","1,295",Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Bloom Hotel - Airport Road Bengaluru,4.4,Near Bangalore Airport ,"4,000",,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Ramanashree Richmond Circle,3.8,Sampangi Rama Nagar ,"2,792",564,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"SRS Suites
+Like a 3",4.4,Koramangala,"3,178",806,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+JP CORDIAL,3.7,Majestic,"2,726",638,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Taj Bangalore,4.6,Near Bangalore Airport ,"11,750",,Bangalore,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Radisson Bengaluru City Center,4.5,Ulsoor,"7,500",,Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Pride Hotel Bangalore,3.8,Richmond road ,"4,599",552,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+BloomSuites | Electronic City,4.1,Electronic City,"5,000",,Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Southern Star Bangalore,3.9,Ashok Nagar ,"3,082",872,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Royal Orchid Central Bangalore,3.7,Ulsoor ,"5,823",699,Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Shivas Galaxy Hotel,4.1,Near Bangalore Airport ,"2,900",604,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"The Bouvice
+Like a 3",4.2,Koramangala,"2,279",624,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+JW Marriott Bengaluru Prestige Golfshire Resort and Spa,4.7,In Devanhalli ,"25,000",,Bangalore,3,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
+La Sara Grand (Formerly Known as Nandhana Grand),4,Koramangala,"2,939",752,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Zone By The Park Infantry,3.9,Infantry Road ,"4,252","1,021",Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Chancery,3.9,Ashok Nagar ,"4,230",990,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Nash Inn Electronic City,3.1,Electronic City,979,268,Bangalore,3,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+Radisson Blu Bengaluru Outer Ring Road,4.2,Outer Ring Road,"8,000",,Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Ginger Bangalore, Whitefield",3.7,Brookefield,"1,884",,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hotel Royal Orchid Bangalore,3.9,Domlur Layout,"7,268",872,Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"The Hosteller Bangalore, Koramangala",4.3,Koramangala,"1,295",294,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Silicon City Hotel,3.4,Hosur road,"1,586",418,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Country Inn And Suites By Radisson Bengaluru Hebbal,3.8,Hebbal,"3,500",,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Octave Himalaya Monarch,4,Gandhi Nagar,"1,645",333,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Greenpark Bengaluru,4.7,Bannerghatta Main road,"6,345","1,350",Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+ITC Gardenia - A Luxury Collection Hotel,4.5,Ashok Nagar ,"11,700",,Bangalore,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+The Continentti Whitefield,4,Brookefield,"2,791",564,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Monarch Luxur,3.9,Infantry Road ,"3,723",752,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Ballal Residency,3.9,Residency Road ,"3,084",836,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Hibernest Indiranagar,4.2,Indiranagar,"1,005",325,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Fortune Park JP Celestial-Member ITC Hotel Group,3.8,Gandhi Nagar,"5,292",,Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Click Hotel Bangalore, International Airport",4.2,Near Bangalore Airport ,"3,510",421,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Omatra Hotel HSR,3.4,Outer Ring Road,"2,194",539,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Svenska Design Hotel,3.3,Electronic City,"1,999",642,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Peninsula Suites,3.9,Whitefield,"2,264",306,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Iris Hotel & Spa Bangalore,4.1,Residency Road ,"5,330","1,247",Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+SM Royal Stay Hotel near Intl Airport Bangalore,4.2,Near Bangalore Airport ,"1,692",360,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Halcyon Residences
+Like a 3",3.8,Koramangala,"2,759",755,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Shangri-La Bengaluru,4.5,Palace road ,"13,500",,Bangalore,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+The Leela Bhartiya City Bengaluru,4.6,Tirumanahalli,"11,000",,Bangalore,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+"Holiday Inn Express & Suites, OMR Bengaluru",4.1,Whitefield,"3,999",,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Fairfield By Marriott Bengaluru Rajajinagar,3.9,Rajajinagar,"5,400",,Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+The Zuri Whitefield,4.3,Whitefield,"6,501",780,Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+MAYBAACH HOTELS,4.1,Marathahalli,"2,820",660,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Regenta Place Bangalore by Royal Orchid Hotels Limited,3.5,Shivaji Nagar ,"2,848",342,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Icon Business Hotel by Bhagini,3.6,HAL old airport road,"2,300",465,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Sterlings Mac Hotel & Suites,4.1,HAL old airport road,"6,768","1,368",Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Nexstay Kites Inn,4.3,Hosur road,"2,799",,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+The Leela Palace Bengaluru,4.5,HAL old airport road,"16,500",,Bangalore,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE
+Omatra Infantry Road | Rooms in a Homestay,3.8,Infantry Road ,"2,098",554,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Bloom Hotel HSR Layout Sector 3,3.9,HSR Layout,"5,500",,Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+NOOR EMPIRE INTERNATIONAL,3.7,Koramangala,"2,776",752,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Attide Biz,3.5,Hebbal,"2,835",693,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Stayhome Classic,4.3,Bilekahalli,"2,345",642,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+DoubleTree Suites by Hilton,4.3,Outer Ring Road,"9,500",,Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+Bloomrooms @ Indiranagar,4.1,Indiranagar,"4,300",,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+RG Royal Hotel,4.2,Yeshwanthpur,"3,666",741,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Four Seasons Hotel Bengaluru at Embassy One,4.8,Ganganagar ,"14,875",,Bangalore,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+Ramee Strand inn,3,Hosur road,"1,505",396,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Shravanthi Sarovar Portico JP Nagar,3.6,Outer Ring Road,"3,977",804,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+"Vivanta Bengaluru, Whitefield",4.3,Whitefield,"7,500",,Bangalore,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+"Melange Astris
+Like a 3",4.1,Richmond road ,"4,300",969,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Octave Church Inn,3.5,Church Street ,"1,669",337,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+Mastiff Infantry Bengaluru,4,Infantry Road ,"1,865",569,Bangalore,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,4,,"1,748",564,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,4.1,,"7,567",806,Pune,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+,4.7,,"1,509",638,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,3.8,,"9,900",,Pune,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+,4,,"2,347",,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,3.6,,"2,522",552,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,3.8,,"6,580",,Pune,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+,4.1,,"10,200",872,Pune,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+,4.4,,"2,598",699,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,4,,"7,700",604,Pune,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+,4.3,,970,624,Pune,3,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,4.1,,"3,680",,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,4.1,,"1,098",752,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,4.2,,"7,249","1,021",Pune,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+,4,,"5,999",990,Pune,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+,4.2,,"6,250",268,Pune,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+,4.3,,"4,299",,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,3.8,,"2,098",,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,4.2,,"5,500",872,Pune,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+,3.6,,"2,776",294,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,3.5,,"2,835",418,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,4.1,,"2,345",,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,3.5,,"9,500",333,Pune,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+,4.1,,"4,300","1,350",Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,3.5,,"3,666",,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,4.4,,"14,875",564,Pune,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+,2.8,,"1,505",752,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,3.8,,"3,977",836,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,3.8,,"7,500",325,Pune,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+,4.4,,"2,792",,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,4.2,,507,564,Pune,3,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,4.1,,"9,000",806,Pune,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+,3.8,,"1,113",638,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,3.8,,"6,698",,Pune,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+,3.9,,700,,Pune,3,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+,4.2,,"4,499",552,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,4,,"6,547",,Pune,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+,3.9,,"3,934",872,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,4.3,,"3,575",699,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,4.2,,"6,499",604,Pune,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+,3.2,,"8,750",624,Pune,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+,4,,"14,000",,Pune,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+,3.3,,"5,099",752,Pune,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+,4.5,,"11,250","1,021",Pune,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+,4.3,,"11,160",990,Pune,4,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE
+,4.2,,"3,679",268,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,3.2,,"9,000",,Pune,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE
+,4,,"3,939",,Pune,3,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE
+,4.2,,"9,100",872,Pune,3,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE

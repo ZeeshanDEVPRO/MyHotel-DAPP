@@ -377,14 +377,14 @@ const Book = ({ account, contractIns, connectContract }) => {
                         </div>
                     ))
                 ) : (
-                    <div className='text-3xl font-bold flex flex-col gap-4 items-center justify-center h-[80vh]'>
-                        <div>No matching results For Now</div>
-                        <div>OR</div>
-                        <div className='flex items-center gap-2'><MdSignalWifiStatusbarConnectedNoInternet4 /><div>Internet/Metamask Error</div></div>
+                    <div className="flex justify-center items-center h-[100vh]">
+                        <div className="w-48 h-48 border-4 border-blue-500 border-t-transparent border-t-4 border-r-transparent border-r-4 rounded-full animate-spin"></div>
                     </div>
                 )
             ) : (
-                <div className='h-[80vh] w-[98vw] flex justify-center items-center text-4xl font-bold'>Loading shortly...</div>
+                <div className="flex justify-center items-center h-[100vh]">
+                    <div className="w-48 h-48 border-4 border-blue-500 border-t-transparent border-t-4 border-r-transparent border-r-4 rounded-full animate-spin"></div>
+                </div>
             )}
 
             <ToastContainer />

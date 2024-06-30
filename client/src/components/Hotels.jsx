@@ -267,7 +267,11 @@ const Hotels = ({ connectContract }) => {
             }
           </div>)
           :
-          (<div className='min-h-[80vh] flex items-center justify-center text-4xl font-bold'>loading...</div>)
+          ( 
+          <div className="flex justify-center items-center h-[70vh]">
+            <div className="w-48 h-48 border-4 border-blue-500 border-t-transparent border-t-4 border-r-transparent border-r-4 rounded-full animate-spin"></div>
+          </div>
+          )
         }
 
       </div>

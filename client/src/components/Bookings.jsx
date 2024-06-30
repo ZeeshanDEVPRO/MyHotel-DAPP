@@ -202,32 +202,32 @@ const Bookings = ({ account, contractIns, connectContract }) => {
         <div className='text-[#4b4848] font-semibold text-2xl mb-6'>Check Availability</div>
 
         <select
-          className='w-full border border-gray-400 p-2 my-4 rounded-md appearance-none'
+          className='w-full border border-gray-400 p-2 my-4 rounded-md appearance-none text-[#302c2c]'
           value={hotelID}
           onChange={(e) => setHotelID(e.target.value)}
         >
-          <option value="">Select Hotel Name</option>
-          <option value="11" className="hover:bg-gray-100">Omkar Pride</option>
-          <option value="12" className="hover:bg-gray-100">SAWAI Resort</option>
-          <option value="13" className="hover:bg-gray-100">Hotel Radiance</option>
-          <option value="21" className="hover:bg-gray-100">Hotel Oberoi</option>
-          <option value="22" className="hover:bg-gray-100">Great Tripti</option>
-          <option value="23" className="hover:bg-gray-100">Mariott Bonvoy</option>
-          <option value="31" className="hover:bg-gray-100">Hotel Supremo</option>
-          <option value="32" className="hover:bg-gray-100">Hotel Hyatt</option>
-          <option value="33" className="hover:bg-gray-100">Resort LinChain</option>
-          <option value="41" className="hover:bg-gray-100">Hotel Mosaicc</option>
-          <option value="42" className="hover:bg-gray-100">Jaswithha</option>
-          <option value="43" className="hover:bg-gray-100">Gaikwad Hotel</option>
-          <option value="51" className="hover:bg-gray-100">Grand Residency</option>
-          <option value="52" className="hover:bg-gray-100">Jayam Residency</option>
-          <option value="53" className="hover:bg-gray-100">Shayayam Residency</option>
-          <option value="61" className="hover:bg-gray-100">SKY INNs</option>
-          <option value="62" className="hover:bg-gray-100">Pavithhra</option>
-          <option value="63" className="hover:bg-gray-100">Hotel SKYSPACE</option>
-          <option value="71" className="hover:bg-gray-100">Sudharani Palace</option>
-          <option value="72" className="hover:bg-gray-100">White Palace Hotel</option>
-          <option value="73" className="hover:bg-gray-100">Park Platinum</option>
+          <option value="" className='text-[#635f5f] font-semibold'>Select Hotel Name</option>
+          <option value="11" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">Omkar Pride</option>
+          <option value="12" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">SAWAI Resort</option>
+          <option value="13" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">Hotel Radiance</option>
+          <option value="21" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">Hotel Oberoi</option>
+          <option value="22" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">Great Tripti</option>
+          <option value="23" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">Mariott Bonvoy</option>
+          <option value="31" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">Hotel Supremo</option>
+          <option value="32" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">Hotel Hyatt</option>
+          <option value="33" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">Resort LinChain</option>
+          <option value="41" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">Hotel Mosaicc</option>
+          <option value="42" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">Jaswithha</option>
+          <option value="43" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">Gaikwad Hotel</option>
+          <option value="51" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">Grand Residency</option>
+          <option value="52" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">Jayam Residency</option>
+          <option value="53" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">Shayayam Residency</option>
+          <option value="61" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">SKY INNs</option>
+          <option value="62" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">Pavithhra</option>
+          <option value="63" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">Hotel SKYSPACE</option>
+          <option value="71" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">Sudharani Palace</option>
+          <option value="72" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">White Palace Hotel</option>
+          <option value="73" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">Park Platinum</option>
         </select>
 
         <div className='flex justify-evenly gap-4 mb-6'>
