@@ -17,7 +17,7 @@ const Nav = ({ account, connectContract }) => {
         </div>
         <div className='text-[#323531] flex flex-col items-center text-md min-[450px]:text-xl md:text-2xl font-normal cursor-pointer' onClick={() => navigate('/hotels')}><RiHotelFill fontSize='25px' /><div className="text-sm font-semibold hidden sm:block">hotels</div></div>
         <div className='text-[#323531] flex flex-col items-center text-md min-[450px]:text-xl md:text-2xl font-normal cursor-pointer' onClick={() => navigate('/bookings')}><FaPenToSquare fontSize='25px' /><div className='text-sm font-semibold hidden sm:block'>booking</div></div>
-        <div className='text-[#323531] flex flex-col items-center text-md min-[450px]:text-xl md:text-2xl font-normal cursor-pointer' onClick={() => navigate('/predictions')}><BsRobot /><div className='text-sm font-semibold hidden sm:block'>AI</div></div>
+        <div className='text-[#323531] flex flex-col items-center text-md min-[450px]:text-xl md:text-2xl font-normal cursor-pointer' onClick={() => navigate('/predictions')}><BsRobot /><div className='text-sm font-semibold hidden sm:block'>predict</div></div>
         <div className='text-[#323531] flex flex-col items-center text-md min-[450px]:text-xl md:text-2xl font-normal cursor-pointer' onClick={() => navigate('/profile')}><CgProfile fontSize='25px' /><div className='text-sm font-semibold hidden sm:block'>profile</div></div>
       </div>
 
