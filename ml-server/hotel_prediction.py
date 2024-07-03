@@ -111,18 +111,18 @@ def load_model_predict(input_data):
     
     return predicted_price
 
-# Flask API endpoint to predict price
-@app.route('/predict', methods=['POST'])
-def predict():
-    try:
-        input_data = request.json
+# # Flask API endpoint to predict price
+# @app.route('/predict', methods=['POST'])
+# def predict():
+#     try:
+#         input_data = request.json
         
-        # Predict price using loaded model
-        predicted_price = load_model_predict(input_data)
+#         # Predict price using loaded model
+#         predicted_price = load_model_predict(input_data)
         
-        return jsonify({'predicted_price': predicted_price})
-    except Exception as e:
-        return jsonify({'error': str(e)})
+#         return jsonify({'predicted_price': predicted_price})
+#     except Exception as e:
+#         return jsonify({'error': str(e)})
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
