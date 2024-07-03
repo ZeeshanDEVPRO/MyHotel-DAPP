@@ -9,6 +9,10 @@ model = joblib.load('hotel_price_predictor.pkl')
 label_encoder = joblib.load('label_encoder.pkl')
 scaler = joblib.load('scaler.pkl')
 
+@app.route('/',methods=['GET'])
+def home():
+    return "Hello, World!"
+
 @app.route('/predict', methods=['POST'])
 def predict():
     input_data = request.json  # Assuming JSON input
