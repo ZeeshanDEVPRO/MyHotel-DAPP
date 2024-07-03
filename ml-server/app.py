@@ -1,10 +1,8 @@
 from flask import Flask, request, jsonify
-from flask_lambda import FlaskLambda
 import joblib
 import pandas as pd
 
 app = Flask(__name__)
-app = FlaskLambda(app)
 
 # Load the trained model, label encoder, and scaler
 model = joblib.load('hotel_price_predictor.pkl')
@@ -27,6 +25,9 @@ def predict():
     # Return the predicted price as JSON
     return jsonify({'predicted_price': predicted_price})
 
-# Required for Flask-Lambda to work with Vercel
-def lambda_handler(event, context):
-    return app.dispatch_request(event)
+# Required for Vercel to handle the Flask app as a serverless function
+def handler(request):
+    if request.method == 'POST':
+        return app(request.get_json())
+    else:
+        return 'Unsupported method', 405
