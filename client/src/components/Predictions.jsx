@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import home2 from '../assets/home2.jpg';
 
 const Predictions = () => {
     const [loader, setLoader] = useState(false);
@@ -22,6 +23,7 @@ const Predictions = () => {
         SwimmingPool: ''
     });
 
+    // Handle input change
     const handleChange = (e) => {
         const { name, value } = e.target;
         const floatFields = ['Rating', 'Tax', 'Star'];
@@ -35,6 +37,7 @@ const Predictions = () => {
         }));
     };
 
+    // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
         const { Rating, Tax, City, Star, MiniFridge, WiFi, HouseKeeping, SeatingArea, Parking, AC, Meals, SwimmingPool } = formData;
@@ -67,7 +70,6 @@ const Predictions = () => {
             return;
         }
 
-        console.log(Rating, Tax, City, Star, MiniFridge, WiFi, HouseKeeping, SeatingArea, Parking, AC, Meals, SwimmingPool);
         try {
             setLoader(true);
             const response = await axios.post('http://127.0.0.1:5000/predict', {
@@ -84,7 +86,6 @@ const Predictions = () => {
                 Meals,
                 SwimmingPool
             });
-            console.log('Predicted Price:', response.data.predicted_price);
             setPredictedPrice(response.data.predicted_price);
             setLoader(false);
             setPredictionOn(false);
@@ -106,20 +107,16 @@ const Predictions = () => {
     };
 
     return (
-        <div className='mt-[16vh] mb-[8vh] flex justify-center items-center'>
+        <div className='mt-[13vh] mb-[1vh] flex justify-center items-center' style={{ backgroundImage: `url(${home2})`,width:'100%',height:'100%', backgroundSize: 'cover', backgroundPosition: 'center' }}>
             {predictionOn ?
                 (loader ?
                     <div className="flex justify-center items-center h-[70vh]">
-                        <div className="w-48 h-48 border-4 border-blue-500 border-t-transparent border-t-4 border-r-transparent border-r-4 rounded-full animate-spin"></div>
+                        <div className="w-48 h-48 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
                     </div>
                     :
                     <div className='flex flex-col items-center'>
                         <div className="mt-4 bg-[#C5E60FE1] text-center rounded-md p-4 shadow-md flex flex-col gap-3">
-                            {/* <p className="text-lg text-[#292727] font-bold">Connected Metamask Address: {account}</p> */}
                             <div className='flex justify-center gap-4 items-center px-5'>
-                                <div>
-
-                                </div>
                                 <div className="ml-3 text-[15px] font-raleway text-[#333131] font-semibold">
                                     "Introducing our Price Prediction System, powered by the latest machine learning technologies. Simply provide your desired hotel inputs, and our predictor will estimate the hotel price for you. Keep in mind that the model's accuracy is 83%, so there may be some variation in the actual price."
                                 </div>
@@ -273,7 +270,7 @@ const Predictions = () => {
                                             </label>
                                         </div>
                                     </div>
-                                    <div className='flex justify-between items-center mb-6'>
+                                    <div className='flex justify-between items-center'>
                                         <div className='text-gray-700 text-sm font-bold'>Swimming Pool:</div>
                                         <div className='flex items-center gap-2'>
                                             <input type='radio' id='swimmingpool-true' name='SwimmingPool' value='true' onChange={handleChange} className='cursor-pointer' />
@@ -289,21 +286,31 @@ const Predictions = () => {
                                 </div>
                             </div>
 
-                            <button type='submit' className='w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600'>Get Prediction</button>
+                            <div className='flex justify-end'>
+                                <button
+                                    type='submit'
+                                    className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+                                >
+                                    Submit
+                                </button>
+                            </div>
                         </form>
-                    </div>
-                )
+                    </div>)
                 :
-                <div className='text-center'>
-                    <div>Predicted Price is {predictedPrice}</div>
-                    <button onClick={() => setPredictionOn(true)} className='bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded'>
-                        Predict Another
+                <div className='flex flex-col items-center justify-center h-[70vh]'>
+                    <div className='text-[16px] font-raleway font-semibold mb-6'>
+                        The predicted price is: ₹{predictedPrice}
+                    </div>
+                    <button
+                        className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+                        onClick={() => setPredictionOn(true)}
+                    >
+                        Back to form
                     </button>
-                </div>
-            }
+                </div>}
             <ToastContainer />
         </div>
     );
-};
+}
 
 export default Predictions;
