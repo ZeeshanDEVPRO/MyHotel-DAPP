@@ -1,4 +1,6 @@
 from flask import Flask, request, jsonify
+import uvicorn #ASGI
+from fastapi import FastAPI
 import joblib
 import pandas as pd
 
