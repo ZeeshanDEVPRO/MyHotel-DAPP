@@ -33,7 +33,7 @@ const Predictions = () => {
         }
         setFormData((prevState) => ({
             ...prevState,
-            [name]: floatFields.includes(name) ? value : value,
+            [name]: value,
         }));
     };
 
@@ -56,7 +56,7 @@ const Predictions = () => {
             !Meals ||
             !SwimmingPool
         ) {
-            toast.error(`Enter all fields and with proper values!`, {
+            toast.error(`Enter all fields with proper values!`, {
                 position: "bottom-center",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -72,7 +72,7 @@ const Predictions = () => {
 
         try {
             setLoader(true);
-            const response = await axios.post('http://127.0.0.1:5000/predict', {
+            const response = await axios.post('https://myhotel-dapp-ml.onrender.com/predict', {
                 Rating: parseFloat(Rating),
                 Tax: parseFloat(Tax),
                 City,
@@ -107,7 +107,7 @@ const Predictions = () => {
     };
 
     return (
-        <div className='mt-[13vh] mb-[1vh] flex justify-center items-center' style={{ backgroundImage: `url(${home2})`,width:'100%',height:'100%', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className='mt-[13vh] mb-[1vh] flex justify-center items-center' style={{ backgroundImage: `url(${home2})`, width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center' }}>
             {predictionOn ?
                 (loader ?
                     <div className="flex justify-center items-center h-[70vh]">
@@ -286,31 +286,27 @@ const Predictions = () => {
                                 </div>
                             </div>
 
-                            <div className='flex justify-end'>
-                                <button
-                                    type='submit'
-                                    className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
-                                >
-                                    Submit
+                            <div className="flex items-center justify-between mt-6">
+                                <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                                    Get Predicted Price
                                 </button>
                             </div>
                         </form>
-                    </div>)
-                :
-                <div className='flex flex-col items-center justify-center h-[70vh]'>
-                    <div className='text-[16px] font-raleway font-semibold mb-6'>
-                        The predicted price is: ₹{predictedPrice}
                     </div>
-                    <button
-                        className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
-                        onClick={() => setPredictionOn(true)}
-                    >
-                        Back to form
+                )
+                :
+                <div className="bg-white rounded-lg p-6 shadow-lg">
+                    <h2 className="text-2xl font-bold text-gray-800 mb-4">Predicted Price</h2>
+                    <p className="text-lg text-gray-600 mb-4">The estimated price for the selected hotel is: <span className="font-semibold text-gray-800">₹{predictedPrice}</span></p>
+                    <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+                        onClick={() => setPredictionOn(true)}>
+                        Predict Again
                     </button>
-                </div>}
+                </div>
+            }
             <ToastContainer />
         </div>
     );
-}
+};
 
 export default Predictions;
