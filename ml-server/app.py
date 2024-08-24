@@ -1,6 +1,4 @@
 from flask import Flask, request, jsonify
-import uvicorn #ASGI
-from fastapi import FastAPI
 import joblib
 import pandas as pd
 
@@ -11,7 +9,7 @@ model = joblib.load('hotel_price_predictor.pkl')
 label_encoder = joblib.load('label_encoder.pkl')
 scaler = joblib.load('scaler.pkl')
 
-@app.route('/',methods=['GET'])
+@app.route('/', methods=['GET'])
 def home():
     return "Hello, World!"
 
@@ -30,13 +28,6 @@ def predict():
     
     # Return the predicted price as JSON
     return jsonify({'predicted_price': predicted_price})
-
-# Required for Vercel to handle the Flask app as a serverless function
-def handler(request):
-    if request.method == 'POST':
-        return app(request.get_json())
-    else:
-        return 'Unsupported method', 405
 
 if __name__ == '__main__':
     app.run(debug=True)
