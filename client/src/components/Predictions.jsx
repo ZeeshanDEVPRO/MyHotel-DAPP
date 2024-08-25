@@ -74,7 +74,7 @@ const Predictions = () => {
 
         try {
             setLoader(true);
-            const response = await axios.post('https://myhotel-dapp.onrender.com', {
+            const response = await axios.post('https://myhotel-dapp.onrender.com/predict', {
                 Rating: parseFloat(Rating),
                 Tax: parseFloat(Tax),
                 City,
