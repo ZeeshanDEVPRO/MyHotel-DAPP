@@ -43,7 +43,7 @@ const Predictions = () => {
         const { Rating, Tax, City, Star, MiniFridge, WiFi, HouseKeeping, SeatingArea, Parking, AC, Meals, SwimmingPool } = formData;
 
         const booleanToInt = (bool) => (bool === 'true' ? 1 : 0);
-        
+
         if (
             !Rating || parseFloat(Rating) < 0 || parseFloat(Rating) > 5 ||
             !Tax || parseFloat(Tax) < 0 ||
@@ -74,7 +74,7 @@ const Predictions = () => {
 
         try {
             setLoader(true);
-            const response = await axios.post('http://localhost:5000/predict', {
+            const response = await axios.post('https://myhotel-dapp.onrender.com', {
                 Rating: parseFloat(Rating),
                 Tax: parseFloat(Tax),
                 City,
