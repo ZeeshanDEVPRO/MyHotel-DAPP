@@ -6,7 +6,7 @@ import traceback
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://my-hotel-dapp.vercel.app"}})
+CORS(app, resources={r"/*": {"origins": ["https://my-hotel-dapp.vercel.app", "http://localhost:5000"]}})
 
 # Load the trained model, label encoder, and scaler
 model = joblib.load('hotel_price_predictor.pkl')
