@@ -6,8 +6,8 @@ const Footer = () => {
     const navigate = useNavigate();
 
     return (
-        <div className=' bg-gray-200 max-w-screen border-0 px-[10vw] py-[10vh] font-poppins font-sans'>
-            <div className="flex justify-start items-center font-noto-sans-<uniquifier> font-sans font-semibold text-4xl">MyHotel <SiHotelsdotcom color='#f13719' /></div>
+        <div className=' bg-gray-200 max-w-screen border-0 px-[10vw] py-[5vh] md:[10vh] font-poppins font-sans'>
+            <div className="flex justify-start items-center font-noto-sans-<uniquifier> font-sans font-semibold text-2xl md:text-4xl">MyHotel <SiHotelsdotcom color='#f13719' /></div>
             <div className="flex justify-center sm:justify-between flex-col min-[698px]:flex-row gap-[5vw] mt-5 mb-5">
                 <div className='flex justify-between gap-[15vw]'>
                     <div className="mb-4">
@@ -53,8 +53,8 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <hr className='border-[0.5px] border-[#cfcfcf]'/>
-            <p className='text-customGray font-normal text-[14px] sm:text-[16px]'>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2024 © MyHotel™ Ltd. All rights reserved.</p>
+            <hr className='border-[0.5px] border-[#cfcfcf]' />
+            <p className='text-customGray font-normal text-[10px] sm:text-[16px]'>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2024 © MyHotel™ Ltd. All rights reserved.</p>
 
         </div>
     )
