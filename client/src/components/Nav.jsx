@@ -15,19 +15,19 @@ const Nav = ({ account, connectContract }) => {
         <div className='border-r-2 border-[#1f1a1a] flex items-center h-[6vh] md:h-[10vh] text-xl min-[450px]:text-2xl md:text-3xl font-medium p-[1.5vh] min-[450px]:p-[3vh] cursor-pointer' onClick={() => navigate('/')} >
           My<span className='text-[rgb(14 165 233 / var(--tw-bg-opacity))]'>Hotel</span><SiHotelsdotcom color='#f13719' />
         </div>
-        <div className='text-[#323531] flex flex-col items-center text-md sm:text-xl md:text-2xl font-normal cursor-pointer'>
+        <div onClick={() => navigate('/hotels')} className='text-[#323531] flex flex-col items-center text-md sm:text-xl md:text-2xl font-normal cursor-pointer'>
           <RiHotelFill fontSize='25px' />
           <div className='text-sm font-semibold hidden sm:block mt-2'>hotels</div>
         </div>
-        <div className='text-[#323531] flex flex-col items-center text-md sm:text-xl md:text-2xl font-normal cursor-pointer'>
+        <div onClick={() => navigate('/bookings')} className='text-[#323531] flex flex-col items-center text-md sm:text-xl md:text-2xl font-normal cursor-pointer'>
           <FaPenToSquare fontSize='25px' />
           <div className='text-sm font-semibold hidden sm:block mt-2'>booking</div>
         </div>
-        <div className='text-[#323531] flex flex-col items-center text-md sm:text-xl md:text-2xl font-normal cursor-pointer'>
+        <div onClick={() => navigate('/predictions')} className='text-[#323531] flex flex-col items-center text-md sm:text-xl md:text-2xl font-normal cursor-pointer'>
           <BsRobot fontSize='25px' />
           <div className='text-sm font-semibold hidden sm:block mt-2'>predict</div>
         </div>
-        <div className='text-[#323531] flex flex-col items-center text-md sm:text-xl md:text-2xl font-normal cursor-pointer'>
+        <div onClick={() => navigate('/profile')} className='text-[#323531] flex flex-col items-center text-md sm:text-xl md:text-2xl font-normal cursor-pointer'>
           <CgProfile fontSize='25px' />
           <div className='text-sm font-semibold hidden sm:block mt-2'>profile</div>
         </div>
