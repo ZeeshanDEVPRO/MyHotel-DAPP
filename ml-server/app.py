@@ -26,7 +26,8 @@ def predict():
         input_data_df = pd.DataFrame([input_data])
 
         # Ensure all expected columns are present
-        expected_columns = ['Rating', 'Tax', 'City', 'Star', 'Mini Fridge', 'Wi-Fi', 'House Keeping', 'Seating Area', 'Parking', 'AC', 'Meals', 'Swimming Pool']
+        expected_columns = ['Rating', 'Tax', 'City', 'Star', 'Mini Fridge', 'Wi-Fi',
+                             'House Keeping', 'Seating Area', 'Parking', 'AC', 'Meals', 'Swimming Pool']
         for col in expected_columns:
             if col not in input_data_df.columns:
                 input_data_df[col] = 0  # Or handle missing columns in another way

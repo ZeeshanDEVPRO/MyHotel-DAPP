@@ -74,20 +74,33 @@ const Predictions = () => {
 
         try {
             setLoader(true);
-            const response = await axios.post('https://myhotel-dapp.onrender.com/predict', {
-                Rating: parseFloat(Rating),
-                Tax: parseFloat(Tax),
-                City,
-                Star: parseFloat(Star),
-                MiniFridge: booleanToInt(MiniFridge),
-                WiFi: booleanToInt(WiFi),
-                HouseKeeping: booleanToInt(HouseKeeping),
-                SeatingArea: booleanToInt(SeatingArea),
-                Parking: booleanToInt(Parking),
-                AC: booleanToInt(AC),
-                Meals: booleanToInt(Meals),
-                SwimmingPool: booleanToInt(SwimmingPool)
+            const response = await fetch('https://myhotel-dapp.onrender.com/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    Rating: parseFloat(Rating),
+                    Tax: parseFloat(Tax),
+                    City,
+                    Star: parseFloat(Star),
+                    MiniFridge: booleanToInt(MiniFridge),
+                    WiFi: booleanToInt(WiFi),
+                    HouseKeeping: booleanToInt(HouseKeeping),
+                    SeatingArea: booleanToInt(SeatingArea),
+                    Parking: booleanToInt(Parking),
+                    AC: booleanToInt(AC),
+                    Meals: booleanToInt(Meals),
+                    SwimmingPool: booleanToInt(SwimmingPool)
+                })
             });
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            const data = await response.json();
+            
             setPredictedPrice(response.data.predicted_price);
             console.log('Prediction result:', response.data.predicted_price);
             setLoader(false);
