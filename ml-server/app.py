@@ -6,6 +6,8 @@ import traceback
 from flask_cors import CORS
 
 app = Flask(__name__)
+
+# Allow requests from specific origins
 CORS(app, resources={r"/*": {"origins": ["https://my-hotel-dapp.vercel.app", "http://localhost:5173"]}})
 
 # Load the trained model, label encoder, and scaler
@@ -13,10 +15,11 @@ model = joblib.load('hotel_price_predictor.pkl')
 label_encoder = joblib.load('label_encoder.pkl')
 scaler = joblib.load('scaler.pkl')
 
-@app.route('/predict', methods=['POST', 'GET'])
+@app.route('/predict', methods=['POST'])
 def predict():
     try:
-        input_data = request.json  # Assuming JSON input
+        # Parse the JSON request data
+        input_data = request.json
 
         # Preprocess the input data
         if 'City' in input_data:
@@ -27,10 +30,10 @@ def predict():
 
         # Ensure all expected columns are present
         expected_columns = ['Rating', 'Tax', 'City', 'Star', 'Mini Fridge', 'Wi-Fi',
-                             'House Keeping', 'Seating Area', 'Parking', 'AC', 'Meals', 'Swimming Pool']
+                            'House Keeping', 'Seating Area', 'Parking', 'AC', 'Meals', 'Swimming Pool']
         for col in expected_columns:
             if col not in input_data_df.columns:
-                input_data_df[col] = 0  # Or handle missing columns in another way
+                input_data_df[col] = 0  # Or handle missing columns as needed
 
         # Reorder columns to match the model's expected input
         input_data_df = input_data_df[expected_columns]
@@ -44,7 +47,7 @@ def predict():
         # Return the predicted price as JSON
         return jsonify({'predicted_price': predicted_price})
     except Exception as e:
-        # Log the exception
+        # Log the exception and return an error response
         traceback.print_exc()
         return jsonify({'error': str(e)}), 500
 
