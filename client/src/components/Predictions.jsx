@@ -41,9 +41,9 @@ const Predictions = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const { Rating, Tax, City, Star, MiniFridge, WiFi, HouseKeeping, SeatingArea, Parking, AC, Meals, SwimmingPool } = formData;
-
+    
         const booleanToInt = (bool) => (bool === 'true' ? 1 : 0);
-
+    
         if (
             !Rating || parseFloat(Rating) < 0 || parseFloat(Rating) > 5 ||
             !Tax || parseFloat(Tax) < 0 ||
@@ -71,7 +71,7 @@ const Predictions = () => {
             });
             return;
         }
-
+    
         try {
             setLoader(true);
             const response = await fetch('https://myhotel-dapp.onrender.com/predict', {
@@ -101,8 +101,13 @@ const Predictions = () => {
             
             const data = await response.json();
             
-            setPredictedPrice(data.predicted_price);  // Use `data.predicted_price`
-            console.log('Prediction result:', data.predicted_price); // Also log the correct value
+            console.log('Response data:', data); // Log the entire response data for debugging
+            if (data && data.predicted_price) {
+                setPredictedPrice(data.predicted_price);
+            } else {
+                throw new Error('Response data does not contain predicted_price');
+            }
+            
             setLoader(false);
             setPredictionOn(false);
         } catch (error) {
@@ -121,7 +126,7 @@ const Predictions = () => {
             console.error('Prediction error:', error);
         }
     };
-
+    
     return (
         <div className='mt-[13vh] mb-[1vh] flex justify-center items-center' style={{ backgroundImage: `url(${home2})`, width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center' }}>
             {predictionOn ?
