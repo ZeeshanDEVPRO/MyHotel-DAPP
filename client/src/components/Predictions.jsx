@@ -72,7 +72,7 @@ const Predictions = () => {
 
         try {
             setLoader(true);
-            const response = await axios.post('https://myhotel-dapp-1.onrender.com/predict', {
+            const response = await axios.post('https://myhotel-dapp.onrender.com', {
                 Rating: parseFloat(Rating),
                 Tax: parseFloat(Tax),
                 City,
@@ -87,6 +87,7 @@ const Predictions = () => {
                 SwimmingPool
             });
             setPredictedPrice(response.data.predicted_price);
+            console.log('Prediction result:', response.data.predicted_price);
             setLoader(false);
             setPredictionOn(false);
         } catch (error) {
@@ -286,22 +287,26 @@ const Predictions = () => {
                                 </div>
                             </div>
 
-                            <div className="flex items-center justify-between mt-6">
-                                <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                                    Get Predicted Price
+                            <div className='flex justify-center'>
+                                <button
+                                    type='submit'
+                                    className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+                                >
+                                    Predict Price
                                 </button>
                             </div>
                         </form>
                     </div>
-                )
-                :
-                <div className="bg-white rounded-lg p-6 shadow-lg">
-                    <h2 className="text-2xl font-bold text-gray-800 mb-4">Predicted Price</h2>
-                    <p className="text-lg text-gray-600 mb-4">The estimated price for the selected hotel is: <span className="font-semibold text-gray-800">₹{predictedPrice}</span></p>
-                    <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline"
-                        onClick={() => setPredictionOn(true)}>
-                        Predict Again
-                    </button>
+                ) :
+                <div className='flex flex-col items-center'>
+                    <div className="bg-[#C5E60FE1] text-center rounded-md p-4 shadow-md flex flex-col gap-3 mt-6">
+                        <div className='text-[#333131] text-lg font-semibold'>
+                            Predicted Hotel Price:
+                        </div>
+                        <div className='text-2xl font-bold text-green-700'>
+                            ₹{predictedPrice}
+                        </div>
+                    </div>
                 </div>
             }
             <ToastContainer />
