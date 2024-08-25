@@ -101,8 +101,8 @@ const Predictions = () => {
             
             const data = await response.json();
             
-            setPredictedPrice(response.data.predicted_price);
-            console.log('Prediction result:', response.data.predicted_price);
+            setPredictedPrice(data.predicted_price);  // Use `data.predicted_price`
+            console.log('Prediction result:', data.predicted_price); // Also log the correct value
             setLoader(false);
             setPredictionOn(false);
         } catch (error) {
