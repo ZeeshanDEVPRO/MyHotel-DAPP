@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -105,11 +105,11 @@ const Predictions = () => {
 
             if (data && data.predicted_price) {
                 setPredictedPrice(data.predicted_price);
-                console.warn(predictedPrice);
             } else {
                 console.error('Error: Response data does not contain predicted_price', data);
                 throw new Error('Response data does not contain predicted_price');
             }
+            console.warn(predictedPrice);
 
             setLoader(false);
             setPredictionOn(false);
