@@ -42,6 +42,8 @@ const Predictions = () => {
         e.preventDefault();
         const { Rating, Tax, City, Star, MiniFridge, WiFi, HouseKeeping, SeatingArea, Parking, AC, Meals, SwimmingPool } = formData;
 
+        const booleanToInt = (bool) => (bool === 'true' ? 1 : 0);
+        
         if (
             !Rating || parseFloat(Rating) < 0 || parseFloat(Rating) > 5 ||
             !Tax || parseFloat(Tax) < 0 ||
@@ -72,19 +74,19 @@ const Predictions = () => {
 
         try {
             setLoader(true);
-            const response = await axios.post('https://myhotel-dapp.onrender.com/predict', {
+            const response = await axios.post('http://localhost:5000/predict', {
                 Rating: parseFloat(Rating),
                 Tax: parseFloat(Tax),
                 City,
                 Star: parseFloat(Star),
-                MiniFridge,
-                WiFi,
-                HouseKeeping,
-                SeatingArea,
-                Parking,
-                AC,
-                Meals,
-                SwimmingPool
+                MiniFridge: booleanToInt(MiniFridge),
+                WiFi: booleanToInt(WiFi),
+                HouseKeeping: booleanToInt(HouseKeeping),
+                SeatingArea: booleanToInt(SeatingArea),
+                Parking: booleanToInt(Parking),
+                AC: booleanToInt(AC),
+                Meals: booleanToInt(Meals),
+                SwimmingPool: booleanToInt(SwimmingPool)
             });
             setPredictedPrice(response.data.predicted_price);
             console.log('Prediction result:', response.data.predicted_price);
