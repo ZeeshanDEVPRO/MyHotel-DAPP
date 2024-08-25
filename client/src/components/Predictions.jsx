@@ -105,6 +105,7 @@ const Predictions = () => {
 
             if (data && data.predicted_price) {
                 setPredictedPrice(data.predicted_price);
+                console.warn(predictedPrice);
             } else {
                 console.error('Error: Response data does not contain predicted_price', data);
                 throw new Error('Response data does not contain predicted_price');
