@@ -17,7 +17,7 @@ scaler = joblib.load('scaler.pkl')
 def home():
     return "Hello, World!"
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['POST','GET'])
 def predict():
     try:
         input_data = request.json  # Assuming JSON input
