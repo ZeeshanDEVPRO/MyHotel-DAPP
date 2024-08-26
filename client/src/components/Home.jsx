@@ -10,7 +10,7 @@ import home2 from '../assets/home2.jpg';
 const Home = ({ connectContract, account }) => {
   return (
     <div className='bg-[#ffffff] mt-[10vh] md:mt-[13vh] mb-[5vh] font-inter font-sans flex flex-col gap-[4vh] sm:gap-[5vh] md:gap-[10vh]'>
-      <div className='relative h-[80vh]'>
+      <div className='relative h-[70vh]'>
         <img
           className='absolute inset-0 h-full w-full object-cover'
           src={home2}
