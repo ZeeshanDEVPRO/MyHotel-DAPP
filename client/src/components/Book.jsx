@@ -201,7 +201,7 @@ const Book = ({ account, contractIns, connectContract }) => {
                             <div className="relative">
                                 <div className="overflow-hidden flex gap-2 max-w-[100vw] max-h-[80vh]">
                                     <img className="object-cover" src={hotell.photo} alt="Hotel Photo" />
-                                    <img className="object-cover" src='https://images.oyoroomscdn.com/uploads/hotel_image/106159/large/cddtcdsrossd.jpg' alt='seating' />
+                                    <img className="object-cover " src='https://images.oyoroomscdn.com/uploads/hotel_image/106159/large/cddtcdsrossd.jpg' alt='seating' />
                                 </div>
                                 <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2">
                                     <div>Picture Credits : MyHotel rooms</div>
@@ -213,24 +213,24 @@ const Book = ({ account, contractIns, connectContract }) => {
                             <div className='mx-[10vw] py-[4vh]'>
                                 <div className='flex flex-col gap-2 py-[4vh]'>
                                     <div className='flex items-center justify-between'>
-                                        <div className='text-[#222] font-bold text-5xl'>{hotell.name}</div>
+                                        <div className='text-[#222] font-bold text-3xl sm:text-4xl md:text-5xl'>{hotell.name}</div>
                                         <div className='flex flex-col items-center'>
-                                            <div className='text-[#222] font-bold text-5xl'>₹ {hotell.price}</div>
-                                            <div className='text-red-500 font-bold'>ETH equivalent</div>
+                                            <div className='text-[#222] font-bold text-3xl sm:text-4xl md:text-5xl'>₹ {hotell.price}</div>
+                                            <div className='text-red-500 font-bold text-[12px] sm:text-[20px]'>ETH equivalent</div>
                                         </div>
                                     </div>
                                     <div className='flex items-center justify-between'>
-                                        <div className='text-[#726e6e] font-semibold text-3xl'>{hotell.address}, {hotell.city}</div>
-                                        <div className='text-2xl text-white bg-green-600 px-[8px] rounded-sm font-medium'>{hotell.discount} % off</div>
+                                        <div className='text-[#726e6e] font-semibold text-lg sm:text-xl md:text-3xl'>{hotell.address}, {hotell.city}</div>
+                                        <div className='text-lg sm:text-xl md:text-2xl text-white bg-green-600 px-[8px] rounded-sm font-medium'>{hotell.discount} % off</div>
                                     </div>
                                 </div>
-                                <div className='py-[4vh]'>
+                                <div className='py-[4vh] pt-[2vh]'>
                                     <button className='my-[3vh] bg-[#f5ece5] cursor-not-allowed text-[#f49242] font-semibold py-2 px-4 rounded inline-flex items-center'>
                                         <CiHeart className='mr-2' />
                                         Managed by MyHotel
                                     </button>
                                     <div className=' my-[2vh]'>
-                                        <div className='flex gap-3 items-center text-3xl'>
+                                        <div className='flex gap-3 items-center text-xl sm:text-3xl'>
                                             <FaStar color='green' />
                                             <div>{hotell.ratings}</div>
                                         </div>
@@ -238,8 +238,8 @@ const Book = ({ account, contractIns, connectContract }) => {
                                     </div>
                                 </div>
                                 <div className='flex flex-col gap-3'>
-                                    <div className='text-3xl font-semibold'>Amenities</div>
-                                    <div className='flex flex-wrap gap-12 text-2xl text-[#474444]'>
+                                    <div className='text-2xl sm:text-3xl font-semibold'>Amenities</div>
+                                    <div className='flex flex-wrap gap-12 text-xl sm:text-2xl text-[#474444]'>
                                         {hotell.facility.map((facility, index) => (
                                             <div key={index} className='flex items-center gap-3'>
                                                 {facility}
@@ -258,12 +258,12 @@ const Book = ({ account, contractIns, connectContract }) => {
                             </div>
 
                             <hr />
-                            <div className='flex justify-center p-[6vh]'>
+                            <div className='flex-col justify-center p-[6vh] md:flex'>
 
                                 {/* Room Availability */}
                                 <div className='shadow px-[3vw] bg-[#e5eff1] border p-[3vh] rounded-[5px] mx-[8vw] my-[3vh] flex flex-col gap-5'>
-                                    <div className='text-[#4b4848] font-semibold text-2xl'>Room Availability</div>
-                                    <div className='flex gap-3'>
+                                    <div className='text-[#4b4848] font-semibold text-xl md:text-2xl'>Room Availability</div>
+                                    <div className='flex flex-col sm:flex-row md:gap-3'>
                                         <div className='flex gap-4 text-gray-600 items-center'>
                                             <input className='cursor-pointer' onClick={() => setRoomID1('1')} type="radio" id="r1_1" name="room1" />
                                             <label htmlFor="r1_1">ROOM 1</label>
@@ -309,17 +309,17 @@ const Book = ({ account, contractIns, connectContract }) => {
                                     </div>
                                     <div className='flex justify-center'>
                                         {!availabilityLoader ? (
-                                            <button className='text-white bg-yellow-600 hover:bg-yellow-700 font-medium text-lg py-2 px-4 rounded flex items-center' onClick={() => roomAvailability(hotell.hotelId, roomID1, entry1, exit1)}>Check Availability</button>
+                                            <button className='text-white bg-yellow-600 hover:bg-yellow-700 font-medium text-base md:text-lg py-2 px-4 rounded flex items-center' onClick={() => roomAvailability(hotell.hotelId, roomID1, entry1, exit1)}>Check Availability</button>
                                         ) : (
-                                            <button className='text-white bg-yellow-600  font-medium text-lg py-2 px-4 rounded flex items-center' disabled>Checking...</button>
+                                            <button className='text-white bg-yellow-600  font-medium text-base md:text-lg py-2 px-4 rounded flex items-center' disabled>Checking...</button>
                                         )}
                                     </div>
                                 </div>
 
                                 {/* Room Booking */}
                                 <div className='shadow px-[3vw] bg-[#e5eff1] border p-[3vh] rounded-[5px] mx-[8vw] my-[3vh] flex flex-col gap-5'>
-                                    <div className='text-[#4b4848] font-semibold text-2xl'>Room Booking</div>
-                                    <div className='flex gap-3'>
+                                    <div className='text-[#4b4848] font-semibold text-xl md:text-2xl'>Room Booking</div>
+                                    <div className='flex flex-col sm:flex-row md:gap-3'>
                                         <div className='flex gap-4 text-gray-600 items-center'>
                                             <input className='cursor-pointer' onClick={() => setRoomID2('1')} type="radio" id="r2_1" name="room2" />
                                             <label htmlFor="r2_1">ROOM 1</label>
@@ -367,9 +367,9 @@ const Book = ({ account, contractIns, connectContract }) => {
                                     </div>
                                     <div className='flex justify-center'>
                                         {!bookingLoader ? (
-                                            <button className='text-white bg-green-600 hover:bg-green-700 font-medium text-lg py-2 px-4 rounded flex items-center' onClick={() => roomBooking(hotell.hotelId, roomID2, entry2, exit2)}>Book Room Now</button>
+                                            <button className='text-white bg-green-600 hover:bg-green-700 font-medium text-base md:text-lg py-2 px-4 rounded flex items-center' onClick={() => roomBooking(hotell.hotelId, roomID2, entry2, exit2)}>Book Room Now</button>
                                         ) : (
-                                            <button className='text-white bg-green-600 font-medium text-lg py-2 px-4 rounded flex items-center' disabled>Booking...</button>
+                                            <button className='text-white bg-green-600 font-medium text-base md:text-lg py-2 px-4 rounded flex items-center' disabled>Booking...</button>
                                         )}
                                     </div>
                                 </div>
