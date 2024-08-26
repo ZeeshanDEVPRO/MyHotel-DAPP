@@ -232,68 +232,69 @@ const Profile = ({ account, contractIns, connectContract }) => {
       </div>
 
       {/* profile details */}
-      <div className='mt-[10vh] mx-[3vh] bg-gray-100 rounded-lg p-8 shadow-md'>
-        <h2 className='text-2xl font-bold mb-4'>Personal Details</h2>
-        <div className='grid grid-cols-2 gap-4'>
-          <div className='text-gray-700 font-semibold'>Metamask Address:</div>
-          <div className='text-gray-900 font-semibold'>{account}</div>
-          <div className='text-gray-700 font-semibold'>Name:</div>
-          <div className='text-gray-900 font-semibold'>
-            {isEditing ? (
-              <input
-                type='text'
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className='border-b border-gray-400 focus:outline-none'
-              />
-            ) : (
-              name
-            )}
-          </div>
-          <div className='text-gray-700 font-semibold'>Email:</div>
-          <div className='text-gray-900 font-semibold'>
-            {isEditing ? (
-              <input
-                type='text'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className='border-b border-gray-400 focus:outline-none'
-              />
-            ) : (
-              email
-            )}
-          </div>
-          <div className='text-gray-700 font-semibold'>Mobile Number:</div>
-          <div className='text-gray-900 font-semibold'>
-            {isEditing ? (
-              <input
-                type='text'
-                value={mobile}
-                onChange={(e) => setMobile(e.target.value)}
-                className='border-b border-gray-400 focus:outline-none'
-              />
-            ) : (
-              mobile
-            )}
-          </div>
-          <div></div>
-          <div>
-            {isEditing ? (
-              detailLoader ? (
-                <button disabled className='text-white bg-green-600 my-2 px-6 py-2 text-lg font-semibold rounded shadow'>
-                  Saving...
-                </button>
-              ) : (
-                <button onClick={handleSave} className='text-white bg-green-600 my-2 px-6 py-2 text-lg font-semibold rounded shadow'>
-                  SAVE
-                </button>
-              )
-            ) : (
-              <FaEdit onClick={handleEdit} className='cursor-pointer text-red-600 text-2xl' />
-            )}
-          </div>
-        </div>
-      </div>
+      <div className='mt-[10vh] mx-[1vh] md:mx-[3vh] bg-gray-100 rounded-lg p-5 md:p-8 shadow-md'>
+  <h2 className='text-2xl font-bold mb-4'>Personal Details</h2>
+  <div className='grid grid-cols-2 gap-4'>
+    <div className='text-gray-700 font-semibold'>Metamask Address:</div>
+    <div className='text-gray-900 font-semibold break-words'>{account}</div>
+    <div className='text-gray-700 font-semibold'>Name:</div>
+    <div className='text-gray-900 font-semibold'>
+      {isEditing ? (
+        <input
+          type='text'
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className='border-b border-gray-400 focus:outline-none'
+        />
+      ) : (
+        name
+      )}
+    </div>
+    <div className='text-gray-700 font-semibold'>Email:</div>
+    <div className='text-gray-900 font-semibold'>
+      {isEditing ? (
+        <input
+          type='text'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className='border-b border-gray-400 focus:outline-none'
+        />
+      ) : (
+        email
+      )}
+    </div>
+    <div className='text-gray-700 font-semibold'>Mobile Number:</div>
+    <div className='text-gray-900 font-semibold'>
+      {isEditing ? (
+        <input
+          type='text'
+          value={mobile}
+          onChange={(e) => setMobile(e.target.value)}
+          className='border-b border-gray-400 focus:outline-none'
+        />
+      ) : (
+        mobile
+      )}
+    </div>
+    <div></div>
+    <div>
+      {isEditing ? (
+        detailLoader ? (
+          <button disabled className='text-white bg-green-600 my-2 px-6 py-2 text-lg font-semibold rounded shadow'>
+            Saving...
+          </button>
+        ) : (
+          <button onClick={handleSave} className='text-white bg-green-600 my-2 px-6 py-2 text-lg font-semibold rounded shadow'>
+            SAVE
+          </button>
+        )
+      ) : (
+        <FaEdit onClick={handleEdit} className='cursor-pointer text-red-600 text-2xl' />
+      )}
+    </div>
+  </div>
+</div>
+
 
       {/* customization */}
       <div className='mt-6 mx-[3vh] bg-gray-100 rounded-lg p-8 shadow-md'>
@@ -374,49 +375,51 @@ const Profile = ({ account, contractIns, connectContract }) => {
       {/* bookings */}
       <div className='mx-[4vw] my-[5vh] bg-gray-100 rounded-lg p-8 shadow-md'>
         <h2 className='text-2xl font-semibold mb-4'>Your Bookings</h2>
-        <div className='flex flex-col m-4'>
-          <div className='bg-black p-4 rounded-md shadow-md'>
-            <div className='flex gap-7 justify-evenly'>
-              <div className="w-1/6 text-center text-white font-semibold">Hotel Booked</div>
-              <div className="w-1/6 text-center text-white font-semibold">Hotel ID</div>
-              <div className="w-1/6 text-center text-white font-semibold">Room ID</div>
-              <div className="w-1/6 text-center text-white font-semibold">Check In Time</div>
-              <div className="w-1/6 text-center text-white font-semibold">Check Out Time</div>
-              <div className="w-1/6 text-center text-white font-semibold">Status</div>
+        <div className='overflow-x-auto'> {/* Container to allow horizontal scrolling */}
+          <div className='min-w-[700px] flex flex-col m-4'> {/* Ensures the table is wider than the container */}
+            <div className='bg-black p-4 rounded-md shadow-md'>
+              <div className='flex gap-7 justify-evenly'>
+                <div className="w-1/6 text-center text-white font-semibold">Hotel Booked</div>
+                <div className="w-1/6 text-center text-white font-semibold">Hotel ID</div>
+                <div className="w-1/6 text-center text-white font-semibold">Room ID</div>
+                <div className="w-1/6 text-center text-white font-semibold">Check In Time</div>
+                <div className="w-1/6 text-center text-white font-semibold">Check Out Time</div>
+                <div className="w-1/6 text-center text-white font-semibold">Status</div>
+              </div>
             </div>
-          </div>
 
-          {hotel && hotel.map((item, index) => {
+            {hotel && hotel.map((item, index) => {
 
-            // Convert entryTime from BigNumber to milliseconds
-            const entryTimeMs = new BigNumber(item.entryTime.toString()).toNumber() * 1000;
-            const entryTimeDate = new Date(entryTimeMs);
-            const formattedEntryTime = entryTimeDate.toLocaleString();
+              const entryTimeMs = new BigNumber(item.entryTime.toString()).toNumber() * 1000;
+              const entryTimeDate = new Date(entryTimeMs);
+              const formattedEntryTime = entryTimeDate.toLocaleString();
 
-            const exitTimeMs = new BigNumber(item.exitTime.toString()).toNumber() * 1000;
-            const exitTimeDate = new Date(exitTimeMs);
-            const formattedExitTime = exitTimeDate.toLocaleString();
+              const exitTimeMs = new BigNumber(item.exitTime.toString()).toNumber() * 1000;
+              const exitTimeDate = new Date(exitTimeMs);
+              const formattedExitTime = exitTimeDate.toLocaleString();
 
-            return (
-              <div className='flex flex-col' key={index}>
-                <div className='bg-white dark:bg-gray-800 p-4 rounded-md shadow-md'>
-                  <div className='flex gap-7 justify-evenly items-center font-medium'>
-                    <div className="w-1/6 text-center text-[#03050c] dark:text-gray-200">{item.name}</div>
-                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.hotelID.toString()}</div>
-                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.roomID.toString()}</div>
-                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedEntryTime}</div>
-                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedExitTime}</div>
-                    <div className="w-1/6 text-center">
-                      {item.status === 'Booked' ?
-                        (<div className='text-green-600 font-bold'>BOOKED</div>) : (<div className='text-red-600 font-bold'>CANCELLLED</div>)}
+              return (
+                <div className='flex flex-col' key={index}>
+                  <div className='bg-white dark:bg-gray-800 p-4 rounded-md shadow-md'>
+                    <div className='flex gap-7 justify-evenly items-center font-medium'>
+                      <div className="w-1/6 text-center text-[#03050c] dark:text-gray-200">{item.name}</div>
+                      <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.hotelID.toString()}</div>
+                      <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.roomID.toString()}</div>
+                      <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedEntryTime}</div>
+                      <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedExitTime}</div>
+                      <div className="w-1/6 text-center">
+                        {item.status === 'Booked' ?
+                          (<div className='text-green-600 font-bold'>BOOKED</div>) : (<div className='text-red-600 font-bold'>CANCELLED</div>)}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
+
       <ToastContainer />
     </div>
   );

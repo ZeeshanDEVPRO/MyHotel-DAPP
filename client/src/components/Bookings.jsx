@@ -131,7 +131,7 @@ const Bookings = ({ account, contractIns, connectContract }) => {
   }
 
   return (
-    <div className='mt-[13vh] pb-[10vh] bg-[#d8dcdf] flex flex-col gap-5'>
+    <div className='mt-[9vh] md:mt-[13vh] pb-[10vh] bg-[#d8dcdf] flex flex-col gap-5'>
 
       {/* warning */}
       <div className="mt-4 bg-[#C5E60FE1] text-center rounded-md p-4 shadow-md flex flex-col gap-3">
@@ -140,7 +140,7 @@ const Bookings = ({ account, contractIns, connectContract }) => {
           <div>
             <TiWarningOutline fontSize='40px' />
           </div>
-          <div className="ml-3 text-[15px]">
+          <div className="ml-3 text-[10px] sm:text[12px] md:text-[15px]">
             Cancellation of a booking is permissible with a full refund provided that the cancellation occurs at least forty-eight hours prior to the scheduled check-in time. Should the cancellation take place within 48 hours of the check-in time, a refund will be issued, deducting 10% of the total paid amount. Refunds will be processed promptly upon cancellation.
           </div>
         </div>
@@ -149,9 +149,9 @@ const Bookings = ({ account, contractIns, connectContract }) => {
       {/* div1 */}
       <div className='mx-[4vw] my-[5vh] bg-white rounded-lg p-8 shadow-md'>
         <h2 className='text-2xl font-semibold mb-4'>Your Bookings</h2>
-        <div className='flex flex-col m-4'>
+        <div className='overflow-x-auto'>
           <div className='bg-gray-200 p-4 rounded-md shadow-md'>
-            <div className='flex gap-7 justify-evenly'>
+            <div className='flex gap-7 justify-evenly min-w-[600px]'>
               <div className="w-1/6 text-center text-gray-700 font-semibold">Hotel Booked</div>
               <div className="w-1/6 text-center text-gray-700 font-semibold">Hotel ID</div>
               <div className="w-1/6 text-center text-gray-700 font-semibold">Room ID</div>
@@ -162,7 +162,6 @@ const Bookings = ({ account, contractIns, connectContract }) => {
           </div>
 
           {hotel && hotel.map((item, index) => {
-           
             if (item.status === 'Booked') {
               // Convert entryTime from BigNumber to milliseconds
               const entryTimeMs = new BigNumber(item.entryTime.toString()).toNumber() * 1000;
@@ -174,35 +173,34 @@ const Bookings = ({ account, contractIns, connectContract }) => {
               const formattedExitTime = exitTimeDate.toLocaleString();
 
               return (
-                <div className='flex flex-col' key={index}>
-                  <div className='bg-white dark:bg-gray-800 p-4 rounded-md shadow-md'>
-                    <div className='flex gap-7 justify-evenly items-center font-medium'>
-                      <div className="w-1/6 text-center text-black font-semibold">{item.name}</div>
-                      <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.hotelID.toString()}</div>
-                      <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.roomID.toString()}</div>
-                      <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedEntryTime}</div>
-                      <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedExitTime}</div>
-                      <div className="w-1/6 text-center">
-                        <button onClick={() => roomCancel(item.hotelID, item.roomID, item.entryTime, item.exitTime)} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg">
-                          Cancel
-                        </button>
-                      </div>
+                <div className='bg-white dark:bg-gray-800 p-4 rounded-md mt-4'>
+                  <div className='flex gap-7 justify-evenly items-center font-medium min-w-[600px]'>
+                    <div className="w-1/6 text-center text-black font-semibold">{item.name}</div>
+                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.hotelID.toString()}</div>
+                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.roomID.toString()}</div>
+                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedEntryTime}</div>
+                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedExitTime}</div>
+                    <div className="w-1/6 text-center">
+                      <button onClick={() => roomCancel(item.hotelID, item.roomID, item.entryTime, item.exitTime)} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg">
+                        Cancel
+                      </button>
                     </div>
                   </div>
                 </div>
               );
             }
           })}
-
         </div>
       </div>
+
+
 
       {/* div2 */}
       <div className='shadow-lg px-8 py-6 bg-white border border-gray-300 rounded-md mx-auto max-w-xl'>
         <div className='text-[#4b4848] font-semibold text-2xl mb-6'>Check Availability</div>
 
         <select
-          className='w-full border border-gray-400 p-2 my-4 rounded-md appearance-none text-[#302c2c]'
+          className='w-full border border-gray-400 p-1 sm:p-2 my-2 sm:my-4 rounded-md appearance-none text-[#302c2c]'
           value={hotelID}
           onChange={(e) => setHotelID(e.target.value)}
         >
@@ -230,7 +228,7 @@ const Bookings = ({ account, contractIns, connectContract }) => {
           <option value="73" className="hover:bg-gray-100 font-raleway font-semibold text-[14px]">Park Platinum</option>
         </select>
 
-        <div className='flex justify-evenly gap-4 mb-6'>
+        <div className='flex flex-col sm:flex-row justify-evenly gap-4 mb-6'>
           <div className='flex items-center gap-3 text-gray-800 dark:text-gray-200 font-medium'>
             <input
               className='cursor-pointer'
@@ -262,7 +260,7 @@ const Bookings = ({ account, contractIns, connectContract }) => {
             <label htmlFor="r1_3">ROOM 3</label>
           </div>
         </div>
-        <div className='flex items-center justify-evenly gap-4 mb-6'>
+        <div className='flex flex-col sm:flex-row items-center justify-evenly gap-4 mb-6'>
           <div className="flex flex-col">
             <label htmlFor="check-in-time" className="text-gray-600 mb-2 text-base">Select Check In Time:</label>
             <input
@@ -294,9 +292,9 @@ const Bookings = ({ account, contractIns, connectContract }) => {
         </div>
         <div className='flex justify-center'>
           {!availabilityLoader ?
-            <button className='text-white bg-yellow-600 hover:bg-yellow-700 font-medium text-lg py-3 px-6 rounded-md flex items-center' onClick={() => roomAvailability(hotelID, roomID, entry, exit)}>Check Availability</button>
+            <button className='text-white bg-yellow-600 hover:bg-yellow-700 font-medium text-base sm:text-lg py-2 sm:py-3 px-6 rounded-md flex items-center' onClick={() => roomAvailability(hotelID, roomID, entry, exit)}>Check Availability</button>
             :
-            <button className='text-white bg-yellow-600 font-medium text-lg py-3 px-6 rounded-md flex items-center' disabled>Checking...</button>
+            <button className='text-white bg-yellow-600 font-medium text-base sm:text-lg py-2 sm:py-3 px-6 rounded-md flex items-center' disabled>Checking...</button>
           }
         </div>
       </div>
