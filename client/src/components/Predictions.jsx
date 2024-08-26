@@ -105,7 +105,9 @@ const Predictions = () => {
             console.log('Response data:', data); // Log the entire response data
 
             if (data && data.predicted_price) {
-                setPredictedPrice(data.predicted_price);
+                // Convert predicted_price to a number and round to 2 decimal places
+                const roundedPrice = parseFloat(data.predicted_price).toFixed(2);
+                setPredictedPrice(roundedPrice);
             } else {
                 console.error('Error: Response data does not contain predicted_price', data);
                 throw new Error('Response data does not contain predicted_price');
@@ -288,7 +290,7 @@ const Predictions = () => {
                             Predicted Hotel Price:
                         </div>
                         <div className='text-xl md:text-3xl font-extrabold text-green-700'>
-                            <p> ₹ {predictedPrice.toFixed(2)}</p>
+                            <p> ₹ {predictedPrice}</p>
                         </div>
                         <button
                             onClick={handleCloseModal}
