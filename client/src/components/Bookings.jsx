@@ -150,14 +150,14 @@ const Bookings = ({ account, contractIns, connectContract }) => {
       <div className='mx-[4vw] my-[5vh] bg-white rounded-lg p-8 shadow-md'>
         <h2 className='text-2xl font-semibold mb-4'>Your Bookings</h2>
         <div className='overflow-x-auto'>
-          <div className='bg-gray-200 p-4 rounded-md shadow-md'>
+          <div className='bg-gray-800 p-4 rounded-md shadow-md'>
             <div className='flex gap-7 justify-evenly min-w-[600px]'>
-              <div className="w-1/6 text-center text-gray-700 font-semibold">Hotel Booked</div>
-              <div className="w-1/6 text-center text-gray-700 font-semibold">Hotel ID</div>
-              <div className="w-1/6 text-center text-gray-700 font-semibold">Room ID</div>
-              <div className="w-1/6 text-center text-gray-700 font-semibold">Check In Time</div>
-              <div className="w-1/6 text-center text-gray-700 font-semibold">Check Out Time</div>
-              <div className="w-1/6 text-center text-gray-700 font-semibold">Cancel Booking</div>
+              <div className="w-1/6 text-center text-white font-semibold">Hotel Booked</div>
+              <div className="w-1/6 text-center text-white font-semibold">Hotel ID</div>
+              <div className="w-1/6 text-center text-white font-semibold">Room ID</div>
+              <div className="w-1/6 text-center text-white font-semibold">Check In Time</div>
+              <div className="w-1/6 text-center text-white font-semibold">Check Out Time</div>
+              <div className="w-1/6 text-center text-white font-semibold">Cancel Booking</div>
             </div>
           </div>
 
@@ -173,13 +173,13 @@ const Bookings = ({ account, contractIns, connectContract }) => {
               const formattedExitTime = exitTimeDate.toLocaleString();
 
               return (
-                <div className='bg-white dark:bg-gray-800 p-4 rounded-md mt-4'>
+                <div className='bg-gray-700 p-4 rounded-md mt-4'>
                   <div className='flex gap-7 justify-evenly items-center font-medium min-w-[600px]'>
-                    <div className="w-1/6 text-center text-black font-semibold">{item.name}</div>
-                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.hotelID.toString()}</div>
-                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.roomID.toString()}</div>
-                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedEntryTime}</div>
-                    <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedExitTime}</div>
+                    <div className="w-1/6 text-center text-white font-semibold">{item.name}</div>
+                    <div className="w-1/6 text-center text-gray-200">{item.hotelID.toString()}</div>
+                    <div className="w-1/6 text-center text-gray-200">{item.roomID.toString()}</div>
+                    <div className="w-1/6 text-center text-gray-200">{formattedEntryTime}</div>
+                    <div className="w-1/6 text-center text-gray-200">{formattedExitTime}</div>
                     <div className="w-1/6 text-center">
                       <button onClick={() => roomCancel(item.hotelID, item.roomID, item.entryTime, item.exitTime)} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-md shadow-lg">
                         Cancel
@@ -229,7 +229,7 @@ const Bookings = ({ account, contractIns, connectContract }) => {
         </select>
 
         <div className='flex flex-col sm:flex-row justify-evenly gap-4 mb-6'>
-          <div className='flex items-center gap-3 text-gray-800 dark:text-gray-200 font-medium'>
+          <div className='flex items-center gap-3 text-gray-800 font-medium'>
             <input
               className='cursor-pointer'
               onClick={() => setRoomID('1')}
@@ -239,7 +239,7 @@ const Bookings = ({ account, contractIns, connectContract }) => {
             />
             <label htmlFor="r1_1">ROOM 1</label>
           </div>
-          <div className='flex items-center gap-3 text-gray-800 dark:text-gray-200 font-medium'>
+          <div className='flex items-center gap-3 text-gray-800 font-medium'>
             <input
               className='cursor-pointer'
               onClick={() => setRoomID('2')}
@@ -249,7 +249,7 @@ const Bookings = ({ account, contractIns, connectContract }) => {
             />
             <label htmlFor="r1_2">ROOM 2</label>
           </div>
-          <div className='flex items-center gap-3 text-gray-800 dark:text-gray-200 font-medium'>
+          <div className='flex items-center gap-3 text-gray-800 font-medium'>
             <input
               className='cursor-pointer'
               onClick={() => setRoomID('3')}

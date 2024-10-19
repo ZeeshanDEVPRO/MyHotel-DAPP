@@ -377,7 +377,7 @@ const Profile = ({ account, contractIns, connectContract }) => {
         <h2 className='text-2xl font-semibold mb-4'>Your Bookings</h2>
         <div className='overflow-x-auto'> {/* Container to allow horizontal scrolling */}
           <div className='min-w-[700px] flex flex-col m-4'> {/* Ensures the table is wider than the container */}
-            <div className='bg-black p-4 rounded-md shadow-md'>
+            <div className='bg-gray-800 p-4 shadow-md'>
               <div className='flex gap-7 justify-evenly'>
                 <div className="w-1/6 text-center text-white font-semibold">Hotel Booked</div>
                 <div className="w-1/6 text-center text-white font-semibold">Hotel ID</div>
@@ -400,13 +400,13 @@ const Profile = ({ account, contractIns, connectContract }) => {
 
               return (
                 <div className='flex flex-col' key={index}>
-                  <div className='bg-white dark:bg-gray-800 p-4 rounded-md shadow-md'>
+                  <div className='bg-gray-700 p-4 shadow-md'>
                     <div className='flex gap-7 justify-evenly items-center font-medium'>
-                      <div className="w-1/6 text-center text-[#03050c] dark:text-gray-200">{item.name}</div>
-                      <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.hotelID.toString()}</div>
-                      <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{item.roomID.toString()}</div>
-                      <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedEntryTime}</div>
-                      <div className="w-1/6 text-center text-gray-800 dark:text-gray-200">{formattedExitTime}</div>
+                      <div className="w-1/6 text-center text-gray-200">{item.name}</div>
+                      <div className="w-1/6 text-center text-gray-200">{item.hotelID.toString()}</div>
+                      <div className="w-1/6 text-center text-gray-200">{item.roomID.toString()}</div>
+                      <div className="w-1/6 text-center text-gray-200">{formattedEntryTime}</div>
+                      <div className="w-1/6 text-center text-gray-200">{formattedExitTime}</div>
                       <div className="w-1/6 text-center">
                         {item.status === 'Booked' ?
                           (<div className='text-green-600 font-bold'>BOOKED</div>) : (<div className='text-red-600 font-bold'>CANCELLED</div>)}

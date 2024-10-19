@@ -41,9 +41,10 @@ const Predictions = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const { Rating, Tax, City, Star, MiniFridge, WiFi, HouseKeeping, SeatingArea, Parking, AC, Meals, SwimmingPool } = formData;
-
+    
         const booleanToInt = (bool) => (bool === 'true' ? 1 : 0);
-
+    
+        // Validate inputs
         if (
             !Rating || parseFloat(Rating) < 0 || parseFloat(Rating) > 5 ||
             !Tax || parseFloat(Tax) < 0 ||
@@ -71,10 +72,11 @@ const Predictions = () => {
             });
             return;
         }
-
+    
         try {
-            setPredictionOn(true); // Use setPredictionOn to update the state
-            setLoader(true);
+            setLoader(true); // Start loader
+            setPredictionOn(false); // Hide modal initially
+    
             const response = await fetch('https://myhotel-dapp.onrender.com/predict', {
                 method: 'POST',
                 headers: {
@@ -95,30 +97,21 @@ const Predictions = () => {
                     SwimmingPool: booleanToInt(SwimmingPool)
                 })
             });
-
+    
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-
+    
             const data = await response.json();
-
-            console.log('Response data:', data); // Log the entire response data
-
+    
             if (data && data.predicted_price) {
-                // Convert predicted_price to a number and round to 2 decimal places
                 const roundedPrice = parseFloat(data.predicted_price).toFixed(2);
                 setPredictedPrice(roundedPrice);
+                setPredictionOn(true); // Show modal when data is received
             } else {
-                console.error('Error: Response data does not contain predicted_price', data);
                 throw new Error('Response data does not contain predicted_price');
             }
-            console.warn(predictedPrice);
-
-            setLoader(false);
-            setPredictionOn(true); // Open the modal when prediction is successful
         } catch (error) {
-            setLoader(false);
-            console.error('Prediction error:', error);
             toast.error(`Internal Error!`, {
                 position: "bottom-center",
                 autoClose: 5000,
@@ -130,8 +123,10 @@ const Predictions = () => {
                 theme: "colored",
                 transition: Bounce,
             });
+        } finally {
+            setLoader(false); // Stop loader
         }
-    }
+    };
 
     const handleCloseModal = () => {
         setPredictionOn(false);
