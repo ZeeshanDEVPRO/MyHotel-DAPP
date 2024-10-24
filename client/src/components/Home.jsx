@@ -4,16 +4,16 @@ import homeImage from '../assets/HomeImage.jpg';
 import staycation from '../assets/staycation.avif';
 import qrDiscount from '../assets/qrDiscount.avif';
 import map from '../assets/map.avif';
-
+import blue from '../assets/blue.jpg';
 import home2 from '../assets/home2.jpg';
 
 const Home = ({ connectContract, account }) => {
   return (
     <div className='bg-[#ffffff] mt-[10vh] md:mt-[13vh] mb-[5vh] font-inter font-sans flex flex-col gap-[4vh] sm:gap-[5vh] md:gap-[10vh]'>
-      <div className='relative h-[70vh]'>
+      <div className='relative h-[60vh]'>
         <img
           className='absolute inset-0 h-full w-full object-cover'
-          src={home2}
+          src={blue}
           alt='travel image'
         />
         <div className='absolute inset-0 flex flex-col gap-4 items-center justify-center text-white'>
